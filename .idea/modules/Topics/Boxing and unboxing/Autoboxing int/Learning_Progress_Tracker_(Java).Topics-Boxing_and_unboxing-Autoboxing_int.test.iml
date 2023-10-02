@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Boxing and unboxing/Autoboxing int/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Boxing and unboxing/Autoboxing int/test" />
-    <orderEntry type="jdk" jdkName="corretto-17" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Learning_Progress_Tracker_(Java).Topics-Boxing_and_unboxing-Autoboxing_int.main" />
     <orderEntry type="module" module-name="Learning_Progress_Tracker_(Java).util.main" />

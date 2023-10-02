@@ -5,7 +5,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Boxing and unboxing/Identify a possible exception/src/test" />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Boxing and unboxing/Identify a possible exception/test" />
-    <orderEntry type="jdk" jdkName="corretto-17" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Learning_Progress_Tracker_(Java).Topics-Boxing_and_unboxing-Identify_a_possible_exception.main" />
     <orderEntry type="module" module-name="Learning_Progress_Tracker_(Java).util.main" />

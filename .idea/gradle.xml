@@ -5,10 +5,9 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
-        <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.3/libexec" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleJvm" value="corretto-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -27,6 +26,13 @@
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Wrapper classes for char and int" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/An empty test" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Annotation" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Assertion" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Did it fail" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Failed assertion" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Test driven development" />
+            <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
