@@ -1090,7 +1090,10 @@
     <inspection_tool class="GroovyAccessToStaticFieldLockedOnInstance" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="GroovyAccessibility" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="GroovyAssignabilityCheck" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="GroovyAssignmentCanBeOperatorAssignment" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="GroovyAssignmentCanBeOperatorAssignment" enabled="true" level="INFORMATION" enabled_by_default="true">
+      <option name="ignoreLazyOperators" value="true" />
+      <option name="ignoreObscureOperators" value="false" />
+    </inspection_tool>
     <inspection_tool class="GroovyAssignmentToForLoopParameter" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GroovyAssignmentToMethodParameter" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="GroovyBreak" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -1216,7 +1219,14 @@
     <inspection_tool class="HtmlRequiredTitleElement" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="HtmlTagCanBeJavadocTag" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlUnknownAnchorTarget" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
     <inspection_tool class="HtmlUnknownBooleanAttribute" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
@@ -1486,6 +1496,7 @@
     <inspection_tool class="JspUnescapedEl" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="Junit4Converter" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="JvmCoverageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JvmUnresolvedTmsLinkInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="KDocMissingDocumentation" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="KDocUnresolvedReference" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="KarmaConfigFile" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -1548,6 +1559,8 @@
     <inspection_tool class="LiteralAsArgToStringEquals" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="LoadLibraryWithNonConstantString" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="LocalCanBeFinal" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="LocalTmsAutomatedStatusInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="LocalTmsIdInspection" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="LocalVariableHidingMemberVariable" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="LocalVariableName" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="LocalVariableNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
