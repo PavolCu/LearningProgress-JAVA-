@@ -35,7 +35,7 @@ public class Main {
         while (true) {
             String input = scanner.nextLine().strip().toLowerCase();
             if (input.equals("back")) {
-                System.out.println("Total " + addedStudents + " students have been added in this session.");
+                System.out.println("Total " + addedStudents + " students have been added.");
                 break;
             } else if (!input.isEmpty()) {  // Check if the input is not empty
                 String validationMessage = validateCredentials(input);
@@ -46,7 +46,7 @@ public class Main {
                     System.out.println(validationMessage);
                 }
             } else {
-                System.out.println("No input.");
+                System.out.println("Incorrect credentials."); // Changed message for empty input
             }
         }
 
@@ -89,8 +89,9 @@ public class Main {
     }
 
     private static boolean isValidEmail(String email) {
-        // Ensure the email pattern allows valid email addresses
-        String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z0-9+_.-]+$";
         return Pattern.matches(emailPattern, email);
     }
+
+
 }
