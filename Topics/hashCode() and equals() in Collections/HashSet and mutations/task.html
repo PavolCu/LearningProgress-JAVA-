@@ -1,0 +1,15 @@
+<h2>HashSet and mutations</h2>
+<div class="step-text">
+<p></p>
+<p>Write the size of the given HashSet. Assume that <code class="language-java">hashCode()</code> and <code class="language-java">equals()</code> are overridden.</p>
+<pre><code class="language-java">    Person james = new Person("James Gosling");
+
+    Set&lt;Person&gt; set = new HashSet();
+    set.add(james);
+    set.add(new Person("James Gosling"));
+
+    james.setName("J. Gosling");
+    set.add(james);
+
+    System.out.println(set.size());</code></pre>
+</div>

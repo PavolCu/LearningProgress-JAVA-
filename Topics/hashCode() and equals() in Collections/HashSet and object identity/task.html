@@ -1,0 +1,13 @@
+<h2>HashSet and object identity</h2>
+<div class="step-text">
+<p></p>
+<p>How many elements does this HashSet have when <code class="language-java">hashcode()</code> and <code class="language-java">equals()</code> are properly overridden to store only unique elements?</p>
+<pre><code class="language-java">    Person james = new Person("James Gosling");
+
+    Set&lt;Person&gt; set = new HashSet();
+    set.add(james);
+    set.add(james);
+    set.add(new Person("James Gosling"));
+
+    System.out.println(set.size());</code></pre>
+</div>

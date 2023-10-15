@@ -41,6 +41,14 @@
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Wrapper classes for char and int" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/A proper collection to avoid duplicates" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/A proper index-based collection" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/A proper sorted collection without duplicates" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/An unsolvable problem" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Even numbers go first" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/General-purpose implementations" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Removing duplicates and sorting" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Theory" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Boxes are not just objects" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Initialize an object of a generic class" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Instance without type argument" />
@@ -141,6 +149,13 @@
             <option value="$PROJECT_DIR$/Topics/What are collections/Resizable structure" />
             <option value="$PROJECT_DIR$/Topics/What are collections/The one suitable description" />
             <option value="$PROJECT_DIR$/Topics/What are collections/Theory" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Duplicate elements in HashSet" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Theory" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/A pair of methods to be overridden" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Complex numbers" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Comprehension" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Comprehension (1)" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

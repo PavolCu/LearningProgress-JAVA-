@@ -16,3 +16,6 @@ content:
   - The Map interface
   - HashMap
   - Array
+  - Choosing the right collection
+  - hashCode() and equals()
+  - hashCode() and equals() in Collections
