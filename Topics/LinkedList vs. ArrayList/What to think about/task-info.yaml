@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: Approximate number of elements
+  - text: ' Where elements will be added'
+  - text: Do you need to get elements by index or not
+  - text: Do you need to remove elements and which ones
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12397#comment
+status: Solved
+record: -1
+custom_name: What to think about?
+local_check: false

@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: This helps to avoid possible unexpected side effects.
+  - text: This makes tests run slower so we can take a break.
+  - text: It is the only way to find performance bottlenecks in our code.
+  - text: This provides a clean state of each instance of the tested class.
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12870#comment
+status: Solved
+record: -1
+local_check: false

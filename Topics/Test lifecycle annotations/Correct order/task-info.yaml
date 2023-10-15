@@ -1,0 +1,28 @@
+type: sorting
+options:
+  - first() // 1
+  - third() // 3
+  - fourth() // 4
+  - second() // 2
+  - fifth() // 5
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12873#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

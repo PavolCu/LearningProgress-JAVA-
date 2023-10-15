@@ -5,10 +5,9 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
-        <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.3/libexec" />
-        <option name="gradleJvm" value="corretto-17" />
+        <option name="gradleJvm" value="corretto-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -19,6 +18,21 @@
             <option value="$PROJECT_DIR$/Learning Progress Tracker (Java)/task/build/reports/tests" />
             <option value="$PROJECT_DIR$/Learning Progress Tracker (Java)/task/build/test-results" />
             <option value="$PROJECT_DIR$/Learning Progress Tracker (Java)/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Array/Declarations" />
+            <option value="$PROJECT_DIR$/Topics/Array/Initializations" />
+            <option value="$PROJECT_DIR$/Topics/Array/Initializing an array of characters" />
+            <option value="$PROJECT_DIR$/Topics/Array/Initializing an array of integers" />
+            <option value="$PROJECT_DIR$/Topics/Array/Initializing an array of longs" />
+            <option value="$PROJECT_DIR$/Topics/Array/Meanings of statements" />
+            <option value="$PROJECT_DIR$/Topics/Array/The last element of an array" />
+            <option value="$PROJECT_DIR$/Topics/Array/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Array/Ways to create an array of ints" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Adding items" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Concat positive numbers" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Creating list" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/How to get an element by the index" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Output the list's elements" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Autoboxing int" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Identify a possible exception" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Initializing long value" />
@@ -27,6 +41,94 @@
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Wrapper classes for char and int" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Boxes are not just objects" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Initialize an object of a generic class" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Instance without type argument" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Reusing code with Object" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Why generics" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/Countries and capitals" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/The same letter" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/The same pairs" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Correct the program" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Declaring generic classes - 2" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Generic parameter values" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Pastry packing optimization" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments - 2" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Fast for ArrayList" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Fast for LinkedList" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Remove the same" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Restore the algorithm" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/The big merge" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/The fair exchange" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Theory" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Transfer both lists" />
+            <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/What to think about" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Argument sources" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Looking for a bug" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Methods as sources" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Number of arguments" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Palindromes" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Parameters" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Parameterized test/Tricky syntax" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/File classes" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/File equality" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Find a statement that returns false" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Pattern matching in practice" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Pattern matching with the logical OR operator" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Select statements" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Sort out the classes" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Statements which returns true" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Match methods" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Methods" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Stack implementation" />
+            <option value="$PROJECT_DIR$/Topics/Stack/The LIFO principle in action" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Which brackets are balanced" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Annotate and run" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Correct order" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Good reasons" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Lifecycle behavior" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Test fixture" />
+            <option value="$PROJECT_DIR$/Topics/Test lifecycle annotations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/A package" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Blacklist" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Collection interfaces" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Creating instances" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Root interfaces" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Squaring numbers" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Supported collections" />
+            <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Backward indexes" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Count the value occurrences" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Greek letters" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Implementations" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Mutable lists" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Replacing ArrayList with LinkedList" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Results of operations" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Select correct assignments" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Setting a new name" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Similarities between lists and arrays" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/The longest string in the list" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Is it collection" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Sum of values" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Value or min" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Comparing sets" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Creating a set" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Match methods and their purposes" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Output elements" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Spell checker" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Strict superset" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/The size of a set" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/TreeSet storage order" />
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/An empty test" />
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Annotation" />
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Assertion" />
@@ -34,6 +136,11 @@
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Failed assertion" />
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Test driven development" />
             <option value="$PROJECT_DIR$/Topics/Unit testing with JUnit/Theory" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Accessing element of a collection" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Initialize a collection" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Resizable structure" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/The one suitable description" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

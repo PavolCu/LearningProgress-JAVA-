@@ -1,0 +1,41 @@
+<h2>Looking for a bug</h2>
+<div class="step-text">
+<p></p>
+<p>
+Imagine that you copied a palindrome checker method from <code class="language-java">stackoverflow.com</code> and now want to be sure that it works as you expect. Here is that suspicious code:</p>
+<pre><code class="language-java">public class StringUtils {
+    public static boolean isPalindrome(String string) {
+        if (string == null || string.isBlank() || string.length() &lt; 2) {
+            return false;
+        }
+
+        int start = 0;
+        int end = string.length() - 1;
+
+        while (start &lt; end) {
+            if (string.charAt(start) != string.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+
+        return true;
+    }
+}</code></pre>
+<p>You quickly wrote a test method with some test cases:</p>
+<pre><code class="language-java">import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.*;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class StringTests {
+
+    @ParameterizedTest
+    @ValueSource(strings = {"rotator", "Stats", "(radar)", "level", "race car"})
+    void testPalindrome(String str) {
+        assertTrue(StringUtils.isPalindrome(str));
+    }
+}</code></pre>
+<p>Which of the test cases are going to fail when you run this test?</p>
+</div>

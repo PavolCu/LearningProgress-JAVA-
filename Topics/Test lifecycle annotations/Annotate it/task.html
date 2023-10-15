@@ -1,0 +1,37 @@
+<h2>Annotate it</h2>
+<div class="step-text">
+<p></p>
+<p>Methods of this test class lack proper annotations:</p>
+<pre><code class="language-java">class SampleTests {
+
+    @BeforeAll // 1.
+    static void setup() {
+        System.out.println("Executes before anything else");
+    }
+
+    // 2.
+    static void teardown() {
+        System.out.println("Executes after anything else");
+    }
+
+    // 3.
+    void instantiate() {
+        System.out.println("Executes before a test method");
+    }
+
+    @AfterEach // 4.
+    void cleanup() {
+        System.out.println("Executes after a test method");
+    }
+
+    // 5.
+    void testSomething() {
+        System.out.println("Performs a test");
+    }
+}</code></pre>
+<p>Let's fix it! Write the missing annotations for positions 2, 3, and 5. Write each annotation in a new line and remember that they are case sensitive.</p>
+<p>Example:</p>
+<pre><code class="language-no-highlight">@BeforeAll
+@BeforeEach
+@Test</code></pre>
+</div>

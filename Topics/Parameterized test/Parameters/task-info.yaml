@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It specifies that the test class constructor has multiple parameters.
+  - text: It indicates that the test framework reads parameters from the gradle.properties
+      file.
+  - text: It denotes a test method that will be invoked multiple times with different
+      arguments.
+  - text: It means that the order of execution of tests is defined by special parameters
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12878#comment
+status: Solved
+record: -1
+local_check: false

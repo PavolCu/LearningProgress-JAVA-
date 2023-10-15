@@ -1,0 +1,33 @@
+<h2>Correct order</h2>
+<div class="step-text">
+<p></p>
+<p>Given the following test class:</p>
+<pre><code class="language-java">class CalculatorTests {
+
+    @BeforeAll
+    static void first() {
+        // 1
+    }
+
+    @AfterAll
+    static void second() {
+        // 2
+    }
+
+    @BeforeEach
+    void third() {
+        // 3
+    }
+
+    @AfterEach
+    void fourth() {
+        // 4
+    }
+
+    @Test
+    void fifth() {
+        // 5
+    }
+}</code></pre>
+<p>Arrange its methods according to the order of their execution. The first method to execute should be on top and the last one should be at the bottom.</p>
+</div>

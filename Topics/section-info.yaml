@@ -1,3 +1,18 @@
 content:
   - Boxing and unboxing
   - Unit testing with JUnit
+  - Runtime type checking
+  - Introduction to generic programming
+  - Generics and Object
+  - What are collections
+  - The Collections Framework overview
+  - Test lifecycle annotations
+  - Parameterized test
+  - ArrayList
+  - The List interface
+  - The Set interface
+  - LinkedList vs. ArrayList
+  - Stack
+  - The Map interface
+  - HashMap
+  - Array

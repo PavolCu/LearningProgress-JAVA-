@@ -1,0 +1,11 @@
+<h2>Value or min</h2>
+<div class="step-text">
+<p></p>
+<p>Map interface has a standard method <code class="language-java">getOrDefault</code>. It returns the value to which the specified key is mapped, or <code class="language-java">defaultValue</code> if this map contains no mapping for the key.</p>
+<p>Let's Implement a similar method <code class="language-java">getOrMin</code>. It behaves in the same way if specified key is presented in a map, but returns the minimum among all values otherwise.</p>
+<p>For instance, there is a map with entries <code class="language-java">A: 1</code>, <code class="language-java">B: 2</code>, <code class="language-java">C: 3</code></p>
+<ul>
+<li>If we pass <code class="language-java">B</code>, then <code class="language-java">2</code> is expected</li>
+<li>If we pass <code class="language-java">D</code>, then <code class="language-java">1</code> is expected</li>
+</ul><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">3<br>A 1<br>B 2<br>C 3<br>B</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">2</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>
+</div>

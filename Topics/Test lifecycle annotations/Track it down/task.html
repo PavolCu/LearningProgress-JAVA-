@@ -1,0 +1,39 @@
+<h2>Track it down</h2>
+<div class="step-text">
+<p></p>
+<p></p><div class="alert alert-primary">This is a little puzzle to test your understanding of the order in which test class methods execute.</div><p></p>
+<p>Take a look at this test class:</p>
+<pre><code class="language-java">class BetaTest {
+    static int number = 14;
+
+    BetaTest() {
+        number *= 2;
+    }
+
+    @BeforeAll
+    static void method3() {
+        number += 11;
+    }
+
+    @BeforeEach
+    void method2() {
+        number -= 4;
+    }
+
+    @AfterAll
+    static void method4() {
+        number /= 3;
+    }
+
+    @AfterEach
+    void method5() {
+        System.out.println(number);
+    }
+
+    @Test
+    void method6() {
+        number += 9;
+    }
+}</code></pre>
+<p>What number will be printed if we run this test?</p>
+</div>

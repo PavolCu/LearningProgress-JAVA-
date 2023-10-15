@@ -1,0 +1,34 @@
+type: matching
+captions:
+  - "int[] numbers;"
+  - "numbers = new int[3];"
+  - "numbers[0] = 5; numbers[1] = 6; numbers[2] = 7;"
+  - "int[] numbers = { 1, 2, 3 };"
+  - "int[] numbers = new int[4];"
+options:
+  - "declaration, instantiation and initialization in the same statement"
+  - explicit initialization
+  - instantiation and initialization with default values
+  - declaration
+  - "declaration, instantiation and initialization with default values"
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2722#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
