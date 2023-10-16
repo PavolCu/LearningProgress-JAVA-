@@ -1,29 +1,44 @@
 package tracker;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class Main {
     private static int totalStudents = 0; // Initialize totalStudents to 0
+    private static Set<String> emailSet = new HashSet<>(); // Set to store unique email addresses
+    private static List<Integer> studentIds = new ArrayList<>(); // List to store student IDs
+    private static Map<Integer, Map<String, Integer>> studentProgress = new HashMap<>(); // Map to store student progress
 
-    public static void main(String[] args) {
-        System.out.print("Learning Progress Tracker > ");
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            String input = scanner.nextLine().strip().toLowerCase();
-            if (input.isBlank() || input.matches("\\s+")) {
-                System.out.println("No input.");
-            } else if (input.equals("exit")) {
-                System.out.println(" Bye!");
-                break;
-            } else if (input.equals("add students")) {
-                totalStudents += addStudents(scanner);
-            } else if (input.equals(("back"))) {
-                System.out.println("Enter 'exit' to exit the program.");
+    private static void findStudent(Scanner scanner) {
+        System.out.println("Enter an id or 'back' to return:");
+        String input = scanner.nextLine().strip().toLowerCase();
+        if (input.equals("back")) {
+            return;
+        }
+        try {
+            int studentId = Integer.parseInt(input);
+            if (studentProgress.containsKey(studentId)) {
+                Map<String, Integer> courses = studentProgress.get(studentId);
+                int javaPoints = courses.getOrDefault("Java", 0);
+                int dsaPoints = courses.getOrDefault("DSA", 0);
+                int databasesPoints = courses.getOrDefault("Databases", 0);
+                int springPoints = courses.getOrDefault("Spring", 0);
+                System.out.printf("%d points: Java=%d; DSA=%d; Databases=%d; Spring=%d%n", studentId, javaPoints, dsaPoints, databasesPoints, springPoints);
             } else {
-                System.out.println("Unknown command!");
+                System.out.printf("No student is found for id=%d.%n", studentId);
+            }
+        } catch (NumberFormatException e) {
+            System.out.printf("Invalid ID: %s.%n", input);
+        }
+    }
+
+    private static void listStudents() {
+        if (studentIds.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            System.out.println("Students:");
+            for (int studentId : studentIds) {
+                System.out.println(studentId);
             }
         }
     }
@@ -42,6 +57,8 @@ public class Main {
                 if (validationMessage.equals("The student has been added.")) {
                     System.out.println("The student has been added.");
                     addedStudents++;
+                    studentIds.add(totalStudents + addedStudents); // Add student ID to the list
+                    studentProgress.put(totalStudents + addedStudents, new HashMap<>()); // Initialize progress for student
                 } else {
                     System.out.println(validationMessage);
                 }
@@ -65,7 +82,12 @@ public class Main {
             boolean isEmailValid = isValidEmail(email);
 
             if (isFirstNameValid && isLastNameValid && isEmailValid) {
-                return "The student has been added.";
+                if (emailSet.contains(email)) {
+                    return "This email is already taken.";
+                } else {
+                    emailSet.add(email); // Add the email to the set
+                    return "The student has been added.";
+                }
             } else {
                 StringBuilder errorMessage = new StringBuilder();
                 if (!isFirstNameValid) {
@@ -93,5 +115,73 @@ public class Main {
         return Pattern.matches(emailPattern, email);
     }
 
+    private static void addPoints(Scanner scanner) {
+        System.out.println("Enter an id and points or 'back' to return:");
+        String input = scanner.nextLine().strip().toLowerCase();
 
+        if (input.equals("back")) {
+            return;
+        }
+
+        String[] parts = input.split(" ");
+        if (parts.length != 5) {
+            System.out.println("Incorrect points format.");
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(parts[0]);
+            int javaPoints = Integer.parseInt(parts[1]);
+            int dsaPoints = Integer.parseInt(parts[2]);
+            int databasesPoints = Integer.parseInt(parts[3]);
+            int springPoints = Integer.parseInt(parts[4]);
+
+            if (javaPoints >= 0 && dsaPoints >= 0 && databasesPoints >= 0 && springPoints >= 0) {
+                if (studentProgress.containsKey(id)) {
+                    Map<String, Integer> courses = studentProgress.get(id);
+                    courses.put("Java", javaPoints);
+                    courses.put("DSA", dsaPoints);
+                    courses.put("Databases", databasesPoints);
+                    courses.put("Spring", springPoints);
+                    System.out.println("Points updated.");
+                } else {
+                    System.out.printf("No student is found for id=%d.%n", id);
+                }
+            } else {
+                System.out.println("Incorrect points format.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Incorrect points format.");
+        }
+    }
+
+
+
+
+    public static void main(String[] args) {
+        System.out.print("Learning Progress Tracker > ");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            String input = scanner.nextLine().strip().toLowerCase();
+            if (input.isBlank() || input.matches("\\s+")) {
+                System.out.print("No input.");
+            } else if (input.equals("exit")) {
+                System.out.println(" Bye!");
+                break;
+            } else if (input.equals("add students")) {
+                totalStudents += addStudents(scanner);
+            } else if (input.equals("list")) {
+                listStudents();
+            } else if (input.equals("add points")) {
+                addPoints(scanner);
+            } else if (input.equals("find")) {
+                findStudent(scanner);
+            } else if (input.equals("back")) {
+                System.out.println("Enter 'exit' to exit the program.");
+            } else {
+                System.out.println("Unknown command.");
+            }
+        }
+    }
 }
