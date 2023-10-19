@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-  - text: collection of objects
-  - text: array
-  - text: collection of key-value pairs
-  - text: queue
+  - text: A queue
+  - text: An array
+  - text: A collection of key-value pairs
+  - text: A collection of objects
 files:
   - name: src/Task.java
     visible: true

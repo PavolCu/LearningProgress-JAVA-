@@ -1,9 +1,8 @@
 [1;31m
 Start test 1[0m
 #Learning Progress Tracker > > back
-"Enter 'exit' to exit the program.
-> exit
- Bye!
+(Enter 'exit' to exit the program.> exit
+Bye!
 [1;31m
 Start test 2[0m
 Learning Progress Tracker > > 
@@ -19,285 +18,35 @@
 [1;31m
 Start test 6[0m
 "Learning Progress Tracker > > abc
-Unknown command.
 [1;31m
 Start test 7[0m
 #Learning Progress Tracker > > quit
-Unknown command.
 [1;31m
 Start test 8[0m
 (Learning Progress Tracker > >   brexit 
-Unknown command.
 [1;31m
 Start test 9[0m
 %Learning Progress Tracker > > exi  t
-Unknown command.
 [1;31m
 Start test 10[0m
  Learning Progress Tracker > > ?
-Unknown command.
 [1;31m
 Start test 11[0m
 $Learning Progress Tracker > > break
-Unknown command.
 [1;31m
 Start test 12[0m
 $Learning Progress Tracker > > -exit
-Unknown command.
 [1;31m
 Start test 13[0m
 %Learning Progress Tracker > > Ctrl+C
-Unknown command.
 [1;31m
 Start test 14[0m
 *Learning Progress Tracker > > exit please
-Unknown command.
 [1;31m
 Start test 15[0m
 !Learning Progress Tracker > > :q
-Unknown command.
 [1;31m
 Start test 16[0m
 +Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-> exit
-Incorrect credentials.
-> back
-"Total 0 students have been added.
-> back
-"Enter 'exit' to exit the program.
-> exit
- Bye!
-[1;31m
-Start test 17[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
- > John Smith jsmith@hotmail.com
-The student has been added.
-"> Anny Doolittle anny.md@mail.edu
-The student has been added.
-*> Jean-Claude O'Connor jcda123@google.net
-The student has been added.
-%> Mary Emelianenko 125367at@zzz90.z9
-The student has been added.
-%> Al Owen u15da125@a1s2f4f7.a1c2c5s4
-The student has been added.
-6> Robert Jemison Van de Graaff robertvdgraaff@mit.edu
-The student has been added.
-> Ed Eden a1@a1.a1
-The student has been added.
-> na'me s-u ii@ii.ii
-The student has been added.
-> n'a me su aa-b'b ab@ab.ab
-The student has been added.
-> nA me 1@1.1
-The student has been added.
-> back
-#Total 10 students have been added.
-[1;31m
-Start test 18[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-> 
-Incorrect credentials.
->  	
-Incorrect credentials.
-> name surname
-Incorrect credentials.
-> n surname email@email.xyz
-Incorrect first name. 
- > 'name surname email@email.xyz
-Incorrect first name. 
- > -name surname email@email.xyz
-Incorrect first name. 
- > name- surname email@email.xyz
-Incorrect first name. 
- > name' surname email@email.xyz
-Incorrect first name. 
-!> nam-'e surname email@email.xyz
-Incorrect first name. 
-!> na'-me surname email@email.xyz
-Incorrect first name. 
-!> na--me surname email@email.xyz
-Incorrect first name. 
-!> na''me surname email@email.xyz
-Incorrect first name. 
-!> námé surname email@email.xyz
-Incorrect first name. 
-> name s email@email.xyz
-Incorrect last name. 
- > name -surname email@email.xyz
-Incorrect last name. 
- > name 'surname email@email.xyz
-Incorrect last name. 
-!> name surnam''e email@email.xyz
-Incorrect last name. 
-!> name surn--ame email@email.xyz
-Incorrect last name. 
-!> name s'-urname email@email.xyz
-Incorrect last name. 
-!> name su-'rname email@email.xyz
-Incorrect last name. 
- > name surname- email@email.xyz
-Incorrect last name. 
- > name surname' email@email.xyz
-Incorrect last name. 
-!> name surnámé email@email.xyz
-Incorrect last name. 
-> name surname emailemail.xyz
-Incorrect email.
-> name surname email@emailxyz
-Incorrect email.
- > name surname email@e@mail.xyz
-Incorrect email.
-> back
-"Total 0 students have been added.
-[1;31m
-Start test 19[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-> back
-"Total 0 students have been added.
-> list
-No students found.
-[1;31m
-Start test 20[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-!> Leola Whelan address1@mail.com
-The student has been added.
-!> Leola Whelan address1@mail.com
-This email is already taken.
-!> Olga Rosanne address2@mail.com
-The student has been added.
-!> Olga Rosanne address2@mail.com
-This email is already taken.
-#> Shoshana Utica address3@mail.com
-The student has been added.
-#> Shoshana Utica address3@mail.com
-This email is already taken.
-%> Charlena Girardo address4@mail.com
-The student has been added.
-%> Charlena Girardo address4@mail.com
-This email is already taken.
-#> Elwira Florrie address5@mail.com
-The student has been added.
-#> Elwira Florrie address5@mail.com
-This email is already taken.
-#> Natka Herculie address6@mail.com
-The student has been added.
-#> Natka Herculie address6@mail.com
-This email is already taken.
-$> Jermaine Naaman address7@mail.com
-The student has been added.
-$> Jermaine Naaman address7@mail.com
-This email is already taken.
-> Tasha Chem address8@mail.com
-The student has been added.
-> Tasha Chem address8@mail.com
-This email is already taken.
-%> Annecorinne Ause address9@mail.com
-The student has been added.
-%> Annecorinne Ause address9@mail.com
-This email is already taken.
-"> Trixie Winer address10@mail.com
-The student has been added.
-"> Trixie Winer address10@mail.com
-This email is already taken.
-"> Starlin Griz address11@mail.com
-The student has been added.
-"> Starlin Griz address11@mail.com
-This email is already taken.
-)> Barbara-Anne Chicky address12@mail.com
-The student has been added.
-)> Barbara-Anne Chicky address12@mail.com
-This email is already taken.
-> back
-#Total 12 students have been added.
-[1;31m
-Start test 21[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-%> Ricki Trovillion address1@mail.com
-The student has been added.
-!> Starlin Griz address2@mail.com
-The student has been added.
-%> Charlena Girardo address3@mail.com
-The student has been added.
-#> Dolley Panther address4@mail.com
-The student has been added.
-$> Jermaine Naaman address5@mail.com
-The student has been added.
-%> Gwenette Kironde address6@mail.com
-The student has been added.
-$> Alexina Belcher address7@mail.com
-The student has been added.
-> Nonna Miko address8@mail.com
-The student has been added.
-%> Carmella Campman address9@mail.com
-The student has been added.
-$> Beatrisa Jegar address10@mail.com
-The student has been added.
-"> Olga Rosanne address11@mail.com
-The student has been added.
-&> Lebbie Alabaster address12@mail.com
-The student has been added.
-> back
-#Total 12 students have been added.
-> list
-
-Students:
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-[1;31m
-Start test 22[0m
-)Learning Progress Tracker > > add points
-,Enter an id and points or 'back' to return:
-> back
-> back
-"Enter 'exit' to exit the program.
-> exit
- Bye!
-[1;31m
-Start test 23[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-#> Emelia Annnora address1@mail.com
-The student has been added.
- > Ann Agnella address2@mail.com
-The student has been added.
-$> Brandise Hardan address3@mail.com
-The student has been added.
-#> Dolley Panther address4@mail.com
-The student has been added.
-!> Trixie Winer address5@mail.com
-The student has been added.
-#> Shoshana Utica address6@mail.com
-The student has been added.
-> back
-"Total 6 students have been added.
-> list
-
-Students:
-1
-2
-3
-4
-5
-6
-> add points
-,Enter an id and points or 'back' to return:
-> 1 
-Incorrect points format.
-> 1 -1 1 1 1
-Unknown command.
+5Enter student credentials or 'back' to return:> exit
+Bye!

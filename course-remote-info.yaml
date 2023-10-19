@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25673/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Mon, 16 Oct 2023 17:12:12 UTC"
+update_date: "Thu, 19 Oct 2023 08:46:17 UTC"
 stages:
   - id: 979
     step: 14396
@@ -13,7 +13,7 @@ stages:
     is_completed: true
   - id: 981
     step: 14398
-    is_completed: false
+    is_completed: true
   - id: 982
     step: 14399
     is_completed: false
@@ -42,8 +42,6 @@ topics:
       theory_id: 8977
     - title: Parameters and Options
       theory_id: 9746
-    - title: Immutability
-      theory_id: 7929
     - title: Pseudocode
       theory_id: 15090
     - title: Pseudocode basics
@@ -52,6 +50,8 @@ topics:
       theory_id: 20922
     - title: Fixed-size array
       theory_id: 20078
+    - title: Immutability
+      theory_id: 7929
     - title: Dynamic array
       theory_id: 5357
     - title: Computer programming
