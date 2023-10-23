@@ -973,6 +973,124 @@ files:
           }
       }
     learner_created: false
+  - name: src/tracker/StudentController.java
+    visible: true
+    text: |
+      package tracker;
+      
+      import java.util.Arrays;
+      import java.util.regex.Pattern;
+      
+      class StudentController {
+          private final StudentProgress studentProgress;
+      
+          public StudentController(StudentProgress studentProgress) {
+              this.studentProgress = studentProgress;
+          }
+      
+          public void listStudentsAndPoints() {
+              for (Integer id : studentProgress.getStudents().keySet()) {
+                  Student student = studentProgress.getStudent(id);
+                  int[] points = studentProgress.getStudentPoints().get(id);
+                  System.out.println("Student: " + student.getFirstName() + " " + student.getLastName());
+                  System.out.println("Points: Java=" + points[0] + ", DSA=" + points[1] + ", Databases=" + points[2] + ", Spring=" + points[3]);
+              }
+          }
+      
+          public boolean isValidName(String name) {
+              return Pattern.matches("^[A-Za-z]+([ '-][A-Za-z]+)*$", name) && name.length() >= 2;
+          }
+      
+          public boolean isValidEmail(String email) {
+              String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z0-9+_.-]+$";
+              return Pattern.matches(emailPattern, email);
+          }
+      
+          public void addStudent(String firstName, String lastName, String email) {
+              int[] points = new int[4];
+              studentProgress.addStudent(studentProgress.getStudents().size() + 1, new Student(firstName, lastName, email));
+              studentProgress.addPoints(studentProgress.getStudents().size(), points);
+              System.out.println("Student added successfully.");
+          }
+      
+          public void addPoints(int id, int[] points) {
+              studentProgress.addPoints(id, points);
+              System.out.println("Points added/updated for student ID " + id + ": " + Arrays.toString(points));
+          }
+      
+          public void findStudent(int id) {
+              Student student = studentProgress.getStudent(id);
+              if (student != null) {
+                  System.out.println("Student found: " + student.getFirstName() + " " + student.getLastName());
+              } else {
+                  System.out.println("No student found for ID " + id);
+              }
+          }
+      }
+    learner_created: true
+  - name: src/tracker/Student.java
+    visible: true
+    text: |
+      package tracker;
+      import java.util.regex.Pattern;
+      
+      class Student {
+          private final String firstName;
+          private final String lastName;
+          private final String email;
+      
+          public Student(String firstName, String lastName, String email) {
+              this.firstName = firstName;
+              this.lastName = lastName;
+              this.email = email;
+          }
+      
+          public String getFirstName() {
+              return firstName;
+          }
+      
+          public String getLastName() {
+              return lastName;
+          }
+      
+          public String getEmail() {
+              return email;
+          }
+      }
+    learner_created: true
+  - name: src/tracker/StudentProgress.java
+    visible: true
+    text: |
+      package tracker;
+      
+      import java.util.HashMap;
+      import java.util.Map;
+      
+      class StudentProgress {
+          private final Map<Integer, Student> students = new HashMap<>();
+          private final Map<Integer, int[]> studentPoints = new HashMap<>();
+      
+          public Map<Integer, Student> getStudents() {
+              return students;
+          }
+      
+          public Map<Integer, int[]> getStudentPoints() {
+              return studentPoints;
+          }
+      
+          public Student getStudent(int id) {
+              return students.get(id);
+          }
+      
+          public void addStudent(int id, Student student) {
+              students.put(id, student);
+          }
+      
+          public void addPoints(int id, int[] points) {
+              studentPoints.put(id, points);
+          }
+      }
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/14399#comment
 status: Unchecked
-record: -1
+record: 4
