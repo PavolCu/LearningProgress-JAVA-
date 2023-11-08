@@ -19,3 +19,5 @@ content:
   - Choosing the right collection
   - hashCode() and equals()
   - hashCode() and equals() in Collections
+  - Package
+  - Iterating over arrays

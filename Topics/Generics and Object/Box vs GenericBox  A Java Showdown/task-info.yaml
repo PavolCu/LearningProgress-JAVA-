@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "Box class can hold any type of object, including primitive types."
+  - text: GenericBox code is easier to understand as it shows what type of objects it
+      can contain and return.
+  - text: "GenericBox provides stronger type checks at compile time, avoiding runtime\
+    \ ClassCastException."
+  - text: Box class can ensure type safety at compile time.
+  - text: "GenericBox allows operations to be performed on the object it encapsulates,\
+    \ without casting."
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31225#comment
+status: Solved
+record: -1
+custom_name: "Box vs GenericBox: A Java Showdown"
+local_check: false

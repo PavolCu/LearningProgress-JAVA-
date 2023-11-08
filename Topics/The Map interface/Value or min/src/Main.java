@@ -3,7 +3,6 @@ import java.util.*;
 class Main {
     private static int getOrMin(Map<String, Integer> map, String key) {
         // implement me
-
         int min = Integer.MAX_VALUE;
         if (map.containsKey(key)) {
             return map.get(key);

@@ -5,9 +5,9 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.3/libexec" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -49,7 +49,9 @@
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/General-purpose implementations" />
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Removing duplicates and sorting" />
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Box vs GenericBox  A Java Showdown" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Boxes are not just objects" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Correct the usage of non-generic class" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Initialize an object of a generic class" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Instance without type argument" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Reusing code with Object" />
@@ -66,6 +68,18 @@
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Theory" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments - 2" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Alphabetical order" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Check if an array contains two numbers" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Check if an array is sorted ascending" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Count how many times a number occurs" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Cyclically shifting elements" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Does an array contain N" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The longest ascending sequence" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The maximum product of adjacent elements" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The sum of array elements" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Triples" />
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Fast for ArrayList" />
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Fast for LinkedList" />
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Remove the same" />
@@ -75,6 +89,18 @@
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Theory" />
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/Transfer both lists" />
             <option value="$PROJECT_DIR$/Topics/LinkedList vs. ArrayList/What to think about" />
+            <option value="$PROJECT_DIR$/Topics/Package/A keyword for importing a class" />
+            <option value="$PROJECT_DIR$/Topics/Package/Accessible packages" />
+            <option value="$PROJECT_DIR$/Topics/Package/Binary search" />
+            <option value="$PROJECT_DIR$/Topics/Package/Class hierarchy" />
+            <option value="$PROJECT_DIR$/Topics/Package/Creating instances" />
+            <option value="$PROJECT_DIR$/Topics/Package/Match imports" />
+            <option value="$PROJECT_DIR$/Topics/Package/Package features" />
+            <option value="$PROJECT_DIR$/Topics/Package/Purpose" />
+            <option value="$PROJECT_DIR$/Topics/Package/Short names" />
+            <option value="$PROJECT_DIR$/Topics/Package/Sorting arrays" />
+            <option value="$PROJECT_DIR$/Topics/Package/The default import" />
+            <option value="$PROJECT_DIR$/Topics/Package/Theory" />
             <option value="$PROJECT_DIR$/Topics/Parameterized test/Argument sources" />
             <option value="$PROJECT_DIR$/Topics/Parameterized test/Looking for a bug" />
             <option value="$PROJECT_DIR$/Topics/Parameterized test/Methods as sources" />
@@ -92,6 +118,9 @@
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Sort out the classes" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Statements which returns true" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Who is who" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Deque output" />
+            <option value="$PROJECT_DIR$/Topics/Stack/Getting the max element of a stack" />
             <option value="$PROJECT_DIR$/Topics/Stack/Match methods" />
             <option value="$PROJECT_DIR$/Topics/Stack/Methods" />
             <option value="$PROJECT_DIR$/Topics/Stack/Stack implementation" />
@@ -124,7 +153,11 @@
             <option value="$PROJECT_DIR$/Topics/The List interface/Similarities between lists and arrays" />
             <option value="$PROJECT_DIR$/Topics/The List interface/The longest string in the list" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Duplications" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Getting value by key" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/How many entries" />
             <option value="$PROJECT_DIR$/Topics/The Map interface/Is it collection" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Is it true or not" />
             <option value="$PROJECT_DIR$/Topics/The Map interface/Sum of values" />
             <option value="$PROJECT_DIR$/Topics/The Map interface/Theory" />
             <option value="$PROJECT_DIR$/Topics/The Map interface/Value or min" />

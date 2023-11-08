@@ -1,0 +1,29 @@
+type: matching
+custom_name: Did it fail?
+captions:
+  - PASSED
+  - SKIPPED
+  - FAILED
+options:
+  - The test was disabled for any reason.
+  - The test was successfully passed without any error.
+  - The test failed due to AssertionFailedError or any other uncaught exception.
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12643#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2

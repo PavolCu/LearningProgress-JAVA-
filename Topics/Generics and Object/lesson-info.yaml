@@ -1,0 +1,9 @@
+content:
+  - Theory
+  - Why generics
+  - Boxes are not just objects
+  - Instance without type argument
+  - Reusing code with Object
+  - Initialize an object of a generic class
+  - Box vs GenericBox  A Java Showdown
+  - Correct the usage of non-generic class

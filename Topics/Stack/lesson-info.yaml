@@ -5,3 +5,5 @@ content:
   - Methods
   - Which brackets are balanced
   - Stack implementation
+  - Deque output
+  - Getting the max element of a stack

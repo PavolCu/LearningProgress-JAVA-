@@ -1,7 +1,7 @@
 package tracker;
 
-
-class Student {
+// Třída Student reprezentuje informace o studentovi, včetně jména, příjmení a e-mailové adresy.
+public class Student {
     private final String firstName;
     private final String lastName;
     private final String email;

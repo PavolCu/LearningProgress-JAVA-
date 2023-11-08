@@ -1,8 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LearningProgressTrackerTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2023-10-19T10:51:08" hostname="macbook-pro-uzivatela-cuninka.home" time="0.691">
+<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-03T20:41:02" hostname="macbook-pro-uzivatela-cuninka.home" time="0.918">
   <properties/>
-  <testcase name="start" classname="LearningProgressTrackerTest" time="0.691">
-    <skipped/>
+  <testcase name="start" classname="LearningProgressTrackerTest" time="0.918">
+    <failure message="java.lang.AssertionError: Presentation error in test #23&#10;&#10;The following output contains wrong number of lines (expected to be equal to 1, found 2):&#10;Incorrect points format.&#10;Enter an id and points or 'back' to return:&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&gt; Brandise Hardan address1@mail.com&#10;The student has been added.&#10;&gt; Charlena Girardo address2@mail.com&#10;The student has been added.&#10;&gt; Emelia Annnora address3@mail.com&#10;The student has been added.&#10;&gt; Dolley Panther address4@mail.com&#10;The student has been added.&#10;&gt; Shoshana Utica address5@mail.com&#10;The student has been added.&#10;&gt; Lebbie Alabaster address6@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 6 students have been added.&gt; list&#10;Students:&#10;10000&#10;10001&#10;10002&#10;10003&#10;10004&#10;10005&#10;&gt; add points&#10;Enter an id and points or 'back' to return:&gt; 10000 &#10;Incorrect points format.&#10;Enter an id and points or 'back' to return:" type="java.lang.AssertionError">java.lang.AssertionError: Presentation error in test #23
+
+The following output contains wrong number of lines (expected to be equal to 1, found 2):
+Incorrect points format.
+Enter an id and points or 'back' to return:
+
+Please find below the output of your program during this failed test.
+Note that the '&gt;' character indicates the beginning of the input line.
+
+---
+
+Learning Progress Tracker &gt; &gt; add students
+Enter student credentials or 'back' to return:&gt; Brandise Hardan address1@mail.com
+The student has been added.
+&gt; Charlena Girardo address2@mail.com
+The student has been added.
+&gt; Emelia Annnora address3@mail.com
+The student has been added.
+&gt; Dolley Panther address4@mail.com
+The student has been added.
+&gt; Shoshana Utica address5@mail.com
+The student has been added.
+&gt; Lebbie Alabaster address6@mail.com
+The student has been added.
+&gt; back
+Total 6 students have been added.&gt; list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+&gt; add points
+Enter an id and points or 'back' to return:&gt; 10000 
+Incorrect points format.
+Enter an id and points or 'back' to return:
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:43)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:82)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
   </testcase>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
@@ -55,7 +160,226 @@ Learning Progress Tracker > > :q
 Start test 16?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:> exit
+Incorrect credentials. Please enter at least first name, last name, and email separated by spaces.
+> back
+Total 0 students have been added.> back
+Enter 'exit' to exit the program.> exit
 Bye!
+?[1;31m
+Start test 17?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> John Smith jsmith@hotmail.com
+The student has been added.
+> Anny Doolittle anny.md@mail.edu
+The student has been added.
+> Jean-Claude O'Connor jcda123@google.net
+The student has been added.
+> Mary Emelianenko 125367at@zzz90.z9
+The student has been added.
+> Al Owen u15da125@a1s2f4f7.a1c2c5s4
+The student has been added.
+> Robert Jemison Van de Graaff robertvdgraaff@mit.edu
+The student has been added.
+> Ed Eden a1@a1.a1
+The student has been added.
+> na'me s-u ii@ii.ii
+The student has been added.
+> n'a me su aa-b'b ab@ab.ab
+The student has been added.
+> nA me 1@1.1
+The student has been added.
+> back
+?[1;31m
+Start test 18?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> 
+Incorrect credentials. Please enter at least first name, last name, and email separated by spaces.
+>  	
+Incorrect credentials. Please enter at least first name, last name, and email separated by spaces.
+> name surname
+Incorrect credentials. Please enter at least first name, last name, and email separated by spaces.
+> n surname email@email.xyz
+Incorrect first name.
+> 'name surname email@email.xyz
+Incorrect first name.
+> -name surname email@email.xyz
+Incorrect first name.
+> name- surname email@email.xyz
+Incorrect first name.
+> name' surname email@email.xyz
+Incorrect first name.
+> nam-'e surname email@email.xyz
+Incorrect first name.
+> na'-me surname email@email.xyz
+Incorrect first name.
+> na--me surname email@email.xyz
+Incorrect first name.
+> na''me surname email@email.xyz
+Incorrect first name.
+> námé surname email@email.xyz
+Incorrect first name.
+> name s email@email.xyz
+Incorrect last name.
+> name -surname email@email.xyz
+Incorrect last name.
+> name 'surname email@email.xyz
+Incorrect last name.
+> name surnam''e email@email.xyz
+Incorrect last name.
+> name surn--ame email@email.xyz
+Incorrect last name.
+> name s'-urname email@email.xyz
+Incorrect last name.
+> name su-'rname email@email.xyz
+Incorrect last name.
+> name surname- email@email.xyz
+Incorrect last name.
+> name surname' email@email.xyz
+Incorrect last name.
+> name surnámé email@email.xyz
+Incorrect last name.
+> name surname emailemail.xyz
+Incorrect email.
+> name surname email@emailxyz
+Incorrect email.
+> name surname email@e@mail.xyz
+Incorrect email.
+> back
+?[1;31m
+Start test 19?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> back
+Total 0 students have been added.> list
+No students found.
+?[1;31m
+Start test 20?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> Alexina Belcher address1@mail.com
+The student has been added.
+> Alexina Belcher address1@mail.com
+This email is already taken.
+> Emelia Annnora address2@mail.com
+The student has been added.
+> Emelia Annnora address2@mail.com
+This email is already taken.
+> Lebbie Alabaster address3@mail.com
+The student has been added.
+> Lebbie Alabaster address3@mail.com
+This email is already taken.
+> Nonna Miko address4@mail.com
+The student has been added.
+> Nonna Miko address4@mail.com
+This email is already taken.
+> Elwira Florrie address5@mail.com
+The student has been added.
+> Elwira Florrie address5@mail.com
+This email is already taken.
+> Van Fawnia address6@mail.com
+The student has been added.
+> Van Fawnia address6@mail.com
+This email is already taken.
+> Jermaine Naaman address7@mail.com
+The student has been added.
+> Jermaine Naaman address7@mail.com
+This email is already taken.
+> Olga Rosanne address8@mail.com
+The student has been added.
+> Olga Rosanne address8@mail.com
+This email is already taken.
+> Charlena Girardo address9@mail.com
+The student has been added.
+> Charlena Girardo address9@mail.com
+This email is already taken.
+> Amye Uriisa address10@mail.com
+The student has been added.
+> Amye Uriisa address10@mail.com
+This email is already taken.
+> Aurie Dorisa address11@mail.com
+The student has been added.
+> Aurie Dorisa address11@mail.com
+This email is already taken.
+> Tasha Chem address12@mail.com
+The student has been added.
+> Tasha Chem address12@mail.com
+This email is already taken.
+> back
+?[1;31m
+Start test 21?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> Elysha Quinlan address1@mail.com
+The student has been added.
+> Starlin Griz address2@mail.com
+The student has been added.
+> Alexina Belcher address3@mail.com
+The student has been added.
+> Lebbie Alabaster address4@mail.com
+The student has been added.
+> Jermaine Naaman address5@mail.com
+The student has been added.
+> Hedwig Wally address6@mail.com
+The student has been added.
+> Shoshana Utica address7@mail.com
+The student has been added.
+> Anjanette Uis address8@mail.com
+The student has been added.
+> Elwira Florrie address9@mail.com
+The student has been added.
+> Roxi Hett address10@mail.com
+The student has been added.
+> Dolley Panther address11@mail.com
+The student has been added.
+> Olga Rosanne address12@mail.com
+The student has been added.
+> back
+Total 12 students have been added.> list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+10006
+10007
+10008
+10009
+10010
+10011
+?[1;31m
+Start test 22?[0m
+Learning Progress Tracker > > add points
+Enter an id and points or 'back' to return:> back
+Returning to the main menu.
+> back
+Enter 'exit' to exit the program.> exit
+Bye!
+?[1;31m
+Start test 23?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:> Brandise Hardan address1@mail.com
+The student has been added.
+> Charlena Girardo address2@mail.com
+The student has been added.
+> Emelia Annnora address3@mail.com
+The student has been added.
+> Dolley Panther address4@mail.com
+The student has been added.
+> Shoshana Utica address5@mail.com
+The student has been added.
+> Lebbie Alabaster address6@mail.com
+The student has been added.
+> back
+Total 6 students have been added.> list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+> add points
+Enter an id and points or 'back' to return:> 10000 
+Incorrect points format.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
