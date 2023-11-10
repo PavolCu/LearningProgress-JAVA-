@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25673/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Thu, 09 Nov 2023 15:40:29 UTC"
+update_date: "Fri, 10 Nov 2023 20:49:32 UTC"
 stages:
   - id: 979
     step: 14396
@@ -162,30 +162,30 @@ topics:
       theory_id: 6692
     - title: Referencing subclass objects
       theory_id: 3585
-    - title: The Object class
+    - title: Object class
       theory_id: 3596
     - title: Multiple constructors
       theory_id: 3538
-    - title: The keyword super
+    - title: Keyword "super"
       theory_id: 3588
-    - title: Objects
+    - title: Objects and their properties
       theory_id: 4727
     - title: Static members
       theory_id: 3534
-    - title: Hiding and overriding
+    - title: Method overriding
       theory_id: 3572
     - title: Polymorphism
       theory_id: 3587
-    - title: Interface
+    - title: Declaring functionality with interfaces
       theory_id: 3615
-    - title: Boxing and unboxing
+    - title: Wrapping classes. Boxing
       theory_id: 3595
   1:
     - title: Build tools
       theory_id: 4284
-    - title: Java Archive
+    - title: JAR files
       theory_id: 4311
-    - title: Gradle basics
+    - title: "Gradle: overview"
       theory_id: 5075
     - title: Basic project with Gradle
       theory_id: 5077
@@ -205,9 +205,9 @@ topics:
       theory_id: 12640
     - title: Regexps in Java
       theory_id: 3670
-    - title: Regexps basics
+    - title: Regular expression
       theory_id: 7580
-    - title: Annotations basics
+    - title: Adding annotations
       theory_id: 3622
   2:
     - title: Modulo division
@@ -265,7 +265,7 @@ topics:
       theory_id: 9253
     - title: Comparator
       theory_id: 12966
-    - title: Anonymous classes
+    - title: Anonymous class
       theory_id: 11896
     - title: Default methods
       theory_id: 11354
