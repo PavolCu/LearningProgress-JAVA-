@@ -3,3 +3,7 @@ content:
   - HashSet and object identity
   - HashSet and mutations
   - Duplicate elements in HashSet
+  - "Understanding 'put', 'equals()', and 'hashCode()'"
+  - System.identityHashCode(Object x) vs hashCode()
+  - Mutating HashMap keys
+  - Unique pairs in HashMap

@@ -117,6 +117,7 @@
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Select statements" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Sort out the classes" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Statements which returns true" />
+            <option value="$PROJECT_DIR$/Topics/Runtime type checking/Sum of the areas" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Theory" />
             <option value="$PROJECT_DIR$/Topics/Runtime type checking/Who is who" />
             <option value="$PROJECT_DIR$/Topics/Stack/Deque output" />
@@ -142,6 +143,7 @@
             <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Supported collections" />
             <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Theory" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Backward indexes" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Companies" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Count the value occurrences" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Greek letters" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Implementations" />
@@ -184,6 +186,8 @@
             <option value="$PROJECT_DIR$/Topics/What are collections/Theory" />
             <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Duplicate elements in HashSet" />
             <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Theory" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Understanding 'put', 'equals()', and 'hashCode()'" />
+            <option value="$PROJECT_DIR$/Topics/hashCode() and equals() in Collections/Unique pairs in HashMap" />
             <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/A pair of methods to be overridden" />
             <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Complex numbers" />
             <option value="$PROJECT_DIR$/Topics/hashCode() and equals()/Comprehension" />

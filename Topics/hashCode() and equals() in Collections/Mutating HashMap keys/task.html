@@ -1,0 +1,15 @@
+<h2>Mutating HashMap keys</h2>
+<div class="step-text">
+<p></p>
+<p>What is the size of the map in this code sample?</p>
+<p>Note that it doesn't matter if <code class="language-java">hashCode()</code> or <code class="language-java">equals()</code> are overridden or not. You will get the same result.</p>
+<pre><code class="language-java">    Person james = new Person("James Gosling");
+
+    Map&lt;Person, Integer&gt; map = new HashMap();
+    map.put(james, 1995);
+
+    james.setName("J. Gosling");
+    map.put(new Person("J. Gosling"), 1995);
+
+    System.out.println(map.size());</code></pre>
+</div>

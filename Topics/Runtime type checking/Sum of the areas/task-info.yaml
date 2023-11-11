@@ -1,0 +1,56 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    highlight_level: NONE
+    text: |-
+      class Sum {
+          public static int sumOfAreas(Shape[] array) {
+              // write your code here
+          }
+      }
+      
+      //Don't change the code below
+      class Shape {
+      }
+      
+      class Square extends Shape {
+          private int side;
+      
+          public int getSide() {
+              return side;
+          }
+      
+          public void setSide(int side) {
+              this.side = side;
+          }
+      }
+      
+      class Rectangle extends Shape {
+          private int width;
+          private int height;
+      
+          public int getWidth() {
+              return width;
+          }
+      
+          public void setWidth(int width) {
+              this.width = width;
+          }
+      
+          public int getHeight() {
+              return height;
+          }
+      
+          public void setHeight(int height) {
+              this.height = height;
+          }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/4341#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 11 Nov 2023 13:26:55 UTC"
+record: -1
+submission_language: java17

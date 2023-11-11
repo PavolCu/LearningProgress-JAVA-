@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: '&#x27;put&#x27; method will throw an error because two &#x27;Student&#x27;
+    objects have the same &#x27;id&#x27;.'
+  - text: '&#x27;put&#x27; method will add both &#x27;John Doe&#x27; and &#x27;Jane
+    Doe&#x27; to the map because &#x27;equals()&#x27; and &#x27;hashCode()&#x27; methods
+    are not used in this scenario.'
+  - text: '&#x27;put&#x27; method will replace the &#x27;John Doe&#x27; with &#x27;Jane
+    Doe&#x27; because two &#x27;Student&#x27; objects have the same &#x27;id&#x27;.
+    This is achieved using &#x27;equals()&#x27; and &#x27;hashCode()&#x27; methods.'
+  - text: The size of the map will be two because &#x27;equals()&#x27; and &#x27;hashCode()&#x27;
+      are overridden but not correctly implemented.
+  - text: The map will only contain &#x27;John Doe&#x27; because &#x27;equals()&#x27;
+      and &#x27;hashCode()&#x27; methods prevent duplicate keys.
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/34388#comment
+status: Solved
+record: -1
+local_check: false
