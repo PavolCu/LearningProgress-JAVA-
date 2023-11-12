@@ -49,41 +49,7 @@ public class Main {
                     System.out.print("Total " + studentsAdded + " students have been added.");
                     break;
                 case "add points":
-                    System.out.print("Enter an id and points or 'back' to return:");
-                    while (true) {
-                        String addPointsInput = scanner.nextLine().strip().toLowerCase();
-
-                        if (addPointsInput.equalsIgnoreCase("back")) {
-                            System.out.println("Returning to the main menu.");
-                            break; // Exit the loop and return to the main menu
-                        }
-
-                        String[] tokens = addPointsInput.split("\\s+");
-                        if (tokens.length != 5) {
-                            System.out.println("Incorrect points format.");
-                            continue; // Continue to the next iteration to input again
-                        }
-
-                        try {
-                            int studentId = Integer.parseInt(tokens[0]);
-                            int[] points = new int[4];
-
-                            for (int i = 0; i < 4; i++) {
-                                points[i] = Integer.parseInt(tokens[i + 1]);
-                                if (points[i] < 0) {
-                                    System.out.println("Incorrect points format.");
-                                    break; // Exit the loop when points are invalid
-                                }
-                            }
-
-                            if (points[0] >= 0 && points[1] >= 0 && points[2] >= 0 && points[3] >= 0) {
-                                studentController.handleAddPointsCommand(studentId, points);
-                                // Print "Points updated." here if needed
-                            }
-                        } catch (NumberFormatException e) {
-                            System.out.println("Invalid input. Please enter valid ID and points.");
-                        }
-                    }
+                    studentController.handleAddPointsCommand(scanner);
                     break; // Exit the "add points" case
 
                 case "find":

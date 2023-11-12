@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-03T20:41:02" hostname="macbook-pro-uzivatela-cuninka.home" time="0.918">
+<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-12T19:32:27" hostname="macbook-pro-uzivatela-cuninka.home" time="0.832">
   <properties/>
-  <testcase name="start" classname="LearningProgressTrackerTest" time="0.918">
-    <failure message="java.lang.AssertionError: Presentation error in test #23&#10;&#10;The following output contains wrong number of lines (expected to be equal to 1, found 2):&#10;Incorrect points format.&#10;Enter an id and points or 'back' to return:&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&gt; Brandise Hardan address1@mail.com&#10;The student has been added.&#10;&gt; Charlena Girardo address2@mail.com&#10;The student has been added.&#10;&gt; Emelia Annnora address3@mail.com&#10;The student has been added.&#10;&gt; Dolley Panther address4@mail.com&#10;The student has been added.&#10;&gt; Shoshana Utica address5@mail.com&#10;The student has been added.&#10;&gt; Lebbie Alabaster address6@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 6 students have been added.&gt; list&#10;Students:&#10;10000&#10;10001&#10;10002&#10;10003&#10;10004&#10;10005&#10;&gt; add points&#10;Enter an id and points or 'back' to return:&gt; 10000 &#10;Incorrect points format.&#10;Enter an id and points or 'back' to return:" type="java.lang.AssertionError">java.lang.AssertionError: Presentation error in test #23
+  <testcase name="start" classname="LearningProgressTrackerTest" time="0.832">
+    <failure message="java.lang.AssertionError: Wrong answer in test #23&#10;&#10;Expected output: &quot;Incorrect points format.&quot;, but your output was: Invalid input. Please enter valid ID and points.&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&gt; Dalia Gleeson address1@mail.com&#10;The student has been added.&#10;&gt; Ann Agnella address2@mail.com&#10;The student has been added.&#10;&gt; Barbara-Anne Chicky address3@mail.com&#10;The student has been added.&#10;&gt; Natka Herculie address4@mail.com&#10;The student has been added.&#10;&gt; Olga Rosanne address5@mail.com&#10;The student has been added.&#10;&gt; Beatrisa Jegar address6@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 6 students have been added.&gt; list&#10;Students:&#10;10000&#10;10001&#10;10002&#10;10003&#10;10004&#10;10005&#10;&gt; add points&#10;Enter an id and points or 'back' to return:&gt; 10000 &#10;Incorrect points format.&#10;&gt; 10000 -1 1 1 1&#10;Invalid input. Please enter valid ID and points." type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #23
 
-The following output contains wrong number of lines (expected to be equal to 1, found 2):
-Incorrect points format.
-Enter an id and points or 'back' to return:
+Expected output: &quot;Incorrect points format.&quot;, but your output was: Invalid input. Please enter valid ID and points.
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -14,17 +12,17 @@ Note that the '&gt;' character indicates the beginning of the input line.
 ---
 
 Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:&gt; Brandise Hardan address1@mail.com
+Enter student credentials or 'back' to return:&gt; Dalia Gleeson address1@mail.com
 The student has been added.
-&gt; Charlena Girardo address2@mail.com
+&gt; Ann Agnella address2@mail.com
 The student has been added.
-&gt; Emelia Annnora address3@mail.com
+&gt; Barbara-Anne Chicky address3@mail.com
 The student has been added.
-&gt; Dolley Panther address4@mail.com
+&gt; Natka Herculie address4@mail.com
 The student has been added.
-&gt; Shoshana Utica address5@mail.com
+&gt; Olga Rosanne address5@mail.com
 The student has been added.
-&gt; Lebbie Alabaster address6@mail.com
+&gt; Beatrisa Jegar address6@mail.com
 The student has been added.
 &gt; back
 Total 6 students have been added.&gt; list
@@ -38,7 +36,8 @@ Students:
 &gt; add points
 Enter an id and points or 'back' to return:&gt; 10000 
 Incorrect points format.
-Enter an id and points or 'back' to return:
+&gt; 10000 -1 1 1 1
+Invalid input. Please enter valid ID and points.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -76,19 +75,17 @@ Enter an id and points or 'back' to return:
 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
 	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:82)
 	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:73)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,8 +100,8 @@ Enter an id and points or 'back' to return:
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
@@ -254,81 +251,81 @@ No students found.
 ?[1;31m
 Start test 20?[0m
 Learning Progress Tracker > > add students
-Enter student credentials or 'back' to return:> Alexina Belcher address1@mail.com
+Enter student credentials or 'back' to return:> Carmella Campman address1@mail.com
 The student has been added.
-> Alexina Belcher address1@mail.com
+> Carmella Campman address1@mail.com
 This email is already taken.
-> Emelia Annnora address2@mail.com
+> Jermaine Naaman address2@mail.com
 The student has been added.
-> Emelia Annnora address2@mail.com
+> Jermaine Naaman address2@mail.com
 This email is already taken.
-> Lebbie Alabaster address3@mail.com
+> Toby Bleier address3@mail.com
 The student has been added.
-> Lebbie Alabaster address3@mail.com
+> Toby Bleier address3@mail.com
 This email is already taken.
-> Nonna Miko address4@mail.com
+> Lebbie Alabaster address4@mail.com
 The student has been added.
-> Nonna Miko address4@mail.com
+> Lebbie Alabaster address4@mail.com
 This email is already taken.
-> Elwira Florrie address5@mail.com
+> Annecorinne Ause address5@mail.com
 The student has been added.
-> Elwira Florrie address5@mail.com
+> Annecorinne Ause address5@mail.com
 This email is already taken.
-> Van Fawnia address6@mail.com
+> Karee Antoinetta address6@mail.com
 The student has been added.
-> Van Fawnia address6@mail.com
+> Karee Antoinetta address6@mail.com
 This email is already taken.
-> Jermaine Naaman address7@mail.com
+> Beatrisa Jegar address7@mail.com
 The student has been added.
-> Jermaine Naaman address7@mail.com
+> Beatrisa Jegar address7@mail.com
 This email is already taken.
-> Olga Rosanne address8@mail.com
+> Alexina Belcher address8@mail.com
 The student has been added.
-> Olga Rosanne address8@mail.com
+> Alexina Belcher address8@mail.com
 This email is already taken.
-> Charlena Girardo address9@mail.com
+> Gwenette Kironde address9@mail.com
 The student has been added.
-> Charlena Girardo address9@mail.com
+> Gwenette Kironde address9@mail.com
 This email is already taken.
-> Amye Uriisa address10@mail.com
+> Van Fawnia address10@mail.com
 The student has been added.
-> Amye Uriisa address10@mail.com
+> Van Fawnia address10@mail.com
 This email is already taken.
-> Aurie Dorisa address11@mail.com
+> Shoshana Utica address11@mail.com
 The student has been added.
-> Aurie Dorisa address11@mail.com
+> Shoshana Utica address11@mail.com
 This email is already taken.
-> Tasha Chem address12@mail.com
+> Hedwig Wally address12@mail.com
 The student has been added.
-> Tasha Chem address12@mail.com
+> Hedwig Wally address12@mail.com
 This email is already taken.
 > back
 ?[1;31m
 Start test 21?[0m
 Learning Progress Tracker > > add students
-Enter student credentials or 'back' to return:> Elysha Quinlan address1@mail.com
+Enter student credentials or 'back' to return:> Annecorinne Ause address1@mail.com
 The student has been added.
-> Starlin Griz address2@mail.com
+> Nonna Miko address2@mail.com
 The student has been added.
-> Alexina Belcher address3@mail.com
+> Francesca Francis address3@mail.com
 The student has been added.
-> Lebbie Alabaster address4@mail.com
+> Brandise Hardan address4@mail.com
 The student has been added.
-> Jermaine Naaman address5@mail.com
+> Ann Agnella address5@mail.com
 The student has been added.
-> Hedwig Wally address6@mail.com
+> Charlena Girardo address6@mail.com
 The student has been added.
-> Shoshana Utica address7@mail.com
+> Toby Bleier address7@mail.com
 The student has been added.
-> Anjanette Uis address8@mail.com
+> Trixie Winer address8@mail.com
 The student has been added.
-> Elwira Florrie address9@mail.com
+> Roxi Hett address9@mail.com
 The student has been added.
-> Roxi Hett address10@mail.com
+> Tasha Chem address10@mail.com
 The student has been added.
-> Dolley Panther address11@mail.com
+> Starlin Griz address11@mail.com
 The student has been added.
-> Olga Rosanne address12@mail.com
+> Elysha Quinlan address12@mail.com
 The student has been added.
 > back
 Total 12 students have been added.> list
@@ -349,24 +346,23 @@ Students:
 Start test 22?[0m
 Learning Progress Tracker > > add points
 Enter an id and points or 'back' to return:> back
-Returning to the main menu.
 > back
 Enter 'exit' to exit the program.> exit
 Bye!
 ?[1;31m
 Start test 23?[0m
 Learning Progress Tracker > > add students
-Enter student credentials or 'back' to return:> Brandise Hardan address1@mail.com
+Enter student credentials or 'back' to return:> Dalia Gleeson address1@mail.com
 The student has been added.
-> Charlena Girardo address2@mail.com
+> Ann Agnella address2@mail.com
 The student has been added.
-> Emelia Annnora address3@mail.com
+> Barbara-Anne Chicky address3@mail.com
 The student has been added.
-> Dolley Panther address4@mail.com
+> Natka Herculie address4@mail.com
 The student has been added.
-> Shoshana Utica address5@mail.com
+> Olga Rosanne address5@mail.com
 The student has been added.
-> Lebbie Alabaster address6@mail.com
+> Beatrisa Jegar address6@mail.com
 The student has been added.
 > back
 Total 6 students have been added.> list
@@ -380,6 +376,8 @@ Students:
 > add points
 Enter an id and points or 'back' to return:> 10000 
 Incorrect points format.
+> 10000 -1 1 1 1
+Invalid input. Please enter valid ID and points.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

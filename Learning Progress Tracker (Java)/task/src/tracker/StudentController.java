@@ -91,10 +91,37 @@ public class StudentController {
         return studentProgress.getStudent(id);
     }
 
-    public void handleAddPointsCommand(int id, int[] points) {
-        if (!isValidPoints(points) || points.length != 4) {
-            System.out.print("Incorrect points format.");
-        } else {
+    public void handleAddPointsCommand(Scanner scanner) {
+        System.out.print("Enter an id and points or 'back' to return:");
+        while (true) {
+
+            String input = scanner.nextLine().strip();
+
+            if (input.equalsIgnoreCase("back")) {
+                break;
+            }
+
+            String[] tokens = input.split("\\s+");
+            if (tokens.length != 5) {
+                System.out.println("Incorrect points format.");
+                continue;
+            }
+
+            int id;
+            int[] points = new int[4];
+            try {
+                id = Integer.parseInt(tokens[0]);
+                for (int i = 0; i < 4; i++) {
+                    points[i] = Integer.parseInt(tokens[i + 1]);
+                    if (points[i] < 0) {
+                        throw new NumberFormatException("Negative points are not allowed.");
+                    }
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter valid ID and points.");
+                continue;
+            }
+
             if (studentProgress.isValidStudentId(id)) {
                 int[] currentPoints = studentProgress.getStudentPoints().get(id);
                 for (int i = 0; i < 4; i++) {
@@ -106,6 +133,8 @@ public class StudentController {
             }
         }
     }
+
+
 
 
     private boolean isValidPoints(int[] points) {
