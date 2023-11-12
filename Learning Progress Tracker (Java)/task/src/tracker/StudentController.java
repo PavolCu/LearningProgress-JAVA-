@@ -13,7 +13,7 @@ public class StudentController {
     }
 
     public void displayStudentPoints(int id) {
-        Student student = studentProgress.getStudent(id);
+        Student student = findStudentById(id);
         if (student != null) {
             int[] points = studentProgress.getStudentPoints().get(id);
             System.out.printf("%d points: Java=%d; DSA=%d; Databases=%d; Spring=%d%n", id, points[0], points[1], points[2], points[3]);
@@ -86,10 +86,6 @@ public class StudentController {
             }
         }
     }
-    public Student getStudent(int id) {
-
-        return studentProgress.getStudent(id);
-    }
 
     public void handleAddPointsCommand(Scanner scanner) {
         System.out.print("Enter an id and points or 'back' to return:");
@@ -98,80 +94,87 @@ public class StudentController {
             String input = scanner.nextLine().strip();
 
             if (input.equalsIgnoreCase("back")) {
+                System.out.println("Returning to the main menu.");
                 break;
             }
 
             String[] tokens = input.split("\\s+");
             if (tokens.length != 5) {
                 System.out.println("Incorrect points format.");
-                continue;
+                continue; // Make sure to continue the loop without updating points
             }
 
             int id;
-            int[] points = new int[4];
             try {
                 id = Integer.parseInt(tokens[0]);
-                for (int i = 0; i < 4; i++) {
-                    points[i] = Integer.parseInt(tokens[i + 1]);
-                    if (points[i] < 0) {
-                        throw new NumberFormatException("Negative points are not allowed.");
-                    }
-                }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter valid ID and points.");
+                System.out.println("No student is found for id=" + tokens[0] + ".");
                 continue;
             }
 
+            if (!studentProgress.isValidStudentId(id)) {
+                System.out.println("No student is found for id=" + id + ".");
+                continue;
+            }
+
+            int[] points = new int[4];
+            boolean isValidPoints = true;
+            for (int i = 0; i < 4; i++) {
+                try {
+                    points[i] = Integer.parseInt(tokens[i + 1]);
+                    if (points[i] < 0) {
+                        System.out.println("Incorrect points format.");
+                        isValidPoints = false;
+                        break; // Break the for-loop, not the while-loop
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Incorrect points format.");
+                    isValidPoints = false;
+                    break; // Break the for-loop, not the while-loop
+                }
+            }
+
+            if (!isValidPoints) {
+                continue; // Continue the while-loop without updating points
+            }
             if (studentProgress.isValidStudentId(id)) {
                 int[] currentPoints = studentProgress.getStudentPoints().get(id);
                 for (int i = 0; i < 4; i++) {
                     currentPoints[i] += points[i];
                 }
-                System.out.println("Points updated.");
+                System.out.print("Points updated.");
             } else {
-                System.out.println("No student is found for id=" + id + ".");
+                System.out.print("No student is found for id=" + id + ".");
             }
         }
-    }
-
-
-
-
-    private boolean isValidPoints(int[] points) {
-        for (int point : points) {
-            if (point < 0) {
-                return false;
-            }
-        }
-        return true;
     }
 
     public void handleFindCommand(Scanner scanner) {
-        System.out.print("Enter an id or 'back' to return:> ");
+        System.out.print("Enter an id or 'back' to return: ");
         String idInput = scanner.nextLine().strip();
 
         if (idInput.equalsIgnoreCase("back")) {
-            return; // Exit the method if 'back' is entered
+            return;
         }
 
         int id;
-
-        // Check if the entered input is a valid integer
         try {
             id = Integer.parseInt(idInput);
         } catch (NumberFormatException e) {
-            // Handle the case where the input is not a valid integer
-            System.out.printf("No student is found for id=%s.%n", idInput);
-            return; // Exit the method
+            System.out.println("Invalid ID format.");
+            return;
         }
 
-        Student student = studentProgress.getStudent(id);
-
+        Student student = findStudentById(id);
         if (student != null) {
             displayStudentPoints(id);
         } else {
             System.out.printf("No student is found for id=%d.%n", id);
         }
+    }
+
+    private Student findStudentById(int id) {
+        return studentProgress.getStudents().get(id);
     }
 
 }

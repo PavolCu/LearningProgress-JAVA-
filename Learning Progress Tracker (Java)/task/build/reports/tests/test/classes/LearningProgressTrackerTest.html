@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.832s</div>
+<div class="counter">1.072s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,9 +76,9 @@
 <a name="start"></a>
 <h3 class="failures">start</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Wrong answer in test #23
+<pre>java.lang.AssertionError: Wrong answer in test #26
 
-Expected output: &quot;Incorrect points format.&quot;, but your output was: Invalid input. Please enter valid ID and points.
+Expected output: 10001 points: Java=2; DSA=2; Databases=2; Spring=2, but your output was: Unknown command.
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -86,32 +86,42 @@ Note that the '&gt;' character indicates the beginning of the input line.
 ---
 
 Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:&gt; Dalia Gleeson address1@mail.com
+Enter student credentials or 'back' to return:&gt; Gwenette Anagnos address1@mail.com
 The student has been added.
-&gt; Ann Agnella address2@mail.com
+&gt; Lebbie Alabaster address2@mail.com
 The student has been added.
-&gt; Barbara-Anne Chicky address3@mail.com
+&gt; Gwenette Kironde address3@mail.com
 The student has been added.
-&gt; Natka Herculie address4@mail.com
+&gt; Elysha Quinlan address4@mail.com
 The student has been added.
-&gt; Olga Rosanne address5@mail.com
-The student has been added.
-&gt; Beatrisa Jegar address6@mail.com
+&gt; Roxi Hett address5@mail.com
 The student has been added.
 &gt; back
-Total 6 students have been added.&gt; list
+Total 5 students have been added.&gt; list
 Students:
 10000
 10001
 10002
 10003
 10004
-10005
 &gt; add points
-Enter an id and points or 'back' to return:&gt; 10000 
-Incorrect points format.
-&gt; 10000 -1 1 1 1
-Invalid input. Please enter valid ID and points.
+Enter an id and points or 'back' to return:&gt; 10000 0 0 0 0
+Points updated.&gt; 10000 0 0 0 0
+Points updated.&gt; 10001 1 1 1 1
+Points updated.&gt; 10001 1 1 1 1
+Points updated.&gt; 10002 2 2 2 2
+Points updated.&gt; 10002 2 2 2 2
+Points updated.&gt; 10003 3 3 3 3
+Points updated.&gt; 10003 3 3 3 3
+Points updated.&gt; 10004 4 4 4 4
+Points updated.&gt; 10004 4 4 4 4
+Points updated.&gt; back
+Returning to the main menu.
+&gt; find
+Enter an id or 'back' to return: &gt; 10000
+10000 points: Java=0; DSA=0; Databases=0; Spring=0
+&gt; 10001
+Unknown command.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -194,7 +204,7 @@ Invalid input. Please enter valid ID and points.
 </thead>
 <tr>
 <td class="failures">start</td>
-<td class="failures">0.832s</td>
+<td class="failures">1.072s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -347,81 +357,81 @@ No students found.
 ?[1;31m
 Start test 20?[0m
 Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:&gt; Carmella Campman address1@mail.com
+Enter student credentials or 'back' to return:&gt; Elwira Florrie address1@mail.com
 The student has been added.
-&gt; Carmella Campman address1@mail.com
+&gt; Elwira Florrie address1@mail.com
 This email is already taken.
-&gt; Jermaine Naaman address2@mail.com
+&gt; Gwenette Kironde address2@mail.com
 The student has been added.
-&gt; Jermaine Naaman address2@mail.com
+&gt; Gwenette Kironde address2@mail.com
 This email is already taken.
-&gt; Toby Bleier address3@mail.com
+&gt; Ricki Trovillion address3@mail.com
 The student has been added.
-&gt; Toby Bleier address3@mail.com
+&gt; Ricki Trovillion address3@mail.com
 This email is already taken.
-&gt; Lebbie Alabaster address4@mail.com
+&gt; Aurie Dorisa address4@mail.com
 The student has been added.
-&gt; Lebbie Alabaster address4@mail.com
+&gt; Aurie Dorisa address4@mail.com
 This email is already taken.
-&gt; Annecorinne Ause address5@mail.com
+&gt; Hedwig Wally address5@mail.com
 The student has been added.
-&gt; Annecorinne Ause address5@mail.com
+&gt; Hedwig Wally address5@mail.com
 This email is already taken.
-&gt; Karee Antoinetta address6@mail.com
+&gt; Starlin Griz address6@mail.com
 The student has been added.
-&gt; Karee Antoinetta address6@mail.com
+&gt; Starlin Griz address6@mail.com
 This email is already taken.
-&gt; Beatrisa Jegar address7@mail.com
+&gt; Charlena Girardo address7@mail.com
 The student has been added.
-&gt; Beatrisa Jegar address7@mail.com
+&gt; Charlena Girardo address7@mail.com
 This email is already taken.
-&gt; Alexina Belcher address8@mail.com
+&gt; Natka Herculie address8@mail.com
 The student has been added.
-&gt; Alexina Belcher address8@mail.com
+&gt; Natka Herculie address8@mail.com
 This email is already taken.
-&gt; Gwenette Kironde address9@mail.com
+&gt; Trixie Winer address9@mail.com
 The student has been added.
-&gt; Gwenette Kironde address9@mail.com
+&gt; Trixie Winer address9@mail.com
 This email is already taken.
-&gt; Van Fawnia address10@mail.com
+&gt; Nonna Miko address10@mail.com
 The student has been added.
-&gt; Van Fawnia address10@mail.com
+&gt; Nonna Miko address10@mail.com
 This email is already taken.
-&gt; Shoshana Utica address11@mail.com
+&gt; Elysha Quinlan address11@mail.com
 The student has been added.
-&gt; Shoshana Utica address11@mail.com
+&gt; Elysha Quinlan address11@mail.com
 This email is already taken.
-&gt; Hedwig Wally address12@mail.com
+&gt; Brandise Hardan address12@mail.com
 The student has been added.
-&gt; Hedwig Wally address12@mail.com
+&gt; Brandise Hardan address12@mail.com
 This email is already taken.
 &gt; back
 ?[1;31m
 Start test 21?[0m
 Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:&gt; Annecorinne Ause address1@mail.com
+Enter student credentials or 'back' to return:&gt; Nonna Miko address1@mail.com
 The student has been added.
-&gt; Nonna Miko address2@mail.com
+&gt; Trixie Winer address2@mail.com
 The student has been added.
-&gt; Francesca Francis address3@mail.com
+&gt; Beatrisa Jegar address3@mail.com
 The student has been added.
-&gt; Brandise Hardan address4@mail.com
+&gt; Gwenette Kironde address4@mail.com
 The student has been added.
-&gt; Ann Agnella address5@mail.com
+&gt; Alexina Belcher address5@mail.com
 The student has been added.
-&gt; Charlena Girardo address6@mail.com
+&gt; Annecorinne Ause address6@mail.com
 The student has been added.
-&gt; Toby Bleier address7@mail.com
+&gt; Hedwig Wally address7@mail.com
 The student has been added.
-&gt; Trixie Winer address8@mail.com
+&gt; Aurie Dorisa address8@mail.com
 The student has been added.
-&gt; Roxi Hett address9@mail.com
+&gt; Brandise Hardan address9@mail.com
 The student has been added.
-&gt; Tasha Chem address10@mail.com
+&gt; Starlin Griz address10@mail.com
 The student has been added.
-&gt; Starlin Griz address11@mail.com
+&gt; Roxi Hett address11@mail.com
 The student has been added.
-&gt; Elysha Quinlan address12@mail.com
+&gt; Karee Antoinetta address12@mail.com
 The student has been added.
 &gt; back
 Total 12 students have been added.&gt; list
@@ -442,23 +452,24 @@ Students:
 Start test 22?[0m
 Learning Progress Tracker &gt; &gt; add points
 Enter an id and points or 'back' to return:&gt; back
+Returning to the main menu.
 &gt; back
 Enter 'exit' to exit the program.&gt; exit
 Bye!
 ?[1;31m
 Start test 23?[0m
 Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:&gt; Dalia Gleeson address1@mail.com
+Enter student credentials or 'back' to return:&gt; Toby Bleier address1@mail.com
 The student has been added.
-&gt; Ann Agnella address2@mail.com
+&gt; Annecorinne Ause address2@mail.com
 The student has been added.
-&gt; Barbara-Anne Chicky address3@mail.com
+&gt; Anjanette Uis address3@mail.com
 The student has been added.
-&gt; Natka Herculie address4@mail.com
+&gt; Brandise Hardan address4@mail.com
 The student has been added.
-&gt; Olga Rosanne address5@mail.com
+&gt; Dolley Panther address5@mail.com
 The student has been added.
-&gt; Beatrisa Jegar address6@mail.com
+&gt; Jermaine Naaman address6@mail.com
 The student has been added.
 &gt; back
 Total 6 students have been added.&gt; list
@@ -473,7 +484,91 @@ Students:
 Enter an id and points or 'back' to return:&gt; 10000 
 Incorrect points format.
 &gt; 10000 -1 1 1 1
-Invalid input. Please enter valid ID and points.
+Incorrect points format.
+&gt; 10000 1 1 2 A
+Incorrect points format.
+&gt; 10000 1 1 1
+Incorrect points format.
+&gt; 10000 1 1 1 1 1
+Incorrect points format.
+&gt; imsurethereisnosuchstudentid 1 1 1 1
+No student is found for id=imsurethereisnosuchstudentid.
+?[1;31m
+Start test 24?[0m
+Learning Progress Tracker &gt; &gt; add students
+Enter student credentials or 'back' to return:&gt; Toby Bleier address1@mail.com
+The student has been added.
+&gt; Trixie Winer address2@mail.com
+The student has been added.
+&gt; Nonna Miko address3@mail.com
+The student has been added.
+&gt; Van Fawnia address4@mail.com
+The student has been added.
+&gt; Elysha Quinlan address5@mail.com
+The student has been added.
+&gt; Emelia Annnora address6@mail.com
+The student has been added.
+&gt; back
+Total 6 students have been added.&gt; list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+&gt; add points
+Enter an id and points or 'back' to return:&gt; 10000 9 4 2 7
+Points updated.&gt; 10001 10 2 1 8
+Points updated.&gt; 10002 2 1 3 6
+Points updated.&gt; 10003 5 7 8 1
+Points updated.&gt; 10004 3 9 4 7
+Points updated.&gt; 10005 9 5 6 9
+?[1;31m
+Start test 25?[0m
+Learning Progress Tracker &gt; &gt; find
+Enter an id or 'back' to return: &gt; back
+&gt; back
+Enter 'exit' to exit the program.&gt; exit
+Bye!
+?[1;31m
+Start test 26?[0m
+Learning Progress Tracker &gt; &gt; add students
+Enter student credentials or 'back' to return:&gt; Gwenette Anagnos address1@mail.com
+The student has been added.
+&gt; Lebbie Alabaster address2@mail.com
+The student has been added.
+&gt; Gwenette Kironde address3@mail.com
+The student has been added.
+&gt; Elysha Quinlan address4@mail.com
+The student has been added.
+&gt; Roxi Hett address5@mail.com
+The student has been added.
+&gt; back
+Total 5 students have been added.&gt; list
+Students:
+10000
+10001
+10002
+10003
+10004
+&gt; add points
+Enter an id and points or 'back' to return:&gt; 10000 0 0 0 0
+Points updated.&gt; 10000 0 0 0 0
+Points updated.&gt; 10001 1 1 1 1
+Points updated.&gt; 10001 1 1 1 1
+Points updated.&gt; 10002 2 2 2 2
+Points updated.&gt; 10002 2 2 2 2
+Points updated.&gt; 10003 3 3 3 3
+Points updated.&gt; 10003 3 3 3 3
+Points updated.&gt; 10004 4 4 4 4
+Points updated.&gt; 10004 4 4 4 4
+Points updated.&gt; back
+Returning to the main menu.
+&gt; find
+Enter an id or 'back' to return: &gt; 10000
+10000 points: Java=0; DSA=0; Databases=0; Spring=0
+&gt; 10001
 </pre>
 </span>
 </div>
@@ -485,7 +580,7 @@ Invalid input. Please enter valid ID and points.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 12. 11. 2023, 20:32:28</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 13. 11. 2023, 0:08:05</p>
 </div>
 </div>
 </body>

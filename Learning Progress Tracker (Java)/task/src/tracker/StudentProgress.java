@@ -37,7 +37,4 @@ public class StudentProgress {
         return students.containsKey(id);
     }
 
-    public boolean containsStudent(int id) {
-        return students.containsKey(id);
-    }
 }

@@ -143,81 +143,81 @@
 [1;31m
 Start test 20[0m
 +Learning Progress Tracker > > add students
-SEnter student credentials or 'back' to return:> Carmella Campman address1@mail.com
+QEnter student credentials or 'back' to return:> Elwira Florrie address1@mail.com
 The student has been added.
-%> Carmella Campman address1@mail.com
+#> Elwira Florrie address1@mail.com
 This email is already taken.
-$> Jermaine Naaman address2@mail.com
+%> Gwenette Kironde address2@mail.com
 The student has been added.
-$> Jermaine Naaman address2@mail.com
+%> Gwenette Kironde address2@mail.com
 This email is already taken.
- > Toby Bleier address3@mail.com
+%> Ricki Trovillion address3@mail.com
 The student has been added.
- > Toby Bleier address3@mail.com
+%> Ricki Trovillion address3@mail.com
 This email is already taken.
-%> Lebbie Alabaster address4@mail.com
+!> Aurie Dorisa address4@mail.com
 The student has been added.
-%> Lebbie Alabaster address4@mail.com
+!> Aurie Dorisa address4@mail.com
 This email is already taken.
-%> Annecorinne Ause address5@mail.com
+!> Hedwig Wally address5@mail.com
 The student has been added.
-%> Annecorinne Ause address5@mail.com
+!> Hedwig Wally address5@mail.com
 This email is already taken.
-%> Karee Antoinetta address6@mail.com
+!> Starlin Griz address6@mail.com
 The student has been added.
-%> Karee Antoinetta address6@mail.com
+!> Starlin Griz address6@mail.com
 This email is already taken.
-#> Beatrisa Jegar address7@mail.com
+%> Charlena Girardo address7@mail.com
 The student has been added.
-#> Beatrisa Jegar address7@mail.com
+%> Charlena Girardo address7@mail.com
 This email is already taken.
-$> Alexina Belcher address8@mail.com
+#> Natka Herculie address8@mail.com
 The student has been added.
-$> Alexina Belcher address8@mail.com
+#> Natka Herculie address8@mail.com
 This email is already taken.
-%> Gwenette Kironde address9@mail.com
+!> Trixie Winer address9@mail.com
 The student has been added.
-%> Gwenette Kironde address9@mail.com
+!> Trixie Winer address9@mail.com
 This email is already taken.
- > Van Fawnia address10@mail.com
+ > Nonna Miko address10@mail.com
 The student has been added.
- > Van Fawnia address10@mail.com
+ > Nonna Miko address10@mail.com
 This email is already taken.
-$> Shoshana Utica address11@mail.com
+$> Elysha Quinlan address11@mail.com
 The student has been added.
-$> Shoshana Utica address11@mail.com
+$> Elysha Quinlan address11@mail.com
 This email is already taken.
-"> Hedwig Wally address12@mail.com
+%> Brandise Hardan address12@mail.com
 The student has been added.
-"> Hedwig Wally address12@mail.com
+%> Brandise Hardan address12@mail.com
 This email is already taken.
 > back
 [1;31m
 Start test 21[0m
 +Learning Progress Tracker > > add students
-SEnter student credentials or 'back' to return:> Annecorinne Ause address1@mail.com
+MEnter student credentials or 'back' to return:> Nonna Miko address1@mail.com
 The student has been added.
-> Nonna Miko address2@mail.com
+!> Trixie Winer address2@mail.com
 The student has been added.
-&> Francesca Francis address3@mail.com
+#> Beatrisa Jegar address3@mail.com
 The student has been added.
-$> Brandise Hardan address4@mail.com
+%> Gwenette Kironde address4@mail.com
 The student has been added.
- > Ann Agnella address5@mail.com
+$> Alexina Belcher address5@mail.com
 The student has been added.
-%> Charlena Girardo address6@mail.com
+%> Annecorinne Ause address6@mail.com
 The student has been added.
- > Toby Bleier address7@mail.com
+!> Hedwig Wally address7@mail.com
 The student has been added.
-!> Trixie Winer address8@mail.com
+!> Aurie Dorisa address8@mail.com
 The student has been added.
-> Roxi Hett address9@mail.com
+$> Brandise Hardan address9@mail.com
 The student has been added.
- > Tasha Chem address10@mail.com
+"> Starlin Griz address10@mail.com
 The student has been added.
-"> Starlin Griz address11@mail.com
+> Roxi Hett address11@mail.com
 The student has been added.
-$> Elysha Quinlan address12@mail.com
+&> Karee Antoinetta address12@mail.com
 The student has been added.
 > back
 )Total 12 students have been added.> list
@@ -239,23 +239,24 @@ Students:
 Start test 22[0m
 )Learning Progress Tracker > > add points
 2Enter an id and points or 'back' to return:> back
+Returning to the main menu.
 > back
 (Enter 'exit' to exit the program.> exit
 Bye!
 [1;31m
 Start test 23[0m
 +Learning Progress Tracker > > add students
-PEnter student credentials or 'back' to return:> Dalia Gleeson address1@mail.com
+NEnter student credentials or 'back' to return:> Toby Bleier address1@mail.com
 The student has been added.
- > Ann Agnella address2@mail.com
+%> Annecorinne Ause address2@mail.com
 The student has been added.
-(> Barbara-Anne Chicky address3@mail.com
+"> Anjanette Uis address3@mail.com
 The student has been added.
-#> Natka Herculie address4@mail.com
+$> Brandise Hardan address4@mail.com
 The student has been added.
-!> Olga Rosanne address5@mail.com
+#> Dolley Panther address5@mail.com
 The student has been added.
-#> Beatrisa Jegar address6@mail.com
+$> Jermaine Naaman address6@mail.com
 The student has been added.
 > back
 (Total 6 students have been added.> list
@@ -271,4 +272,90 @@ Students:
 4Enter an id and points or 'back' to return:> 10000 
 Incorrect points format.
 > 10000 -1 1 1 1
-1Invalid input. Please enter valid ID and points.
+Incorrect points format.
+> 10000 1 1 2 A
+Incorrect points format.
+> 10000 1 1 1
+Incorrect points format.
+> 10000 1 1 1 1 1
+Incorrect points format.
+'> imsurethereisnosuchstudentid 1 1 1 1
+9No student is found for id=imsurethereisnosuchstudentid.
+[1;31m
+Start test 24[0m
++Learning Progress Tracker > > add students
+NEnter student credentials or 'back' to return:> Toby Bleier address1@mail.com
+The student has been added.
+!> Trixie Winer address2@mail.com
+The student has been added.
+> Nonna Miko address3@mail.com
+The student has been added.
+> Van Fawnia address4@mail.com
+The student has been added.
+#> Elysha Quinlan address5@mail.com
+The student has been added.
+#> Emelia Annnora address6@mail.com
+The student has been added.
+> back
+(Total 6 students have been added.> list
+
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+> add points
+;Enter an id and points or 'back' to return:> 10000 9 4 2 7
+ Points updated.> 10001 10 2 1 8
+Points updated.> 10002 2 1 3 6
+Points updated.> 10003 5 7 8 1
+Points updated.> 10004 3 9 4 7
+Points updated.> 10005 9 5 6 9
+[1;31m
+Start test 25[0m
+#Learning Progress Tracker > > find
+(Enter an id or 'back' to return: > back
+> back
+(Enter 'exit' to exit the program.> exit
+Bye!
+[1;31m
+Start test 26[0m
++Learning Progress Tracker > > add students
+SEnter student credentials or 'back' to return:> Gwenette Anagnos address1@mail.com
+The student has been added.
+%> Lebbie Alabaster address2@mail.com
+The student has been added.
+%> Gwenette Kironde address3@mail.com
+The student has been added.
+#> Elysha Quinlan address4@mail.com
+The student has been added.
+> Roxi Hett address5@mail.com
+The student has been added.
+> back
+(Total 5 students have been added.> list
+
+Students:
+10000
+10001
+10002
+10003
+10004
+> add points
+;Enter an id and points or 'back' to return:> 10000 0 0 0 0
+Points updated.> 10000 0 0 0 0
+Points updated.> 10001 1 1 1 1
+Points updated.> 10001 1 1 1 1
+Points updated.> 10002 2 2 2 2
+Points updated.> 10002 2 2 2 2
+Points updated.> 10003 3 3 3 3
+Points updated.> 10003 3 3 3 3
+Points updated.> 10004 4 4 4 4
+Points updated.> 10004 4 4 4 4
+Points updated.> back
+Returning to the main menu.
+> find
+)Enter an id or 'back' to return: > 10000
+310000 points: Java=0; DSA=0; Databases=0; Spring=0
+> 10001
