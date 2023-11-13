@@ -3,7 +3,8 @@ package tracker;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StudentProgress {
+
+class StudentProgress {
     private final Map<Integer, Student> students = new HashMap<>();
     private final Map<Integer, int[]> studentPoints = new HashMap<>();
 
@@ -21,20 +22,10 @@ public class StudentProgress {
 
     public void addStudent(int id, Student student) {
         students.put(id, student);
-        studentPoints.put(id, new int[]{0, 0, 0, 0});
     }
 
-    public boolean addPoints(int id, int[] points) {
-        int[] currentPoints = studentPoints.getOrDefault(id, new int[]{0, 0, 0, 0});
-        for (int i = 0; i < 4; i++) {
-            currentPoints[i] += points[i];
-        }
-        studentPoints.put(id, currentPoints);
-        return true;
-    }
-
-    public boolean isValidStudentId(int id) {
-        return students.containsKey(id);
+    public void addPoints(int id, int[] points) {
+        studentPoints.put(id, points);
     }
 
 }

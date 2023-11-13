@@ -4,70 +4,62 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        // Inicializace scanneru pro vstup od uživatele
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Learning Progress Tracker > ");
-
-        // Vytvoření instance StudentProgress a StudentController
         StudentProgress studentProgress = new StudentProgress();
         StudentController studentController = new StudentController(studentProgress);
 
-        // Proměnná pro kontrolu, zda je první vstup "back"
+        System.out.print("Learning Progress Tracker > ");
         boolean isFirstInputBack = true;
 
-        // Hlavní smyčka programu
         label:
         while (true) {
-
-            String mainInput = scanner.nextLine().strip().toLowerCase();
-
-            // Ověření, zda je vstup prázdný
-            if (mainInput.isEmpty()) {
-                System.out.print("No input.");
+            String input = scanner.nextLine().strip().toLowerCase();
+            if (input.isEmpty()) {
+                System.out.println("No input.");
                 continue;
             }
 
-            // Pokud je první vstup "back", vypis zprávu
-            if (isFirstInputBack && mainInput.equals("back")) {
-                System.out.print("Enter 'exit' to exit the program.");
+            if (isFirstInputBack && input.equals("back")) {
                 isFirstInputBack = false;
+                System.out.println("Enter 'exit' to exit the program.");
                 continue;
             }
 
-            // Rozpoznání a zpracování příkazů od uživatele
-            switch (mainInput) {
+            switch (input) {
                 case "back":
-                    isFirstInputBack = true;
+
                     break;
                 case "list":
                     studentController.listStudentsAndPoints();
                     break;
                 case "add students":
-                    // Zpracování příkazu pro přidání studentů
                     int studentsAdded = studentController.handleAddStudentsCommand(scanner);
-                    System.out.print("Total " + studentsAdded + " students have been added.");
+                    System.out.println("Total " + studentsAdded + " students have been added.");
                     break;
                 case "add points":
                     studentController.handleAddPointsCommand(scanner);
-                    break; // Exit the "add points" case
-
+                    break;
                 case "find":
-                    studentController.handleFindCommand(scanner);
-                    break ; // Exit the "find" case
-
+                    System.out.print("Enter an id or 'back' to return:\n> ");
+                    String idInput = scanner.nextLine().strip();
+                    if (idInput.equals("back")) {
+                        continue;
+                    }
+                    try {
+                        int id = Integer.parseInt(idInput);
+                        studentController.findStudent(id);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a valid id.");
+                    }
+                    break;
                 case "exit":
-                    // Ukončení programu
                     System.out.println("Bye!");
                     break label;
                 default:
-                    // Zpráva pro neznámý příkaz
-                    System.out.print("Unknown command.");
+                    System.out.println("Unknown command.");
                     break;
             }
         }
-
-        // Uzavření scanneru
         scanner.close();
     }
 }

@@ -1,35 +1,24 @@
 package tracker;
 
-import java.util.regex.Pattern;
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.regex.Pattern;
 
-public class StudentController {
+class StudentController {
     private final StudentProgress studentProgress;
+    private int totalStudents;
 
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
-    }
-
-    public void displayStudentPoints(int id) {
-        Student student = findStudentById(id);
-        if (student != null) {
-            int[] points = studentProgress.getStudentPoints().get(id);
-            System.out.printf("%d points: Java=%d; DSA=%d; Databases=%d; Spring=%d%n", id, points[0], points[1], points[2], points[3]);
-        } else {
-            System.out.printf("No student is found for id=%d.%n", id);
-        }
+        this.totalStudents = studentProgress.getStudents().size();// Initialize totalStudents
     }
 
     public void listStudentsAndPoints() {
-        if (studentProgress.getStudents().isEmpty()) {
-            System.out.println("No students found.");
-        } else {
+        for (Integer id : studentProgress.getStudents().keySet()) {
+            Student student = studentProgress.getStudent(id);
             System.out.println("Students:");
-            for (Integer id : studentProgress.getStudents().keySet()) {
-                System.out.println(id);
-            }
+            System.out.print(id + ". " + student.getFirstName() + " " + student.getLastName() +
+                    ": (No points available)");
         }
     }
 
@@ -43,26 +32,26 @@ public class StudentController {
     }
 
     public int handleAddStudentsCommand(Scanner scanner) {
+        System.out.println("Enter student credentials or 'back' to return:");
         int addedStudents = 0;
-        System.out.print("Enter student credentials or 'back' to return:");
 
         while (true) {
-            String studentInput = scanner.nextLine().strip();
+            String studentInput = scanner.nextLine().strip().toLowerCase();
+
 
             if (studentInput.equals("back")) {
                 return addedStudents;
             }
 
             String[] parts = studentInput.split(" ");
-
             if (parts.length < 3) {
-                System.out.println("Incorrect credentials. Please enter at least first name, last name, and email separated by spaces.");
+                System.out.println("Incorrect credentials.");
                 continue;
             }
 
-            String firstName = parts[0].trim();
-            String lastName = parts[1].trim();
-            String email = parts[parts.length - 1].trim();
+            String firstName = parts[0];
+            String lastName = String.join(" ", Arrays.copyOfRange(parts, 1, parts.length - 1));
+            String email = parts[parts.length - 1];
 
             if (!isValidName(firstName)) {
                 System.out.println("Incorrect first name.");
@@ -78,7 +67,7 @@ public class StudentController {
                     System.out.println("This email is already taken.");
                 } else {
                     Student student = new Student(firstName, lastName, email);
-                    int studentId = studentProgress.getStudents().size() + 10000;
+                    int studentId = studentProgress.getStudents().size() + 10000; // Start id from 10000
                     studentProgress.addStudent(studentId, student);
                     System.out.println("The student has been added.");
                     addedStudents++;
@@ -88,96 +77,91 @@ public class StudentController {
     }
 
     public void handleAddPointsCommand(Scanner scanner) {
-        System.out.print("Enter an id and points or 'back' to return:");
-        while (true) {
+        System.out.print("Enter an id and points or 'back' to return:\n> ");
+        String input = scanner.nextLine().strip().toLowerCase();
 
-            String input = scanner.nextLine().strip();
+        if (input.equals("back")) {
+            return;
+        }
 
-            if (input.equalsIgnoreCase("back")) {
-                System.out.println("Returning to the main menu.");
-                break;
-            }
+        String[] inputParts = input.split(" ");
+        if (inputParts.length != 5) {
+            System.out.println("Incorrect points format.");
+            return;
+        }
 
-            String[] tokens = input.split("\\s+");
-            if (tokens.length != 5) {
-                System.out.println("Incorrect points format.");
-                continue; // Make sure to continue the loop without updating points
-            }
-
-            int id;
-            try {
-                id = Integer.parseInt(tokens[0]);
-            } catch (NumberFormatException e) {
-                System.out.println("No student is found for id=" + tokens[0] + ".");
-                continue;
-            }
-
-            if (!studentProgress.isValidStudentId(id)) {
-                System.out.println("No student is found for id=" + id + ".");
-                continue;
-            }
-
+        try {
+            int id = Integer.parseInt(inputParts[0]);
             int[] points = new int[4];
-            boolean isValidPoints = true;
+            boolean validPoints = true;
+
             for (int i = 0; i < 4; i++) {
                 try {
-                    points[i] = Integer.parseInt(tokens[i + 1]);
+                    points[i] = Integer.parseInt(inputParts[i + 1]);
                     if (points[i] < 0) {
-                        System.out.println("Incorrect points format.");
-                        isValidPoints = false;
-                        break; // Break the for-loop, not the while-loop
+                        validPoints = false;
+                        break;
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Incorrect points format.");
-                    isValidPoints = false;
-                    break; // Break the for-loop, not the while-loop
+                    validPoints = false;
+                    break;
                 }
             }
 
-            if (!isValidPoints) {
-                continue; // Continue the while-loop without updating points
-            }
-            if (studentProgress.isValidStudentId(id)) {
-                int[] currentPoints = studentProgress.getStudentPoints().get(id);
-                for (int i = 0; i < 4; i++) {
-                    currentPoints[i] += points[i];
+            if (validPoints) {
+                boolean pointsUpdated = addPoints(id, points);
+                if (pointsUpdated) {
+                    System.out.println("Points updated.");
                 }
-                System.out.print("Points updated.");
             } else {
-                System.out.print("No student is found for id=" + id + ".");
+                System.out.println("Incorrect points format.");
             }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter numbers for id and points.");
         }
     }
 
-    public void handleFindCommand(Scanner scanner) {
-        System.out.print("Enter an id or 'back' to return: ");
-        while (true) {
-            // Read the input (id
-            String idInput = scanner.nextLine().strip();
+    public boolean addPoints(int id, int[] points) {
+        Student student = studentProgress.getStudent(id);
+        if (student == null) {
+            System.out.printf("No student is found for id=%d.%n", id);
+            return false;
+        }
 
-            if (idInput.equalsIgnoreCase("back")) {
-                return;
+        // Overiť, či je pole bodov platné (nie je záporné)
+        boolean validPoints = Arrays.stream(points).allMatch(point -> point >= 0);
+
+        if (validPoints && points.length == 4) {
+            int[] existingPoints = studentProgress.getStudentPoints().getOrDefault(id, new int[4]);
+
+            // Pripočítať nové body k existujúcim bodom
+            for (int i = 0; i < 4; i++) {
+                existingPoints[i] += points[i];
             }
 
-            int id;
-            try {
-                id = Integer.parseInt(idInput);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid ID format.");
-                continue;
-            }
-
-            Student student = findStudentById(id);
-            if (student != null) {
-                displayStudentPoints(id);
-            } else {
-                System.out.printf("No student is found for id=%d.%n", id);
-            }
+            studentProgress.addPoints(id, existingPoints);
+            return true;
+        } else {
+            System.out.println("Incorrect points format.");
+            return false;
         }
     }
 
-        private Student findStudentById ( int id){
-            return studentProgress.getStudents().get(id);
+    private boolean isValidPoints(int[] points) {
+        for (int point : points) {
+            if (point < 0) {
+                return false;
+            }
         }
-
+        return true;
     }
+    public void findStudent(int id) {
+        Student student = studentProgress.getStudent(id);
+        if (student != null) {
+            int[] points = studentProgress.getStudentPoints().get(id);
+            System.out.println(id + " points: Java=" + points[0] + "; DSA=" + points[1] + "; Databases=" + points[2] + "; Spring=" + points[3]);
+        } else {
+            System.out.println("No student is found for id=" + id + ".");
+        }
+    }
+}
