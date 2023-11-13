@@ -44,7 +44,7 @@ public class StudentController {
 
     public int handleAddStudentsCommand(Scanner scanner) {
         int addedStudents = 0;
-       System.out.print("Enter student credentials or 'back' to return:");
+        System.out.print("Enter student credentials or 'back' to return:");
 
         while (true) {
             String studentInput = scanner.nextLine().strip();
@@ -151,30 +151,33 @@ public class StudentController {
 
     public void handleFindCommand(Scanner scanner) {
         System.out.print("Enter an id or 'back' to return: ");
-        String idInput = scanner.nextLine().strip();
+        while (true) {
+            // Read the input (id
+            String idInput = scanner.nextLine().strip();
 
-        if (idInput.equalsIgnoreCase("back")) {
-            return;
-        }
+            if (idInput.equalsIgnoreCase("back")) {
+                return;
+            }
 
-        int id;
-        try {
-            id = Integer.parseInt(idInput);
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid ID format.");
-            return;
-        }
+            int id;
+            try {
+                id = Integer.parseInt(idInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid ID format.");
+                continue;
+            }
 
-        Student student = findStudentById(id);
-        if (student != null) {
-            displayStudentPoints(id);
-        } else {
-            System.out.printf("No student is found for id=%d.%n", id);
+            Student student = findStudentById(id);
+            if (student != null) {
+                displayStudentPoints(id);
+            } else {
+                System.out.printf("No student is found for id=%d.%n", id);
+            }
         }
     }
 
-    private Student findStudentById(int id) {
-        return studentProgress.getStudents().get(id);
-    }
+        private Student findStudentById ( int id){
+            return studentProgress.getStudents().get(id);
+        }
 
-}
+    }
