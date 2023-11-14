@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: The getDescription() method in the Truck class will not compile because it
+      overrides a default method.
+  - text: The Truck class has overridden the default method from the Vehicle interface.
+  - text: The default method in the Vehicle interface is not visible to the Truck class.
+  - text: The getDescription() method in the Truck class will print &quot;Vehicle&quot;.
+  - text: The getDescription() method can be removed from the Truck class and it will
+      use the one from the Vehicle interface.
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30988#comment
+status: Solved
+record: -1
+local_check: false

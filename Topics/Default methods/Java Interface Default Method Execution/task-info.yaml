@@ -1,0 +1,27 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "The method call on objA will execute the overridden method in ClassA, and\
+    \ the method call on objB will execute the overridden method in ClassB."
+  - text: Both calls will execute the code defined in the interface&#x27;s default method.
+  - text: "The method call on objA will execute the code defined in the interface&#x27;s\
+    \ default method, and the method call on objB will execute the overridden method\
+    \ in ClassB."
+  - text: Both calls will result in a compilation error because default methods cannot
+      be called on an object of the implementing class.
+files:
+  - name: src/Task.java
+    visible: true
+    text: |
+      // You can experiment here, it won’t be checked
+      
+      public class Task {
+        public static void main(String[] args) {
+          // put your code here
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31722#comment
+status: Solved
+record: -1
+local_check: false
