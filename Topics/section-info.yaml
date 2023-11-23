@@ -25,3 +25,4 @@ content:
   - Default methods
   - Lambda expressions
   - Method references
+  - Functional interfaces

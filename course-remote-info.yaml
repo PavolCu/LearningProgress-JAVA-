@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25673/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Thu, 23 Nov 2023 08:28:53 UTC"
+update_date: "Thu, 23 Nov 2023 18:24:37 UTC"
 stages:
   - id: 979
     step: 14396
@@ -42,6 +42,8 @@ topics:
       theory_id: 8977
     - title: Parameters and options
       theory_id: 9746
+    - title: Immutability
+      theory_id: 7929
     - title: Pseudocode
       theory_id: 15090
     - title: Pseudocode basics
@@ -50,14 +52,12 @@ topics:
       theory_id: 20922
     - title: Fixed-size array
       theory_id: 20078
-    - title: Immutability
-      theory_id: 7929
     - title: Dynamic array
       theory_id: 5357
     - title: Computer programming
       theory_id: 8739
     - title: Introduction to Java
-      theory_id: 3500
+      theory_id: 38627
     - title: "Basic literals: numbers, strings and characters"
       theory_id: 3522
     - title: Writing first program
@@ -116,8 +116,6 @@ topics:
       theory_id: 3511
     - title: Arrays as parameters
       theory_id: 3594
-    - title: Iterating over arrays
-      theory_id: 3602
     - title: Characters
       theory_id: 3514
     - title: String
@@ -130,6 +128,8 @@ topics:
       theory_id: 3497
     - title: NullPointerException
       theory_id: 1945
+    - title: Iterating over arrays
+      theory_id: 3602
     - title: What is object-oriented programming
       theory_id: 3614
     - title: Grouping classes with packages
@@ -162,12 +162,12 @@ topics:
       theory_id: 6692
     - title: Referencing subclass objects
       theory_id: 3585
-    - title: Object class
-      theory_id: 3596
     - title: Multiple constructors
       theory_id: 3538
     - title: Keyword "super"
       theory_id: 3588
+    - title: Object class
+      theory_id: 3596
     - title: Objects and their properties
       theory_id: 4727
     - title: Static members
@@ -240,16 +240,16 @@ topics:
       theory_id: 3575
     - title: LinkedList vs. ArrayList
       theory_id: 12391
-    - title: Stack
-      theory_id: 20203
     - title: The Map interface
       theory_id: 3558
     - title: HashMap
       theory_id: 12379
-    - title: Choosing the right collection
-      theory_id: 12854
     - title: hashCode() and equals() in Collections
       theory_id: 19587
+    - title: Stack
+      theory_id: 20203
+    - title: Choosing the right collection
+      theory_id: 12854
     - title: Runtime type checking
       theory_id: 3571
     - title: hashCode() and equals()
