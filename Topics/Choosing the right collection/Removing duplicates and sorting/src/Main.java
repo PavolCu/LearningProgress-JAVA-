@@ -5,7 +5,6 @@ class Main {
         Scanner scanner = new Scanner(System.in);
 
         int size = scanner.nextInt();
-
         Set<String> uniqueStrings = new HashSet<>();
 
         // Read strings and add them to the set

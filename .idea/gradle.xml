@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$/Topics/Anonymous class/Exploring Java's Anonymous Classes" />
             <option value="$PROJECT_DIR$/Topics/Anonymous class/Find a correct syntax" />
             <option value="$PROJECT_DIR$/Topics/Anonymous class/Single method" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous class/String reverser" />
             <option value="$PROJECT_DIR$/Topics/Anonymous class/Theory" />
             <option value="$PROJECT_DIR$/Topics/Anonymous class/Tricky Java  Final in Anonymous Classes" />
             <option value="$PROJECT_DIR$/Topics/Anonymous class/What about context" />
@@ -56,6 +57,7 @@
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Even numbers go first" />
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/General-purpose implementations" />
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Removing duplicates and sorting" />
+            <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Substitution cipher" />
             <option value="$PROJECT_DIR$/Topics/Choosing the right collection/Theory" />
             <option value="$PROJECT_DIR$/Topics/Default methods/Add new default method" />
             <option value="$PROJECT_DIR$/Topics/Default methods/Default method's body" />
@@ -76,9 +78,12 @@
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Theory" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Why generics" />
             <option value="$PROJECT_DIR$/Topics/HashMap/Countries and capitals" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/How many buckets" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/Remove long names" />
             <option value="$PROJECT_DIR$/Topics/HashMap/The same letter" />
             <option value="$PROJECT_DIR$/Topics/HashMap/The same pairs" />
             <option value="$PROJECT_DIR$/Topics/HashMap/Theory" />
+            <option value="$PROJECT_DIR$/Topics/HashMap/When to use" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Correct the program" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Declaring generic classes - 2" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Generic parameter values" />
