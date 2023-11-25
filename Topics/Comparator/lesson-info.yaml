@@ -2,3 +2,6 @@ content:
   - Theory
   - Sort users
   - Comparator vs Comparable
+  - Non-abstract methods
+  - Comparing values
+  - Reverse sorting
