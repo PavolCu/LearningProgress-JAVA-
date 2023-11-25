@@ -10,6 +10,19 @@ public class CourseStatistics {
         this.studentProgress = studentProgress;
     }
 
+    public String calculateMostPopularCourse() {
+        Map<String, Integer> courseCount = new HashMap<>();
+        for (int[] points : studentProgress.getStudentPoints().values()) {
+            for (int i = 0; i < points.length; i++) {
+                if (points[i] > 0) {
+                    String courseName = getCourseIndex(i);
+                    courseCount.put(courseName, courseCount.getOrDefault(courseName, 0) + 1);
+                }
+            }
+        }
+        return courseCount.isEmpty() ? "n/a" : Collections.max(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+    }
+
     public String getCourseIndex(int index) {
         switch (index) {
             case 0:
@@ -91,18 +104,7 @@ public class CourseStatistics {
         return Collections.min(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
-    public String calculateMostPopularCourse() {
-        Map<String, Integer> courseCount = new HashMap<>();
-        for (int[] points : studentProgress.getStudentPoints().values()) {
-            for (int i = 0; i < points.length; i++) {
-                if (points[i] > 0) {
-                    String courseName = getCourseIndex(i);
-                    courseCount.put(courseName, courseCount.getOrDefault(courseName, 0) + 1);
-                }
-            }
-        }
-        return Collections.max(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
-    }
+
 
 
 
