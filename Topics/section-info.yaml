@@ -27,3 +27,4 @@ content:
   - Method references
   - Functional interfaces
   - Comparable
+  - Comparator
