@@ -21,7 +21,11 @@ class UserComparator implements Comparator<User> {
 
     @Override
     public int compare(User user1, User user2) {
-        // your code here
+        if (user1.getName().compareTo(user2.getName()) > 0) {
+            return 1;
+        } else if (user1.getName().compareTo(user2.getName()) < 0) {
+            return -1;
+        }
         return 0;
     }
 }
