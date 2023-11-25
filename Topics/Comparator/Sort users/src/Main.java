@@ -21,11 +21,7 @@ class UserComparator implements Comparator<User> {
 
     @Override
     public int compare(User user1, User user2) {
-        if (user1.getName().compareTo(user2.getName()) > 0) {
-            return 1;
-        } else if (user1.getName().compareTo(user2.getName()) < 0) {
-            return -1;
-        }
-        return 0;
+        // your code here
+        return Comparator.comparing(User::getName).compare(user1, user2);
     }
 }
