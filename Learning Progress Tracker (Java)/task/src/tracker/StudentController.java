@@ -46,7 +46,7 @@ class StudentController {
             int points1 = getTotalPointsForStudent(s1, courseName);
             int points2 = getTotalPointsForStudent(s2, courseName);
             return Integer.compare(points2, points1);
-        }).thenComparing(Student::getId);
+        }).thenComparing(StudentProgress::getStudent);
 
         for (Student student : students) {
             int points = getTotalPointsForStudent(student, courseName);
