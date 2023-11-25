@@ -50,7 +50,7 @@ public class CourseStatistics {
         for (String courseName : courseAveragePoints.keySet()) {
             courseAveragePoints.put(courseName, courseAveragePoints.get(courseName) / studentProgress.getStudents().size());
         }
-        return Collections.min(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return courseAveragePoints.isEmpty() ? "n/a" : Collections.min(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public String calculateEasiestCourse() {
@@ -65,7 +65,7 @@ public class CourseStatistics {
         for (String courseName : courseAveragePoints.keySet()) {
             courseAveragePoints.put(courseName, courseAveragePoints.get(courseName) / studentProgress.getStudents().size());
         }
-        return Collections.max(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return courseAveragePoints.isEmpty() ? "n/a" : Collections.max(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public String calculateLowestActivityCourse() {
@@ -77,7 +77,7 @@ public class CourseStatistics {
                 coursePoints.put(courseName, coursePoints.getOrDefault(courseName, 0) + points[i]);
             }
         }
-        return Collections.min(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return coursePoints.isEmpty() ? "n/a" : Collections.min(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public String calculateHighestActivityCourse() {
@@ -89,7 +89,7 @@ public class CourseStatistics {
                 coursePoints.put(courseName, coursePoints.getOrDefault(courseName, 0) + points[i]);
             }
         }
-        return Collections.max(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return coursePoints.isEmpty() ? "n/a" : Collections.max(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
     public String calculateLeastPopularCourse() {
         Map<String, Integer> courseCount = new HashMap<>();
@@ -101,12 +101,6 @@ public class CourseStatistics {
                 }
             }
         }
-        return Collections.min(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return courseCount.isEmpty() ? "n/a" : Collections.min(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
-
-
-
-
-
-
 }

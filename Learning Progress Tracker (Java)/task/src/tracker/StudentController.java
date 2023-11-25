@@ -20,7 +20,6 @@ class StudentController {
 
     public void handleStatisticsCommand(Scanner scanner) {
         CourseStatistics courseStatistics = new CourseStatistics(studentProgress);
-        System.out.print("Type the name of a course to see details or 'back' to quit");
         //Calculate statistics for each course
         String mostPopular = courseStatistics.calculateMostPopularCourse();
         String leastPopular = courseStatistics.calculateLeastPopularCourse();
@@ -30,12 +29,13 @@ class StudentController {
         String hardestCourse = courseStatistics.calculateHardestCourse();
 
         //print statistics
-        System.out.println("Most popular course: " + mostPopular != null ? mostPopular : "n/a");
-        System.out.println("Least popular course: " + leastPopular != null ? leastPopular : "n/a");
-        System.out.println("Highest activity: " + highestActivity != null ? highestActivity : "n/a");
-        System.out.println("Lowest activity: " + lowestActivity != null ? lowestActivity : "n/a");
-        System.out.println("Easiest course: " + easiestCourse != null ? easiestCourse : "n/a");
-        System.out.println("Hardest course: " + hardestCourse != null ? hardestCourse : "n/a");
+        System.out.println("Most popular: " + (mostPopular != null ? mostPopular : "n/a"));
+        System.out.println("Least popular: " + (leastPopular != null ? leastPopular : "n/a"));
+        System.out.println("Highest activity: " + (highestActivity != null ? highestActivity : "n/a"));
+        System.out.println("Lowest activity: " + (lowestActivity != null ? lowestActivity : "n/a"));
+        System.out.println("Easiest course: " + (easiestCourse != null ? easiestCourse : "n/a"));
+        System.out.println("Hardest course: " + (hardestCourse != null ? hardestCourse : "n/a"));
+        System.out.println("Type the name of a course to see details or 'back' to quit");
 
         while (true) {
             String courseName = scanner.nextLine().strip().toLowerCase();
@@ -46,7 +46,8 @@ class StudentController {
             if (isValidCourseName(courseName)) {
                 printCourseStatistics(courseName);
             }else  {
-                System.out.println("Unknown course");
+                System.out.println("Unknown course.");
+
             }
         }
     }
