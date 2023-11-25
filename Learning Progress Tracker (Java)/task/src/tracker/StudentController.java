@@ -19,7 +19,23 @@ class StudentController {
     }
 
     public void handleStatisticsCommand(Scanner scanner) {
+        CourseStatistics courseStatistics = new CourseStatistics(studentProgress);
         System.out.print("Type the name of a course to see details or 'back' to quit");
+        //Calculate statistics for each course
+        String mostPopular = courseStatistics.calculateMostPopularCourse();
+        String leastPopular = courseStatistics.calculateLeastPopularCourse();
+        String highestActivity = courseStatistics.calculateHighestActivityCourse();
+        String lowestActivity = courseStatistics.calculateLowestActivityCourse();
+        String easiestCourse = courseStatistics.calculateEasiesCourse();
+        String hardestCourse = courseStatistics.calculateHardestCourse();
+
+        //print statistics
+        System.out.println("Most popular course: " + mostPopular != null ? mostPopular : "n/a");
+        System.out.println("Least popular course: " + leastPopular != null ? leastPopular : "n/a");
+        System.out.println("Highest activity: " + highestActivity != null ? highestActivity : "n/a");
+        System.out.println("Lowest activity: " + lowestActivity != null ? lowestActivity : "n/a");
+        System.out.println("Easiest course: " + easiestCourse != null ? easiestCourse : "n/a");
+        System.out.println("Hardest course: " + hardestCourse != null ? hardestCourse : "n/a");
 
         while (true) {
             String courseName = scanner.nextLine().strip().toLowerCase();
