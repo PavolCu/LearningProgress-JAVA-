@@ -55,6 +55,9 @@ public class Main {
                 case "exit":
                     System.out.println("Bye!");
                     break label;
+                case "statistics":
+                    studentController.handleStatisticsCommand(scanner);
+                    break;
                 default:
                     System.out.println("Unknown command.");
                     break;

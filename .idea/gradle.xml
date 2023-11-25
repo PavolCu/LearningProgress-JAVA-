@@ -71,6 +71,12 @@
             <option value="$PROJECT_DIR$/Topics/Comparable/Theory" />
             <option value="$PROJECT_DIR$/Topics/Comparable/Value class" />
             <option value="$PROJECT_DIR$/Topics/Comparable/compareTo" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Comparator vs Comparable" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Comparing values" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Non-abstract methods" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Reverse sorting" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Sort users" />
+            <option value="$PROJECT_DIR$/Topics/Comparator/Theory" />
             <option value="$PROJECT_DIR$/Topics/Default methods/Add new default method" />
             <option value="$PROJECT_DIR$/Topics/Default methods/Default method's body" />
             <option value="$PROJECT_DIR$/Topics/Default methods/Diamond problem" />

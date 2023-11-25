@@ -1,8 +1,12 @@
 package tracker;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+
 
 class StudentController {
     private final StudentProgress studentProgress;
@@ -11,6 +15,98 @@ class StudentController {
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
         this.totalStudents = studentProgress.getStudents().size();// Initialize totalStudents
+    }
+
+    public void handleStatisticsCommand(Scanner scanner) {
+        System.out.print("Type the name of a course to see details or 'back' to quit");
+
+        while (true) {
+            String courseName = scanner.nextLine().strip().toLowerCase();
+            if (courseName.equals("back")) {
+                return;
+            }
+
+            if (isValidCourseName(courseName)) {
+                printCourseStatistics(courseName);
+            }else  {
+                System.out.println("Unknown course");
+            }
+        }
+    }
+
+    private boolean isValidCourseName(String courseName) {
+        return courseName.equals("java") || courseName.equals("dsa") || courseName.equals("databases") || courseName.equals("spring");
+    }
+
+    private void printCourseStatistics(String courseName) {
+        System.out.println(courseName);
+        System.out.println("ID | Points | Completion");
+        List<Student> students = getStudentsForCourse(courseName);
+        students.sort((s1, s2) -> {
+            int points1 = getTotalPointsForStudent(s1, courseName);
+            int points2 = getTotalPointsForStudent(s2, courseName);
+            return Integer.compare(points2, points1);
+        }).thenComparing(Student::getId);
+
+        for (Student student : students) {
+            int points = getTotalPointsForStudent(student, courseName);
+            double completion = getCompletionPercentage(student, courseName);
+            System.out.printf("%d | %d | %.1f%%\n", student.getId(), points, completion);
+        }
+    }
+
+    private List<Student> getStudentForCourse(String courseName) {
+        int courseIndex = getCourseIndex(courseName);
+        return studentProgress.getStudents().values().stream()
+                .filter(student -> studentProgress.getStudentPoints().containsKey(student.getId()))
+                .filter(student -> studentProgress.getStudentPoints().get(student.getId())[courseIndex] > 0)
+                .collect(Collectors.toList());
+    }
+
+    private int getTotalPointsForStudent(Student student, String courseName) {
+        int courseIndex = getCourseIndex(courseName);
+        return studentProgress.getStudentPoints().get(student.getId())[courseIndex];
+    }
+
+    private double getCompletionPercentage(Student student, String courseName) {
+        int totalPoints = getTotalPointsForStudent(student,courseName);
+        return (double) totalPoints / getMaxPointsForCourse(courseName) * 100; // MAX_POINTS_PER_COURSE is the maximum points a student can get for a course
+    }
+
+    private int getCourseIndex(String courseName) {
+        switch (courseName) {
+            case "java":
+                return 0;
+            case "dsa":
+                return 1;
+            case "databases":
+                return 2;
+            case "spring":
+                return 3;
+            default:
+                throw new  IllegalArgumentException("Invalid coursename: " + courseName);
+        }
+    }
+    private int getMaxPointsForCourse(String courseName) {
+        switch (courseName) {
+            case "java":
+                return 600;
+            case "dsa":
+                return 400;
+            case "databases":
+                return 480;
+            case "spring":
+                return 550;
+            default:
+                throw new  IllegalArgumentException("Invalid coursename: " + courseName);
+        }
+    }
+
+    private List<Student> getStudentsForCourse(String courseName) {
+        return studentProgress.getStudents().values().stream()
+                .filter(student -> studentProgress.getStudentPoints().containsKey(student.getId()))
+                .filter(student -> studentProgress.getStudentPoints().get(student.getId())[getCourseIndex(courseName)] > 0)
+                .collect(Collectors.toList());
     }
 
     public void listStudentsAndPoints() {
@@ -145,15 +241,6 @@ class StudentController {
             System.out.println("Incorrect points format.");
             return false;
         }
-    }
-
-    private boolean isValidPoints(int[] points) {
-        for (int point : points) {
-            if (point < 0) {
-                return false;
-            }
-        }
-        return true;
     }
     public void findStudent(int id) {
         Student student = studentProgress.getStudent(id);
