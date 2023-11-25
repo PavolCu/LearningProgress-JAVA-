@@ -1,6 +1,7 @@
 package tracker;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -42,25 +43,14 @@ class StudentController {
         System.out.println(courseName);
         System.out.println("ID | Points | Completion");
         List<Student> students = getStudentsForCourse(courseName);
-        students.sort((s1, s2) -> {
-            int points1 = getTotalPointsForStudent(s1, courseName);
-            int points2 = getTotalPointsForStudent(s2, courseName);
-            return Integer.compare(points2, points1);
-        }).thenComparing(Student::getId);
+        students.sort(Comparator.comparingInt((Student s) ->getTotalPointsForStudent(s, courseName)).reversed()
+                .thenComparing(Student::getId));
 
         for (Student student : students) {
             int points = getTotalPointsForStudent(student, courseName);
             double completion = getCompletionPercentage(student, courseName);
             System.out.printf("%d | %d | %.1f%%\n", student.getId(), points, completion);
         }
-    }
-
-    private List<Student> getStudentForCourse(String courseName) {
-        int courseIndex = getCourseIndex(courseName);
-        return studentProgress.getStudents().values().stream()
-                .filter(student -> studentProgress.getStudentPoints().containsKey(student.getId()))
-                .filter(student -> studentProgress.getStudentPoints().get(student.getId())[courseIndex] > 0)
-                .collect(Collectors.toList());
     }
 
     private int getTotalPointsForStudent(Student student, String courseName) {
@@ -162,9 +152,9 @@ class StudentController {
                 if (emailExists) {
                     System.out.println("This email is already taken.");
                 } else {
-                    Student student = new Student(firstName, lastName, email);
-                    int studentId = studentProgress.getStudents().size() + 10000; // Start id from 10000
-                    studentProgress.addStudent(studentId, student);
+                    int id = studentProgress.getStudents().size() + 10000; // Generate an id for the new student
+                    Student student = new Student(id, firstName, lastName, email);
+                    studentProgress.addStudent(id, student);
                     System.out.println("The student has been added.");
                     addedStudents++;
                 }
