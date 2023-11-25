@@ -26,7 +26,7 @@ class StudentController {
         String leastPopular = courseStatistics.calculateLeastPopularCourse();
         String highestActivity = courseStatistics.calculateHighestActivityCourse();
         String lowestActivity = courseStatistics.calculateLowestActivityCourse();
-        String easiestCourse = courseStatistics.calculateEasiesCourse();
+        String easiestCourse = courseStatistics.calculateEasiestCourse();
         String hardestCourse = courseStatistics.calculateHardestCourse();
 
         //print statistics
