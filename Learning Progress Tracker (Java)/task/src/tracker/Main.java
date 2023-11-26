@@ -41,12 +41,12 @@ public class Main {
                     break;
                 case "find":
                     System.out.print("Enter an id or 'back' to return: ");
-                    String idInput = scanner.nextLine().strip();
-                    if (idInput.equals("back")) {
-                        continue;
+                    String[] findParts = input.split(" ");
+                    if (findParts.length != 2) {
+                        break;
                     }
                     try {
-                        int id = Integer.parseInt(idInput);
+                        int id = Integer.parseInt(findParts[1]);
                         studentController.findStudent(id);
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input. Please enter a valid id.");

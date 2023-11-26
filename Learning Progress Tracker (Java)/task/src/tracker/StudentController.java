@@ -220,7 +220,6 @@ class StudentController {
         }
     }
 
-
     public boolean addPoints(int id, int[] points) {
         Student student = studentProgress.getStudent(id);
         if (student == null) {
@@ -228,18 +227,23 @@ class StudentController {
             return false;
         }
 
-        // Overiť, či je pole bodov platné (nie je záporné)
+        // Verify if the points array is valid (not negative)
         boolean validPoints = Arrays.stream(points).allMatch(point -> point >= 0);
 
         if (validPoints && points.length == 4) {
-            int[] existingPoints = studentProgress.getStudentPoints().getOrDefault(id, new int[4]);
+            int[] existingPoints = studentProgress.getStudentPoints().get(id);
 
-            // Pripočítať nové body k existujúcim bodom
+            // If the student doesn't have any points yet, initialize a new array
+            if (existingPoints == null) {
+                existingPoints = new int[4];
+                studentProgress.getStudentPoints().put(id, existingPoints);
+            }
+
+            // Add the new points to the existing points
             for (int i = 0; i < 4; i++) {
                 existingPoints[i] += points[i];
             }
 
-            studentProgress.addPoints(id, existingPoints);
             return true;
         } else {
             System.out.println("Incorrect points format.");

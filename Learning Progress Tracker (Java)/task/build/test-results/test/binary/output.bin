@@ -188,53 +188,53 @@ No input.
 Start test 24[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Annecorinne Ause address1@mail.com
+"> Marisa Firman address1@mail.com
 The student has been added.
-%> Annecorinne Ause address1@mail.com
+"> Marisa Firman address1@mail.com
 This email is already taken.
- > Amye Uriisa address2@mail.com
+%> Ricki Trovillion address2@mail.com
 The student has been added.
- > Amye Uriisa address2@mail.com
+%> Ricki Trovillion address2@mail.com
 This email is already taken.
-!> Trixie Winer address3@mail.com
+%> Charlena Girardo address3@mail.com
 The student has been added.
-!> Trixie Winer address3@mail.com
+%> Charlena Girardo address3@mail.com
 This email is already taken.
-$> Alexina Belcher address4@mail.com
+!> Leola Whelan address4@mail.com
 The student has been added.
-$> Alexina Belcher address4@mail.com
+!> Leola Whelan address4@mail.com
 This email is already taken.
-"> Dalia Gleeson address5@mail.com
+ > Amye Uriisa address5@mail.com
 The student has been added.
-"> Dalia Gleeson address5@mail.com
+ > Amye Uriisa address5@mail.com
 This email is already taken.
-> Tasha Chem address6@mail.com
+&> Francesca Francis address6@mail.com
 The student has been added.
-> Tasha Chem address6@mail.com
+&> Francesca Francis address6@mail.com
 This email is already taken.
-%> Gwenette Kironde address7@mail.com
+!> Olga Rosanne address7@mail.com
 The student has been added.
-%> Gwenette Kironde address7@mail.com
+!> Olga Rosanne address7@mail.com
 This email is already taken.
- > Toby Bleier address8@mail.com
+%> Annecorinne Ause address8@mail.com
 The student has been added.
- > Toby Bleier address8@mail.com
+%> Annecorinne Ause address8@mail.com
 This email is already taken.
-%> Ricki Trovillion address9@mail.com
+#> Natka Herculie address9@mail.com
 The student has been added.
-%> Ricki Trovillion address9@mail.com
+#> Natka Herculie address9@mail.com
 This email is already taken.
-&> Carmella Campman address10@mail.com
+$> Dolley Panther address10@mail.com
 The student has been added.
-&> Carmella Campman address10@mail.com
+$> Dolley Panther address10@mail.com
 This email is already taken.
-"> Leola Whelan address11@mail.com
+ > Nonna Miko address11@mail.com
 The student has been added.
-"> Leola Whelan address11@mail.com
+ > Nonna Miko address11@mail.com
 This email is already taken.
-'> Francesca Francis address12@mail.com
+#> Dalia Gleeson address12@mail.com
 The student has been added.
-'> Francesca Francis address12@mail.com
+#> Dalia Gleeson address12@mail.com
 This email is already taken.
 > back
 #Total 12 students have been added.
@@ -242,29 +242,29 @@ No input.
 Start test 25[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-!> Trixie Winer address1@mail.com
+!> Hedwig Wally address1@mail.com
 The student has been added.
-!> Leola Whelan address2@mail.com
+"> Marisa Firman address2@mail.com
 The student has been added.
-!> Starlin Griz address3@mail.com
+ > Amye Uriisa address3@mail.com
 The student has been added.
 #> Shoshana Utica address4@mail.com
 The student has been added.
-$> Jermaine Naaman address5@mail.com
+&> Francesca Francis address5@mail.com
 The student has been added.
-"> Dalia Gleeson address6@mail.com
+%> Ricki Trovillion address6@mail.com
 The student has been added.
-#> Natka Herculie address7@mail.com
+$> Jermaine Naaman address7@mail.com
 The student has been added.
-"> Anjanette Uis address8@mail.com
+%> Gwenette Anagnos address8@mail.com
 The student has been added.
-%> Gwenette Kironde address9@mail.com
+#> Elysha Quinlan address9@mail.com
 The student has been added.
-&> Carmella Campman address10@mail.com
+&> Charlena Girardo address10@mail.com
 The student has been added.
-$> Beatrisa Jegar address11@mail.com
+ > Nonna Miko address11@mail.com
 The student has been added.
-&> Gwenette Anagnos address12@mail.com
+$> Elwira Florrie address12@mail.com
 The student has been added.
 > back
 #Total 12 students have been added.
@@ -296,17 +296,17 @@ Students:
 Start test 27[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
- > Ann Agnella address1@mail.com
+$> Alexina Belcher address1@mail.com
 The student has been added.
-%> Charlena Girardo address2@mail.com
+ > Toby Bleier address2@mail.com
 The student has been added.
-#> Elysha Quinlan address3@mail.com
+$> Brandise Hardan address3@mail.com
 The student has been added.
-%> Lebbie Alabaster address4@mail.com
+#> Natka Herculie address4@mail.com
 The student has been added.
-!> Hedwig Wally address5@mail.com
+%> Charlena Girardo address5@mail.com
 The student has been added.
-%> Karee Antoinetta address6@mail.com
+#> Emelia Annnora address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -337,17 +337,17 @@ Students:
 Start test 28[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Charlena Girardo address1@mail.com
+#> Dolley Panther address1@mail.com
 The student has been added.
-%> Carmella Campman address2@mail.com
+"> Marisa Firman address2@mail.com
 The student has been added.
-#> Beatrisa Jegar address3@mail.com
+%> Lebbie Alabaster address3@mail.com
 The student has been added.
-!> Olga Rosanne address4@mail.com
+$> Brandise Hardan address4@mail.com
 The student has been added.
-"> Dalia Gleeson address5@mail.com
+!> Starlin Griz address5@mail.com
 The student has been added.
-"> Anjanette Uis address6@mail.com
+!> Aurie Dorisa address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -362,75 +362,21 @@ Students:
 10005
 > add points
 ,Enter an id and points or 'back' to return:
-> > 10000 3 10 7 10
+> > 10000 4 5 9 9
 Points updated.
-> 10001 1 6 6 9
+> 10001 9 10 4 8
 Points updated.
-> 10002 2 2 3 2
+> 10002 4 10 9 6
 Points updated.
-> 10003 1 10 1 4
+> 10003 9 6 5 2
 Points updated.
-> 10004 9 8 4 1
+> 10004 1 8 7 2
 Points updated.
-> 10005 7 4 4 4
+> 10005 7 6 10 1
 Points updated.
 [1;31m
 Start test 29[0m
 #Learning Progress Tracker > > find
 (Enter an id or 'back' to return: > back
-> back
 "Enter 'exit' to exit the program.
-> exit
-Bye!
-[1;31m
-Start test 30[0m
-+Learning Progress Tracker > > add students
-/Enter student credentials or 'back' to return:
-(> Barbara-Anne Chicky address1@mail.com
-The student has been added.
-%> Gwenette Anagnos address2@mail.com
-The student has been added.
-"> Marisa Firman address3@mail.com
-The student has been added.
-#> Emelia Annnora address4@mail.com
-The student has been added.
-#> Shoshana Utica address5@mail.com
-The student has been added.
 > back
-"Total 5 students have been added.
-> list
-
-Students:
-10000
-10001
-10002
-10003
-10004
-> add points
-,Enter an id and points or 'back' to return:
-> > 10000 0 0 0 0
-Points updated.
-> 10000 0 0 0 0
-Points updated.
-> 10001 1 1 1 1
-Points updated.
-> 10001 1 1 1 1
-Points updated.
-> 10002 2 2 2 2
-Points updated.
-> 10002 2 2 2 2
-Points updated.
-> 10003 3 3 3 3
-Points updated.
-> 10003 3 3 3 3
-Points updated.
-> 10004 4 4 4 4
-Points updated.
-> 10004 4 4 4 4
-Points updated.
-> back
-> find
-)Enter an id or 'back' to return: > 10000
-310000 points: Java=0; DSA=0; Databases=0; Spring=0
-> 10001
-Unknown command.

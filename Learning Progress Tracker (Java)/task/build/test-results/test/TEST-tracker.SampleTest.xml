@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tracker.SampleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-26T11:32:19" hostname="macbook-pro-uzivatela-cuninka.home" time="0.019">
+<testsuite name="tracker.SampleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-26T15:09:18" hostname="macbook-pro-uzivatela-cuninka.home" time="0.025">
   <properties/>
-  <testcase name="test()" classname="tracker.SampleTest" time="0.019"/>
+  <testcase name="test()" classname="tracker.SampleTest" time="0.025"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
