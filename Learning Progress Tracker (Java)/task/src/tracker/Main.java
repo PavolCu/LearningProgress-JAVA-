@@ -14,23 +14,23 @@ public class Main {
         label:
         while (true) {
             String input = scanner.nextLine().strip().toLowerCase();
+
             if (input.isEmpty()) {
                 System.out.println("No input.");
                 continue;
             }
-            if (input.equals("back")) {
+            if (input.equalsIgnoreCase("back")) {
                 System.out.println("Enter 'exit' to exit the program.");
                 continue;
             }
 
-            if (isFirstInputBack && input.equals("back")) {
+            if (isFirstInputBack && input.equalsIgnoreCase("back")) {
                 System.out.println("Enter 'exit' to exit the program.");
                 continue;
             }
 
-            switch (input) {
+            switch (input.toLowerCase()) {
                 case "back":
-
                     continue;
                 case "list":
                     studentController.listStudentsAndPoints();
