@@ -70,9 +70,7 @@ public class CourseStatistics {
                 courseAveragePoints.put(courseName, courseAveragePoints.getOrDefault(courseName, 0.0) + points[i]);
             }
         }
-        for (String courseName : courseAveragePoints.keySet()) {
-            courseAveragePoints.put(courseName, courseAveragePoints.get(courseName) / studentProgress.getStudents().size());
-        }
+        courseAveragePoints.replaceAll((courseName, totalPoints) -> totalPoints / studentProgress.getStudents().size());
         return courseAveragePoints.isEmpty() ? "n/a" : Collections.max(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 

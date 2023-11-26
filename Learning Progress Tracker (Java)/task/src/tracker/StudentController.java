@@ -18,6 +18,7 @@ class StudentController {
         this.totalStudents = studentProgress.getStudents().size();// Initialize totalStudents
     }
 
+
     public void handleStatisticsCommand(Scanner scanner) {
         CourseStatistics courseStatistics = new CourseStatistics(studentProgress);
         System.out.println("Type the name of a course to see details or 'back' to quit:");
@@ -197,7 +198,8 @@ class StudentController {
             }
             try {
                 int id = Integer.parseInt(inputParts[0]);
-                if (studentProgress.getStudent(id) == null) {
+                Student student = studentProgress.getStudent(id);
+                if (student == null) {
                     System.out.println("No student is found for id=" + inputParts[0] + ".");
                     continue;
                 }
@@ -231,18 +233,15 @@ class StudentController {
         boolean validPoints = Arrays.stream(points).allMatch(point -> point >= 0);
 
         if (validPoints && points.length == 4) {
-            int[] existingPoints = studentProgress.getStudentPoints().get(id);
-
-            // If the student doesn't have any points yet, initialize a new array
-            if (existingPoints == null) {
-                existingPoints = new int[4];
-                studentProgress.getStudentPoints().put(id, existingPoints);
-            }
+            int[] existingPoints = studentProgress.getStudentPoints().getOrDefault(id, new int[4]);
 
             // Add the new points to the existing points
             for (int i = 0; i < 4; i++) {
                 existingPoints[i] += points[i];
             }
+
+            // Update the studentPoints map with the new total points
+            studentProgress.getStudentPoints().put(id, existingPoints);
 
             return true;
         } else {
@@ -253,10 +252,11 @@ class StudentController {
     public void findStudent(int id) {
         Student student = studentProgress.getStudent(id);
         if (student != null) {
-            int[] points = studentProgress.getStudentPoints().get(id);
-            System.out.println(id + " points: Java=" + points[0] + "; DSA=" + points[1] + "; Databases=" + points[2] + "; Spring=" + points[3]);
+            int[] points = studentProgress.getStudentPoints().getOrDefault(id, new int[4]);
+            System.out.printf("%d points: Java=%d; DSA=%d; Databases=%d; Spring=%d%n",
+                    id, points[0], points[1], points[2], points[3]);
         } else {
-            System.out.println("No student is found for id=" + id + ".");
+            System.out.printf("No student is found for id=%d.%n", id);
         }
     }
 }

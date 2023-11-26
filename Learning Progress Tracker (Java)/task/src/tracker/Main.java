@@ -18,9 +18,12 @@ public class Main {
                 System.out.println("No input.");
                 continue;
             }
+            if (input.equals("back")) {
+                System.out.println("Enter 'exit' to exit the program.");
+                continue;
+            }
 
             if (isFirstInputBack && input.equals("back")) {
-                isFirstInputBack = false;
                 System.out.println("Enter 'exit' to exit the program.");
                 continue;
             }
@@ -28,7 +31,7 @@ public class Main {
             switch (input) {
                 case "back":
 
-                    break;
+                    continue;
                 case "list":
                     studentController.listStudentsAndPoints();
                     break;
@@ -41,12 +44,12 @@ public class Main {
                     break;
                 case "find":
                     System.out.print("Enter an id or 'back' to return: ");
-                    String[] findParts = input.split(" ");
-                    if (findParts.length != 2) {
-                        break;
+                    String findInput = scanner.nextLine().strip();
+                    if ("back".equals(findInput.toLowerCase())) {
+                        continue;
                     }
                     try {
-                        int id = Integer.parseInt(findParts[1]);
+                        int id = Integer.parseInt(findInput);
                         studentController.findStudent(id);
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input. Please enter a valid id.");

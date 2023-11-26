@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.993s</div>
+<div class="counter">1.350s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,19 +76,64 @@
 <a name="start"></a>
 <h3 class="failures">start</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Presentation error in test #29
+<pre>java.lang.AssertionError: Wrong answer in test #30
 
-The output is empty, but should contain lines (expected to be equal to 1, found 0)
+Expected output: 10001 points: Java=2; DSA=2; Databases=2; Spring=2, but your output was: Unknown command.
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
 
 ---
 
-Learning Progress Tracker &gt; &gt; find
-Enter an id or 'back' to return: &gt; back
-Enter 'exit' to exit the program.
+Learning Progress Tracker &gt; &gt; add students
+Enter student credentials or 'back' to return:
+&gt; Amye Uriisa address1@mail.com
+The student has been added.
+&gt; Roxi Hett address2@mail.com
+The student has been added.
+&gt; Charlena Girardo address3@mail.com
+The student has been added.
+&gt; Elysha Quinlan address4@mail.com
+The student has been added.
+&gt; Toby Bleier address5@mail.com
+The student has been added.
 &gt; back
+Total 5 students have been added.
+&gt; list
+Students:
+10000
+10001
+10002
+10003
+10004
+&gt; add points
+Enter an id and points or 'back' to return:
+&gt; &gt; 10000 0 0 0 0
+Points updated.
+&gt; 10000 0 0 0 0
+Points updated.
+&gt; 10001 1 1 1 1
+Points updated.
+&gt; 10001 1 1 1 1
+Points updated.
+&gt; 10002 2 2 2 2
+Points updated.
+&gt; 10002 2 2 2 2
+Points updated.
+&gt; 10003 3 3 3 3
+Points updated.
+&gt; 10003 3 3 3 3
+Points updated.
+&gt; 10004 4 4 4 4
+Points updated.
+&gt; 10004 4 4 4 4
+Points updated.
+&gt; back
+&gt; find
+Enter an id or 'back' to return: &gt; 10000
+10000 points: Java=0; DSA=0; Databases=0; Spring=0
+&gt; 10001
+Unknown command.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -171,7 +216,7 @@ Enter 'exit' to exit the program.
 </thead>
 <tr>
 <td class="failures">start</td>
-<td class="failures">0.993s</td>
+<td class="failures">1.350s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -365,53 +410,53 @@ No students found.
 Start test 24?[0m
 Learning Progress Tracker &gt; &gt; add students
 Enter student credentials or 'back' to return:
-&gt; Marisa Firman address1@mail.com
+&gt; Lebbie Alabaster address1@mail.com
 The student has been added.
-&gt; Marisa Firman address1@mail.com
+&gt; Lebbie Alabaster address1@mail.com
 This email is already taken.
-&gt; Ricki Trovillion address2@mail.com
+&gt; Jermaine Naaman address2@mail.com
 The student has been added.
-&gt; Ricki Trovillion address2@mail.com
+&gt; Jermaine Naaman address2@mail.com
 This email is already taken.
-&gt; Charlena Girardo address3@mail.com
+&gt; Barbara-Anne Chicky address3@mail.com
 The student has been added.
-&gt; Charlena Girardo address3@mail.com
+&gt; Barbara-Anne Chicky address3@mail.com
 This email is already taken.
-&gt; Leola Whelan address4@mail.com
+&gt; Amye Uriisa address4@mail.com
 The student has been added.
-&gt; Leola Whelan address4@mail.com
+&gt; Amye Uriisa address4@mail.com
 This email is already taken.
-&gt; Amye Uriisa address5@mail.com
+&gt; Gwenette Kironde address5@mail.com
 The student has been added.
-&gt; Amye Uriisa address5@mail.com
+&gt; Gwenette Kironde address5@mail.com
 This email is already taken.
-&gt; Francesca Francis address6@mail.com
+&gt; Leola Whelan address6@mail.com
 The student has been added.
-&gt; Francesca Francis address6@mail.com
+&gt; Leola Whelan address6@mail.com
 This email is already taken.
-&gt; Olga Rosanne address7@mail.com
+&gt; Van Fawnia address7@mail.com
 The student has been added.
-&gt; Olga Rosanne address7@mail.com
+&gt; Van Fawnia address7@mail.com
 This email is already taken.
-&gt; Annecorinne Ause address8@mail.com
+&gt; Aurie Dorisa address8@mail.com
 The student has been added.
-&gt; Annecorinne Ause address8@mail.com
+&gt; Aurie Dorisa address8@mail.com
 This email is already taken.
-&gt; Natka Herculie address9@mail.com
+&gt; Annecorinne Ause address9@mail.com
 The student has been added.
-&gt; Natka Herculie address9@mail.com
+&gt; Annecorinne Ause address9@mail.com
 This email is already taken.
-&gt; Dolley Panther address10@mail.com
+&gt; Emelia Annnora address10@mail.com
 The student has been added.
-&gt; Dolley Panther address10@mail.com
+&gt; Emelia Annnora address10@mail.com
 This email is already taken.
-&gt; Nonna Miko address11@mail.com
+&gt; Alexina Belcher address11@mail.com
 The student has been added.
-&gt; Nonna Miko address11@mail.com
+&gt; Alexina Belcher address11@mail.com
 This email is already taken.
-&gt; Dalia Gleeson address12@mail.com
+&gt; Carmella Campman address12@mail.com
 The student has been added.
-&gt; Dalia Gleeson address12@mail.com
+&gt; Carmella Campman address12@mail.com
 This email is already taken.
 &gt; back
 Total 12 students have been added.
@@ -419,29 +464,29 @@ Total 12 students have been added.
 Start test 25?[0m
 Learning Progress Tracker &gt; &gt; add students
 Enter student credentials or 'back' to return:
-&gt; Hedwig Wally address1@mail.com
+&gt; Aurie Dorisa address1@mail.com
 The student has been added.
-&gt; Marisa Firman address2@mail.com
+&gt; Trixie Winer address2@mail.com
 The student has been added.
-&gt; Amye Uriisa address3@mail.com
+&gt; Toby Bleier address3@mail.com
 The student has been added.
-&gt; Shoshana Utica address4@mail.com
+&gt; Charlena Girardo address4@mail.com
 The student has been added.
-&gt; Francesca Francis address5@mail.com
+&gt; Elwira Florrie address5@mail.com
 The student has been added.
-&gt; Ricki Trovillion address6@mail.com
+&gt; Francesca Francis address6@mail.com
 The student has been added.
-&gt; Jermaine Naaman address7@mail.com
+&gt; Brandise Hardan address7@mail.com
 The student has been added.
-&gt; Gwenette Anagnos address8@mail.com
+&gt; Leola Whelan address8@mail.com
 The student has been added.
-&gt; Elysha Quinlan address9@mail.com
+&gt; Ricki Trovillion address9@mail.com
 The student has been added.
-&gt; Charlena Girardo address10@mail.com
+&gt; Natka Herculie address10@mail.com
 The student has been added.
-&gt; Nonna Miko address11@mail.com
+&gt; Elysha Quinlan address11@mail.com
 The student has been added.
-&gt; Elwira Florrie address12@mail.com
+&gt; Gwenette Anagnos address12@mail.com
 The student has been added.
 &gt; back
 Total 12 students have been added.
@@ -472,17 +517,17 @@ Bye!
 Start test 27?[0m
 Learning Progress Tracker &gt; &gt; add students
 Enter student credentials or 'back' to return:
-&gt; Alexina Belcher address1@mail.com
+&gt; Olga Rosanne address1@mail.com
 The student has been added.
-&gt; Toby Bleier address2@mail.com
+&gt; Emelia Annnora address2@mail.com
 The student has been added.
-&gt; Brandise Hardan address3@mail.com
+&gt; Amye Uriisa address3@mail.com
 The student has been added.
-&gt; Natka Herculie address4@mail.com
+&gt; Dalia Gleeson address4@mail.com
 The student has been added.
-&gt; Charlena Girardo address5@mail.com
+&gt; Nonna Miko address5@mail.com
 The student has been added.
-&gt; Emelia Annnora address6@mail.com
+&gt; Francesca Francis address6@mail.com
 The student has been added.
 &gt; back
 Total 6 students have been added.
@@ -512,15 +557,15 @@ No student is found for id=imsurethereisnosuchstudentid.
 Start test 28?[0m
 Learning Progress Tracker &gt; &gt; add students
 Enter student credentials or 'back' to return:
-&gt; Dolley Panther address1@mail.com
+&gt; Trixie Winer address1@mail.com
 The student has been added.
-&gt; Marisa Firman address2@mail.com
+&gt; Karee Antoinetta address2@mail.com
 The student has been added.
-&gt; Lebbie Alabaster address3@mail.com
+&gt; Natka Herculie address3@mail.com
 The student has been added.
-&gt; Brandise Hardan address4@mail.com
+&gt; Roxi Hett address4@mail.com
 The student has been added.
-&gt; Starlin Griz address5@mail.com
+&gt; Gwenette Anagnos address5@mail.com
 The student has been added.
 &gt; Aurie Dorisa address6@mail.com
 The student has been added.
@@ -536,24 +581,77 @@ Students:
 10005
 &gt; add points
 Enter an id and points or 'back' to return:
-&gt; &gt; 10000 4 5 9 9
+&gt; &gt; 10000 8 6 6 9
 Points updated.
-&gt; 10001 9 10 4 8
+&gt; 10001 7 7 1 5
 Points updated.
-&gt; 10002 4 10 9 6
+&gt; 10002 4 5 9 7
 Points updated.
-&gt; 10003 9 6 5 2
+&gt; 10003 10 5 2 7
 Points updated.
-&gt; 10004 1 8 7 2
+&gt; 10004 2 7 3 6
 Points updated.
-&gt; 10005 7 6 10 1
+&gt; 10005 5 8 7 6
 Points updated.
 ?[1;31m
 Start test 29?[0m
 Learning Progress Tracker &gt; &gt; find
 Enter an id or 'back' to return: &gt; back
-Enter 'exit' to exit the program.
 &gt; back
+Enter 'exit' to exit the program.
+&gt; exit
+Bye!
+?[1;31m
+Start test 30?[0m
+Learning Progress Tracker &gt; &gt; add students
+Enter student credentials or 'back' to return:
+&gt; Amye Uriisa address1@mail.com
+The student has been added.
+&gt; Roxi Hett address2@mail.com
+The student has been added.
+&gt; Charlena Girardo address3@mail.com
+The student has been added.
+&gt; Elysha Quinlan address4@mail.com
+The student has been added.
+&gt; Toby Bleier address5@mail.com
+The student has been added.
+&gt; back
+Total 5 students have been added.
+&gt; list
+Students:
+10000
+10001
+10002
+10003
+10004
+&gt; add points
+Enter an id and points or 'back' to return:
+&gt; &gt; 10000 0 0 0 0
+Points updated.
+&gt; 10000 0 0 0 0
+Points updated.
+&gt; 10001 1 1 1 1
+Points updated.
+&gt; 10001 1 1 1 1
+Points updated.
+&gt; 10002 2 2 2 2
+Points updated.
+&gt; 10002 2 2 2 2
+Points updated.
+&gt; 10003 3 3 3 3
+Points updated.
+&gt; 10003 3 3 3 3
+Points updated.
+&gt; 10004 4 4 4 4
+Points updated.
+&gt; 10004 4 4 4 4
+Points updated.
+&gt; back
+&gt; find
+Enter an id or 'back' to return: &gt; 10000
+10000 points: Java=0; DSA=0; Databases=0; Spring=0
+&gt; 10001
+Unknown command.
 </pre>
 </span>
 </div>
@@ -565,7 +663,7 @@ Enter 'exit' to exit the program.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 26. 11. 2023, 16:09:19</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 26. 11. 2023, 18:48:43</p>
 </div>
 </div>
 </body>
