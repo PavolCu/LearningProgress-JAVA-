@@ -2,6 +2,7 @@ package tracker;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CourseStatistics {
     private final StudentProgress studentProgress;
@@ -20,7 +21,14 @@ public class CourseStatistics {
                 }
             }
         }
-        return courseCount.isEmpty() ? "n/a" : Collections.max(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+        if (courseCount.isEmpty()){
+            return "n/a";
+        }
+        int maxCount = Collections.max(courseCount.values());
+        return courseCount.entrySet().stream()
+                .filter(entry -> entry.getValue() == maxCount)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.joining(", "));
     }
 
     public String getCourseIndex(int index) {
@@ -101,6 +109,13 @@ public class CourseStatistics {
                 }
             }
         }
-        return courseCount.isEmpty() ? "n/a" : Collections.min(courseCount.entrySet(), Map.Entry.comparingByValue()).getKey();
+        if (courseCount.isEmpty()){
+            return "n/a";
+        }
+        int minCount = Collections.min(courseCount.values());
+        return courseCount.entrySet().stream()
+                .filter(entry -> entry.getValue() == minCount)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.joining(", "));
     }
 }

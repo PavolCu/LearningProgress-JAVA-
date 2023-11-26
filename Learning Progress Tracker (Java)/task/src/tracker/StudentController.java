@@ -57,7 +57,7 @@ class StudentController {
     }
 
     private void printCourseStatistics(String courseName) {
-        System.out.println(courseName);
+        System.out.println(courseName.toUpperCase());
         System.out.println("id | points | completed");
         List<Student> students = getStudentsForCourse(courseName);
         students.sort(Comparator.comparingInt((Student s) ->getTotalPointsForStudent(s, courseName)).reversed()
@@ -119,11 +119,16 @@ class StudentController {
     public void listStudentsAndPoints() {
         for (Integer id : studentProgress.getStudents().keySet()) {
             Student student = studentProgress.getStudent(id);
-            System.out.println("Students:");
-            System.out.print(id + ". " + student.getFirstName() + " " + student.getLastName() +
-                    ": (No points available)");
+            if (isValidName(student.getFirstName()) && isValidName(student.getLastName()) && isValidEmail(student.getEmail())) {
+                System.out.println(id + ". " + student.getFirstName() + " " + student.getLastName() +
+                        ": (No points available)");
+            } else {
+                System.out.println("Invalid student credentials.");
+            }
         }
     }
+
+
 
     public boolean isValidName(String name) {
         return Pattern.matches("^[A-Za-z]+([ '-][A-Za-z]+)*$", name) && name.length() >= 2;
@@ -181,48 +186,32 @@ class StudentController {
 
     public void handleAddPointsCommand(Scanner scanner) {
         System.out.print("Enter an id and points or 'back' to return:\n> ");
-        String input = scanner.nextLine().strip().toLowerCase();
-
-        if (input.equals("back")) {
-            return;
-        }
-
-        String[] inputParts = input.split(" ");
-        if (inputParts.length != 5) {
-            System.out.println("Incorrect points format.");
-            return;
-        }
-
-        try {
-            int id = Integer.parseInt(inputParts[0]);
-            int[] points = new int[4];
-            boolean validPoints = true;
-
-            for (int i = 0; i < 4; i++) {
-                try {
-                    points[i] = Integer.parseInt(inputParts[i + 1]);
-                    if (points[i] < 0) {
-                        validPoints = false;
-                        break;
-                    }
-                } catch (NumberFormatException e) {
-                    validPoints = false;
-                    break;
-                }
+        while (true) {
+            String input = scanner.nextLine().strip().toLowerCase();
+            if (input.equals("back")) {
+                return;
             }
-
-            if (validPoints) {
+            String[] inputParts = input.split(" ");
+            if (inputParts.length != 5) {
+                System.out.println("Incorrect points format.");
+                continue;
+            }
+            try {
+                int id = Integer.parseInt(inputParts[0]);
+                int[] points = new int[4];
+                for (int i = 0; i < 4; i++) {
+                    points[i] = Integer.parseInt(inputParts[i + 1]);
+                }
                 boolean pointsUpdated = addPoints(id, points);
                 if (pointsUpdated) {
                     System.out.println("Points updated.");
                 }
-            } else {
+            } catch (NumberFormatException e) {
                 System.out.println("Incorrect points format.");
             }
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter numbers for id and points.");
         }
     }
+
 
     public boolean addPoints(int id, int[] points) {
         Student student = studentProgress.getStudent(id);
