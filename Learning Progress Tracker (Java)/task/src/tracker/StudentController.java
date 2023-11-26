@@ -117,8 +117,12 @@ class StudentController {
     }
 
     public void listStudentsAndPoints() {
-        for (Integer id : studentProgress.getStudents().keySet()) {
-            System.out.println(id);
+        if (studentProgress.getStudents().isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            for (Integer id : studentProgress.getStudents().keySet()) {
+                System.out.println(id);
+            }
         }
     }
 
