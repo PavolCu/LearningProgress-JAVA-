@@ -188,53 +188,53 @@ No input.
 Start test 24[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Lebbie Alabaster address1@mail.com
+#> Natka Herculie address1@mail.com
 The student has been added.
-%> Lebbie Alabaster address1@mail.com
+#> Natka Herculie address1@mail.com
 This email is already taken.
-$> Jermaine Naaman address2@mail.com
+!> Starlin Griz address2@mail.com
 The student has been added.
-$> Jermaine Naaman address2@mail.com
+!> Starlin Griz address2@mail.com
 This email is already taken.
-(> Barbara-Anne Chicky address3@mail.com
+#> Dolley Panther address3@mail.com
 The student has been added.
-(> Barbara-Anne Chicky address3@mail.com
+#> Dolley Panther address3@mail.com
 This email is already taken.
- > Amye Uriisa address4@mail.com
+"> Marisa Firman address4@mail.com
 The student has been added.
- > Amye Uriisa address4@mail.com
+"> Marisa Firman address4@mail.com
 This email is already taken.
-%> Gwenette Kironde address5@mail.com
+> Nonna Miko address5@mail.com
 The student has been added.
-%> Gwenette Kironde address5@mail.com
+> Nonna Miko address5@mail.com
 This email is already taken.
-!> Leola Whelan address6@mail.com
+%> Annecorinne Ause address6@mail.com
 The student has been added.
-!> Leola Whelan address6@mail.com
+%> Annecorinne Ause address6@mail.com
 This email is already taken.
-> Van Fawnia address7@mail.com
+%> Gwenette Kironde address7@mail.com
 The student has been added.
-> Van Fawnia address7@mail.com
+%> Gwenette Kironde address7@mail.com
 This email is already taken.
 !> Aurie Dorisa address8@mail.com
 The student has been added.
 !> Aurie Dorisa address8@mail.com
 This email is already taken.
-%> Annecorinne Ause address9@mail.com
+#> Elysha Quinlan address9@mail.com
 The student has been added.
-%> Annecorinne Ause address9@mail.com
+#> Elysha Quinlan address9@mail.com
 This email is already taken.
-$> Emelia Annnora address10@mail.com
+ > Van Fawnia address10@mail.com
 The student has been added.
-$> Emelia Annnora address10@mail.com
+ > Van Fawnia address10@mail.com
 This email is already taken.
-%> Alexina Belcher address11@mail.com
+&> Karee Antoinetta address11@mail.com
 The student has been added.
-%> Alexina Belcher address11@mail.com
+&> Karee Antoinetta address11@mail.com
 This email is already taken.
-&> Carmella Campman address12@mail.com
+&> Gwenette Anagnos address12@mail.com
 The student has been added.
-&> Carmella Campman address12@mail.com
+&> Gwenette Anagnos address12@mail.com
 This email is already taken.
 > back
 #Total 12 students have been added.
@@ -242,29 +242,29 @@ No input.
 Start test 25[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-!> Aurie Dorisa address1@mail.com
+$> Jermaine Naaman address1@mail.com
 The student has been added.
-!> Trixie Winer address2@mail.com
+&> Francesca Francis address2@mail.com
 The student has been added.
- > Toby Bleier address3@mail.com
+!> Starlin Griz address3@mail.com
 The student has been added.
-%> Charlena Girardo address4@mail.com
+ > Toby Bleier address4@mail.com
 The student has been added.
-#> Elwira Florrie address5@mail.com
+#> Dolley Panther address5@mail.com
 The student has been added.
-&> Francesca Francis address6@mail.com
+!> Olga Rosanne address6@mail.com
 The student has been added.
-$> Brandise Hardan address7@mail.com
+ > Ann Agnella address7@mail.com
 The student has been added.
-!> Leola Whelan address8@mail.com
+> Van Fawnia address8@mail.com
 The student has been added.
-%> Ricki Trovillion address9@mail.com
+> Nonna Miko address9@mail.com
 The student has been added.
-$> Natka Herculie address10@mail.com
+%> Alexina Belcher address10@mail.com
 The student has been added.
-$> Elysha Quinlan address11@mail.com
+&> Lebbie Alabaster address11@mail.com
 The student has been added.
-&> Gwenette Anagnos address12@mail.com
+"> Aurie Dorisa address12@mail.com
 The student has been added.
 > back
 #Total 12 students have been added.
@@ -296,17 +296,17 @@ Students:
 Start test 27[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-!> Olga Rosanne address1@mail.com
+%> Gwenette Kironde address1@mail.com
 The student has been added.
-#> Emelia Annnora address2@mail.com
+%> Annecorinne Ause address2@mail.com
 The student has been added.
- > Amye Uriisa address3@mail.com
+%> Carmella Campman address3@mail.com
 The student has been added.
-"> Dalia Gleeson address4@mail.com
+"> Anjanette Uis address4@mail.com
 The student has been added.
-> Nonna Miko address5@mail.com
+ > Amye Uriisa address5@mail.com
 The student has been added.
-&> Francesca Francis address6@mail.com
+!> Hedwig Wally address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -337,17 +337,17 @@ Students:
 Start test 28[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-!> Trixie Winer address1@mail.com
+ > Toby Bleier address1@mail.com
 The student has been added.
-%> Karee Antoinetta address2@mail.com
+> Tasha Chem address2@mail.com
 The student has been added.
-#> Natka Herculie address3@mail.com
+#> Dolley Panther address3@mail.com
 The student has been added.
-> Roxi Hett address4@mail.com
+ > Ann Agnella address4@mail.com
 The student has been added.
-%> Gwenette Anagnos address5@mail.com
+ > Amye Uriisa address5@mail.com
 The student has been added.
-!> Aurie Dorisa address6@mail.com
+%> Lebbie Alabaster address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -362,17 +362,17 @@ Students:
 10005
 > add points
 ,Enter an id and points or 'back' to return:
-> > 10000 8 6 6 9
+> > 10000 1 4 8 5
 Points updated.
-> 10001 7 7 1 5
+> 10001 3 9 8 10
 Points updated.
-> 10002 4 5 9 7
+> 10002 5 5 4 3
 Points updated.
-> 10003 10 5 2 7
+> 10003 8 6 10 8
 Points updated.
-> 10004 2 7 3 6
+> 10004 2 4 3 10
 Points updated.
-> 10005 5 8 7 6
+> 10005 10 10 2 4
 Points updated.
 [1;31m
 Start test 29[0m
@@ -386,15 +386,15 @@ Students:
 Start test 30[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
- > Amye Uriisa address1@mail.com
+%> Gwenette Kironde address1@mail.com
 The student has been added.
-> Roxi Hett address2@mail.com
+#> Emelia Annnora address2@mail.com
 The student has been added.
-%> Charlena Girardo address3@mail.com
+$> Jermaine Naaman address3@mail.com
 The student has been added.
-#> Elysha Quinlan address4@mail.com
+$> Alexina Belcher address4@mail.com
 The student has been added.
- > Toby Bleier address5@mail.com
+%> Carmella Campman address5@mail.com
 The student has been added.
 > back
 "Total 5 students have been added.
