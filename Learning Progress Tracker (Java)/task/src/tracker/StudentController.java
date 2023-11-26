@@ -20,6 +20,7 @@ class StudentController {
 
     public void handleStatisticsCommand(Scanner scanner) {
         CourseStatistics courseStatistics = new CourseStatistics(studentProgress);
+        System.out.println("Type the name of a course to see details or 'back' to quit:");
         //Calculate statistics for each course
         String mostPopular = courseStatistics.calculateMostPopularCourse();
         String leastPopular = courseStatistics.calculateLeastPopularCourse();
@@ -35,7 +36,7 @@ class StudentController {
         System.out.println("Lowest activity: " + (lowestActivity != null ? lowestActivity : "n/a"));
         System.out.println("Easiest course: " + (easiestCourse != null ? easiestCourse : "n/a"));
         System.out.println("Hardest course: " + (hardestCourse != null ? hardestCourse : "n/a"));
-        System.out.println("Type the name of a course to see details or 'back' to quit");
+
 
         while (true) {
             String courseName = scanner.nextLine().strip().toLowerCase();
@@ -47,7 +48,6 @@ class StudentController {
                 printCourseStatistics(courseName);
             }else  {
                 System.out.println("Unknown course.");
-
             }
         }
     }
@@ -58,7 +58,7 @@ class StudentController {
 
     private void printCourseStatistics(String courseName) {
         System.out.println(courseName);
-        System.out.println("ID | Points | Completion");
+        System.out.println("id | points | completed");
         List<Student> students = getStudentsForCourse(courseName);
         students.sort(Comparator.comparingInt((Student s) ->getTotalPointsForStudent(s, courseName)).reversed()
                 .thenComparing(Student::getId));
