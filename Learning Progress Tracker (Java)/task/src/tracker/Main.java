@@ -40,7 +40,7 @@ public class Main {
                     studentController.handleAddPointsCommand(scanner);
                     break;
                 case "find":
-                    System.out.print("Enter an id or 'back' to return:\n> ");
+                    System.out.print("Enter an id or 'back' to return: ");
                     String idInput = scanner.nextLine().strip();
                     if (idInput.equals("back")) {
                         continue;
