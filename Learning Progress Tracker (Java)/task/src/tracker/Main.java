@@ -45,7 +45,7 @@ public class Main {
                 case "find":
                     System.out.print("Enter an id or 'back' to return: ");
                     String findInput = scanner.nextLine().strip();
-                    if ("back".equals(findInput.toLowerCase())) {
+                    if ("back".equalsIgnoreCase(findInput)) {
                         continue;
                     }
                     try {

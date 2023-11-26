@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-class StudentProgress {
+public class StudentProgress {
     private final Map<Integer, Student> students = new HashMap<>();
     private final Map<Integer, int[]> studentPoints = new HashMap<>();
 
