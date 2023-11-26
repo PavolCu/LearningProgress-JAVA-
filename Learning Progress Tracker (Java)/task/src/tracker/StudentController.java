@@ -118,13 +118,7 @@ class StudentController {
 
     public void listStudentsAndPoints() {
         for (Integer id : studentProgress.getStudents().keySet()) {
-            Student student = studentProgress.getStudent(id);
-            if (isValidName(student.getFirstName()) && isValidName(student.getLastName()) && isValidEmail(student.getEmail())) {
-                System.out.println(id + ". " + student.getFirstName() + " " + student.getLastName() +
-                        ": (No points available)");
-            } else {
-                System.out.println("Invalid student credentials.");
-            }
+            System.out.println(id);
         }
     }
 
