@@ -188,53 +188,53 @@ No input.
 Start test 24[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
- > Toby Bleier address1@mail.com
+!> Hedwig Wally address1@mail.com
 The student has been added.
- > Toby Bleier address1@mail.com
+!> Hedwig Wally address1@mail.com
 This email is already taken.
-%> Carmella Campman address2@mail.com
+%> Charlena Girardo address2@mail.com
 The student has been added.
-%> Carmella Campman address2@mail.com
+%> Charlena Girardo address2@mail.com
 This email is already taken.
  > Amye Uriisa address3@mail.com
 The student has been added.
  > Amye Uriisa address3@mail.com
 This email is already taken.
-%> Charlena Girardo address4@mail.com
+!> Leola Whelan address4@mail.com
 The student has been added.
-%> Charlena Girardo address4@mail.com
+!> Leola Whelan address4@mail.com
 This email is already taken.
-%> Karee Antoinetta address5@mail.com
+$> Alexina Belcher address5@mail.com
 The student has been added.
-%> Karee Antoinetta address5@mail.com
+$> Alexina Belcher address5@mail.com
 This email is already taken.
-#> Beatrisa Jegar address6@mail.com
+#> Elysha Quinlan address6@mail.com
 The student has been added.
-#> Beatrisa Jegar address6@mail.com
+#> Elysha Quinlan address6@mail.com
 This email is already taken.
-$> Alexina Belcher address7@mail.com
+%> Ricki Trovillion address7@mail.com
 The student has been added.
-$> Alexina Belcher address7@mail.com
+%> Ricki Trovillion address7@mail.com
 This email is already taken.
-!> Leola Whelan address8@mail.com
+%> Gwenette Kironde address8@mail.com
 The student has been added.
-!> Leola Whelan address8@mail.com
+%> Gwenette Kironde address8@mail.com
 This email is already taken.
-#> Emelia Annnora address9@mail.com
+#> Shoshana Utica address9@mail.com
 The student has been added.
-#> Emelia Annnora address9@mail.com
+#> Shoshana Utica address9@mail.com
 This email is already taken.
-"> Trixie Winer address10@mail.com
+%> Brandise Hardan address10@mail.com
 The student has been added.
-"> Trixie Winer address10@mail.com
+%> Brandise Hardan address10@mail.com
 This email is already taken.
-&> Gwenette Kironde address11@mail.com
+$> Natka Herculie address11@mail.com
 The student has been added.
-&> Gwenette Kironde address11@mail.com
+$> Natka Herculie address11@mail.com
 This email is already taken.
-$> Shoshana Utica address12@mail.com
+> Roxi Hett address12@mail.com
 The student has been added.
-$> Shoshana Utica address12@mail.com
+> Roxi Hett address12@mail.com
 This email is already taken.
 > back
 #Total 12 students have been added.
@@ -242,42 +242,42 @@ No input.
 Start test 25[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Annecorinne Ause address1@mail.com
+%> Charlena Girardo address1@mail.com
 The student has been added.
-%> Karee Antoinetta address2@mail.com
+ > Toby Bleier address2@mail.com
 The student has been added.
-%> Charlena Girardo address3@mail.com
+!> Trixie Winer address3@mail.com
 The student has been added.
-%> Lebbie Alabaster address4@mail.com
+#> Natka Herculie address4@mail.com
 The student has been added.
- > Ann Agnella address5@mail.com
+> Van Fawnia address5@mail.com
 The student has been added.
-!> Starlin Griz address6@mail.com
+> Nonna Miko address6@mail.com
 The student has been added.
-!> Hedwig Wally address7@mail.com
+$> Brandise Hardan address7@mail.com
 The student has been added.
 "> Dalia Gleeson address8@mail.com
 The student has been added.
-> Tasha Chem address9@mail.com
+"> Anjanette Uis address9@mail.com
 The student has been added.
-&> Ricki Trovillion address10@mail.com
+$> Elysha Quinlan address10@mail.com
 The student has been added.
- > Nonna Miko address11@mail.com
+%> Jermaine Naaman address11@mail.com
 The student has been added.
-&> Carmella Campman address12@mail.com
+&> Ricki Trovillion address12@mail.com
 The student has been added.
 > back
 #Total 12 students have been added.
 > list
 10000
-10001
-10002
-10003
-10004
-10005
-10006
-10007
-10008
-10009
-10010
-10011
+> 10001
+> 10002
+> 10003
+> 10004
+> 10005
+> 10006
+> 10007
+> 10008
+> 10009
+> 10010
+> 10011

@@ -120,6 +120,7 @@ class StudentController {
         if (studentProgress.getStudents().isEmpty()) {
             System.out.println("No students found.");
         } else {
+            System.out.println("Students:");
             for (Integer id : studentProgress.getStudents().keySet()) {
                 System.out.println(id);
             }
