@@ -1,57 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-26T09:47:38" hostname="macbook-pro-uzivatela-cuninka.home" time="0.889">
+<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-26T11:23:10" hostname="macbook-pro-uzivatela-cuninka.home" time="0.914">
   <properties/>
-  <testcase name="start" classname="LearningProgressTrackerTest" time="0.889">
-    <failure message="java.lang.AssertionError: Wrong answer in test #25&#10;&#10;Expected the header &quot;Students:&quot; but your first line was: 10000&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&#10;&gt; Charlena Girardo address1@mail.com&#10;The student has been added.&#10;&gt; Toby Bleier address2@mail.com&#10;The student has been added.&#10;&gt; Trixie Winer address3@mail.com&#10;The student has been added.&#10;&gt; Natka Herculie address4@mail.com&#10;The student has been added.&#10;&gt; Van Fawnia address5@mail.com&#10;The student has been added.&#10;&gt; Nonna Miko address6@mail.com&#10;The student has been added.&#10;&gt; Brandise Hardan address7@mail.com&#10;The student has been added.&#10;&gt; Dalia Gleeson address8@mail.com&#10;The student has been added.&#10;&gt; Anjanette Uis address9@mail.com&#10;The student has been added.&#10;&gt; Elysha Quinlan address10@mail.com&#10;The student has been added.&#10;&gt; Jermaine Naaman address11@mail.com&#10;The student has been added.&#10;&gt; Ricki Trovillion address12@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 12 students have been added.&#10;&gt; list&#10;10000&#10;&gt; 10001&#10;&gt; 10002&#10;&gt; 10003&#10;&gt; 10004&#10;&gt; 10005&#10;&gt; 10006&#10;&gt; 10007&#10;&gt; 10008&#10;&gt; 10009&#10;&gt; 10010&#10;&gt; 10011&#10;&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #25
+  <testcase name="start" classname="LearningProgressTrackerTest" time="0.914">
+    <failure message="java.lang.AssertionError: Presentation error in test #29&#10;&#10;The following output contains wrong number of lines (expected to be equal to 1, found 2):&#10;Enter an id or 'back' to return:&#10;&gt;&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; find&#10;Enter an id or 'back' to return:&#10;&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Presentation error in test #29
 
-Expected the header &quot;Students:&quot; but your first line was: 10000
+The following output contains wrong number of lines (expected to be equal to 1, found 2):
+Enter an id or 'back' to return:
+&gt;
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
 
 ---
 
-Learning Progress Tracker &gt; &gt; add students
-Enter student credentials or 'back' to return:
-&gt; Charlena Girardo address1@mail.com
-The student has been added.
-&gt; Toby Bleier address2@mail.com
-The student has been added.
-&gt; Trixie Winer address3@mail.com
-The student has been added.
-&gt; Natka Herculie address4@mail.com
-The student has been added.
-&gt; Van Fawnia address5@mail.com
-The student has been added.
-&gt; Nonna Miko address6@mail.com
-The student has been added.
-&gt; Brandise Hardan address7@mail.com
-The student has been added.
-&gt; Dalia Gleeson address8@mail.com
-The student has been added.
-&gt; Anjanette Uis address9@mail.com
-The student has been added.
-&gt; Elysha Quinlan address10@mail.com
-The student has been added.
-&gt; Jermaine Naaman address11@mail.com
-The student has been added.
-&gt; Ricki Trovillion address12@mail.com
-The student has been added.
-&gt; back
-Total 12 students have been added.
-&gt; list
-10000
-&gt; 10001
-&gt; 10002
-&gt; 10003
-&gt; 10004
-&gt; 10005
-&gt; 10006
-&gt; 10007
-&gt; 10008
-&gt; 10009
-&gt; 10010
-&gt; 10011
+Learning Progress Tracker &gt; &gt; find
+Enter an id or 'back' to return:
 &gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
@@ -307,53 +270,53 @@ No students found.
 Start test 24?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Hedwig Wally address1@mail.com
+> Charlena Girardo address1@mail.com
 The student has been added.
-> Hedwig Wally address1@mail.com
+> Charlena Girardo address1@mail.com
 This email is already taken.
-> Charlena Girardo address2@mail.com
+> Alexina Belcher address2@mail.com
 The student has been added.
-> Charlena Girardo address2@mail.com
+> Alexina Belcher address2@mail.com
 This email is already taken.
-> Amye Uriisa address3@mail.com
+> Aurie Dorisa address3@mail.com
 The student has been added.
-> Amye Uriisa address3@mail.com
+> Aurie Dorisa address3@mail.com
 This email is already taken.
-> Leola Whelan address4@mail.com
+> Ricki Trovillion address4@mail.com
 The student has been added.
-> Leola Whelan address4@mail.com
+> Ricki Trovillion address4@mail.com
 This email is already taken.
-> Alexina Belcher address5@mail.com
+> Leola Whelan address5@mail.com
 The student has been added.
-> Alexina Belcher address5@mail.com
+> Leola Whelan address5@mail.com
 This email is already taken.
-> Elysha Quinlan address6@mail.com
+> Brandise Hardan address6@mail.com
 The student has been added.
-> Elysha Quinlan address6@mail.com
+> Brandise Hardan address6@mail.com
 This email is already taken.
-> Ricki Trovillion address7@mail.com
+> Francesca Francis address7@mail.com
 The student has been added.
-> Ricki Trovillion address7@mail.com
+> Francesca Francis address7@mail.com
 This email is already taken.
-> Gwenette Kironde address8@mail.com
+> Shoshana Utica address8@mail.com
 The student has been added.
-> Gwenette Kironde address8@mail.com
+> Shoshana Utica address8@mail.com
 This email is already taken.
-> Shoshana Utica address9@mail.com
+> Emelia Annnora address9@mail.com
 The student has been added.
-> Shoshana Utica address9@mail.com
+> Emelia Annnora address9@mail.com
 This email is already taken.
-> Brandise Hardan address10@mail.com
+> Annecorinne Ause address10@mail.com
 The student has been added.
-> Brandise Hardan address10@mail.com
+> Annecorinne Ause address10@mail.com
 This email is already taken.
-> Natka Herculie address11@mail.com
+> Gwenette Anagnos address11@mail.com
 The student has been added.
-> Natka Herculie address11@mail.com
+> Gwenette Anagnos address11@mail.com
 This email is already taken.
-> Roxi Hett address12@mail.com
+> Elysha Quinlan address12@mail.com
 The student has been added.
-> Roxi Hett address12@mail.com
+> Elysha Quinlan address12@mail.com
 This email is already taken.
 > back
 Total 12 students have been added.
@@ -361,45 +324,139 @@ Total 12 students have been added.
 Start test 25?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Charlena Girardo address1@mail.com
+> Karee Antoinetta address1@mail.com
 The student has been added.
-> Toby Bleier address2@mail.com
+> Nonna Miko address2@mail.com
 The student has been added.
-> Trixie Winer address3@mail.com
+> Elwira Florrie address3@mail.com
 The student has been added.
-> Natka Herculie address4@mail.com
+> Hedwig Wally address4@mail.com
 The student has been added.
-> Van Fawnia address5@mail.com
+> Roxi Hett address5@mail.com
 The student has been added.
-> Nonna Miko address6@mail.com
+> Dolley Panther address6@mail.com
 The student has been added.
 > Brandise Hardan address7@mail.com
 The student has been added.
-> Dalia Gleeson address8@mail.com
+> Amye Uriisa address8@mail.com
 The student has been added.
-> Anjanette Uis address9@mail.com
+> Emelia Annnora address9@mail.com
 The student has been added.
-> Elysha Quinlan address10@mail.com
+> Aurie Dorisa address10@mail.com
 The student has been added.
-> Jermaine Naaman address11@mail.com
+> Gwenette Anagnos address11@mail.com
 The student has been added.
-> Ricki Trovillion address12@mail.com
+> Tasha Chem address12@mail.com
 The student has been added.
 > back
 Total 12 students have been added.
 > list
+Students:
 10000
-> 10001
-> 10002
-> 10003
-> 10004
-> 10005
-> 10006
-> 10007
-> 10008
-> 10009
-> 10010
-> 10011
+10001
+10002
+10003
+10004
+10005
+10006
+10007
+10008
+10009
+10010
+10011
+?[1;31m
+Start test 26?[0m
+Learning Progress Tracker > > add points
+Enter an id and points or 'back' to return:
+> > back
+> back
+Enter 'exit' to exit the program.
+> exit
+Bye!
+?[1;31m
+Start test 27?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:
+> Elysha Quinlan address1@mail.com
+The student has been added.
+> Karee Antoinetta address2@mail.com
+The student has been added.
+> Ann Agnella address3@mail.com
+The student has been added.
+> Annecorinne Ause address4@mail.com
+The student has been added.
+> Lebbie Alabaster address5@mail.com
+The student has been added.
+> Marisa Firman address6@mail.com
+The student has been added.
+> back
+Total 6 students have been added.
+> list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+> add points
+Enter an id and points or 'back' to return:
+> > 10000 
+Incorrect points format.
+> 10000 -1 1 1 1
+Incorrect points format.
+> 10000 1 1 2 A
+Incorrect points format.
+> 10000 1 1 1
+Incorrect points format.
+> 10000 1 1 1 1 1
+Incorrect points format.
+> imsurethereisnosuchstudentid 1 1 1 1
+No student is found for id=imsurethereisnosuchstudentid.
+?[1;31m
+Start test 28?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:
+> Tasha Chem address1@mail.com
+The student has been added.
+> Dalia Gleeson address2@mail.com
+The student has been added.
+> Alexina Belcher address3@mail.com
+The student has been added.
+> Nonna Miko address4@mail.com
+The student has been added.
+> Leola Whelan address5@mail.com
+The student has been added.
+> Ann Agnella address6@mail.com
+The student has been added.
+> back
+Total 6 students have been added.
+> list
+Students:
+10000
+10001
+10002
+10003
+10004
+10005
+> add points
+Enter an id and points or 'back' to return:
+> > 10000 1 5 1 1
+Points updated.
+> 10001 2 2 3 5
+Points updated.
+> 10002 10 5 8 5
+Points updated.
+> 10003 7 10 9 6
+Points updated.
+> 10004 1 9 2 2
+Points updated.
+> 10005 2 7 8 8
+Points updated.
+?[1;31m
+Start test 29?[0m
+Learning Progress Tracker > > find
+Enter an id or 'back' to return:
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

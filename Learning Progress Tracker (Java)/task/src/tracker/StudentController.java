@@ -182,7 +182,7 @@ class StudentController {
             }
         }
     }
-
+    // In StudentController.java
     public void handleAddPointsCommand(Scanner scanner) {
         System.out.print("Enter an id and points or 'back' to return:\n> ");
         while (true) {
@@ -197,16 +197,25 @@ class StudentController {
             }
             try {
                 int id = Integer.parseInt(inputParts[0]);
+                if (studentProgress.getStudent(id) == null) {
+                    System.out.println("No student is found for id=" + inputParts[0] + ".");
+                    continue;
+                }
                 int[] points = new int[4];
-                for (int i = 0; i < 4; i++) {
-                    points[i] = Integer.parseInt(inputParts[i + 1]);
+                try {
+                    for (int i = 0; i < 4; i++) {
+                        points[i] = Integer.parseInt(inputParts[i + 1]);
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Incorrect points format.");
+                    continue;
                 }
                 boolean pointsUpdated = addPoints(id, points);
                 if (pointsUpdated) {
                     System.out.println("Points updated.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Incorrect points format.");
+                System.out.println("No student is found for id=" + inputParts[0] + ".");
             }
         }
     }
