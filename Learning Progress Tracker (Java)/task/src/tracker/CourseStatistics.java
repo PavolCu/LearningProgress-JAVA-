@@ -5,9 +5,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CourseStatistics {
-    public StudentProgress studentProgress;
+    private final StudentProgress studentProgress;
 
     public CourseStatistics(StudentProgress studentProgress) {
+
         this.studentProgress = studentProgress;
     }
 
@@ -16,7 +17,7 @@ public class CourseStatistics {
         for (int[] points : studentProgress.getStudentPoints().values()) {
             for (int i = 0; i < points.length; i++) {
                 if (points[i] > 0) {
-                    String courseName = getCourseIndex(i);
+                    String courseName = getCourseName(i);
                     courseCount.put(courseName, courseCount.getOrDefault(courseName, 0) + 1);
                 }
             }
@@ -27,7 +28,7 @@ public class CourseStatistics {
         Map<String, Integer> coursePoints = new HashMap<>();
         for (int[] points : studentProgress.getStudentPoints().values()) {
             for (int i = 0; i < points.length; i++) {
-                String courseName = getCourseIndex(i);
+                String courseName = getCourseName(i);
                 coursePoints.put(courseName, coursePoints.getOrDefault(courseName, 0) + points[i]);
             }
         }
@@ -37,7 +38,7 @@ public class CourseStatistics {
         Map<String, Double> courseAveragePoints = new HashMap<>();
         for (int[] points : studentProgress.getStudentPoints().values()) {
             for (int i = 0; i < points.length; i++) {
-                String courseName = getCourseIndex(i);
+                String courseName = getCourseName(i);
                 courseAveragePoints.put(courseName, courseAveragePoints.getOrDefault(courseName, 0.0) + points[i]);
             }
         }
@@ -45,7 +46,7 @@ public class CourseStatistics {
         return courseAveragePoints;
     }
 
-    public String getCourseIndex(int index) {
+    private String getCourseName(int index) {
         switch (index) {
             case 0:
                 return "java";
@@ -56,9 +57,10 @@ public class CourseStatistics {
             case 3:
                 return "spring";
             default:
-                throw new IllegalArgumentException("Invalid course index: " + index);
+                throw new IllegalArgumentException("Invalid index: " + index);
         }
     }
+
 
     public String calculateHardestCourse() {
         // Assuming the hardest course is the one with the lowest average points
@@ -97,15 +99,20 @@ public class CourseStatistics {
                 .collect(Collectors.joining(", "));
     }
     public String calculateLeastPopularCourse() {
-        Map<String, Integer> courseCount = calculateCoursePopularity();
-
-        if (courseCount.isEmpty()){
-            return "n/a";
+        int[] coursePopularity = new int[4];
+        for (int[] points : studentProgress.getStudentPoints().values()) {
+            for (int i = 0; i < 4; i++) {
+                if (points[i] > 0) {
+                    coursePopularity[i]++;
+                }
+            }
         }
-        int minCount = Collections.min(courseCount.values());
-        return courseCount.entrySet().stream()
-                .filter(entry -> entry.getValue() == minCount)
-                .map(Map.Entry::getKey)
-                .collect(Collectors.joining(", "));
+        int minIndex = 0;
+        for (int i = 1; i < 4; i++) {
+            if (coursePopularity[i] < coursePopularity[minIndex]) {
+                minIndex = i;
+            }
+        }
+        return getCourseName(minIndex);
     }
 }
