@@ -28,4 +28,8 @@ public class StudentProgress {
         studentPoints.put(id, points);
     }
 
+    public int[] getPoints(int id) {
+        return studentPoints.getOrDefault(id, new int[4]);
+    }
+
 }

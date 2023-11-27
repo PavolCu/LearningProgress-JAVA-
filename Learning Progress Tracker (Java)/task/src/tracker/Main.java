@@ -44,16 +44,7 @@ public class Main {
                     break;
                 case "find":
                     System.out.print("Enter an id or 'back' to return: ");
-                    String findInput = scanner.nextLine().strip();
-                    if ("back".equalsIgnoreCase(findInput)) {
-                        continue;
-                    }
-                    try {
-                        int id = Integer.parseInt(findInput);
-                        studentController.findStudent(id);
-                    } catch (NumberFormatException e) {
-                        System.out.println("Invalid input. Please enter a valid id.");
-                    }
+                    studentController.handleFindCommand(scanner);
                     break;
                 case "exit":
                     System.out.println("Bye!");

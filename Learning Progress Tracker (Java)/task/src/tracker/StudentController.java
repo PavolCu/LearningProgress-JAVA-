@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 class StudentController {
     private final StudentProgress studentProgress;
-    private int totalStudents;
+    private final int totalStudents;
 
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
@@ -70,7 +70,20 @@ class StudentController {
             System.out.printf("%d | %d | %.1f%%\n", student.getId(), points, completion);
         }
     }
-
+    public void handleFindCommand(Scanner scanner) {
+        while (true) {
+            String findInput = scanner.nextLine().strip();
+            if ("back".equalsIgnoreCase(findInput)) {
+                return;
+            }
+            try {
+                int id = Integer.parseInt(findInput);
+                findStudent(id); // Call the findStudent method with id as an argument
+            } catch (NumberFormatException e) {
+                System.out.println("Unknown command.");
+            }
+        }
+    }
     private int getTotalPointsForStudent(Student student, String courseName) {
         int courseIndex = getCourseIndex(courseName);
         return studentProgress.getStudentPoints().get(student.getId())[courseIndex];
@@ -221,7 +234,6 @@ class StudentController {
             }
         }
     }
-
     public boolean addPoints(int id, int[] points) {
         Student student = studentProgress.getStudent(id);
         if (student == null) {
@@ -233,7 +245,7 @@ class StudentController {
         boolean validPoints = Arrays.stream(points).allMatch(point -> point >= 0);
 
         if (validPoints && points.length == 4) {
-            int[] existingPoints = studentProgress.getStudentPoints().getOrDefault(id, new int[4]);
+            int[] existingPoints = studentProgress.getPoints(id); // Use the new getPoints method
 
             // Add the new points to the existing points
             for (int i = 0; i < 4; i++) {
@@ -241,7 +253,7 @@ class StudentController {
             }
 
             // Update the studentPoints map with the new total points
-            studentProgress.getStudentPoints().put(id, existingPoints);
+            studentProgress.addPoints(id, existingPoints);
 
             return true;
         } else {
@@ -258,5 +270,9 @@ class StudentController {
         } else {
             System.out.printf("No student is found for id=%d.%n", id);
         }
+    }
+
+    public int getTotalStudents() {
+        return totalStudents;
     }
 }
