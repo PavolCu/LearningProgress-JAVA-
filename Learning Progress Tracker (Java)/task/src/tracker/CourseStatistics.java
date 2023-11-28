@@ -99,20 +99,15 @@ public class CourseStatistics {
                 .collect(Collectors.joining(", "));
     }
     public String calculateLeastPopularCourse() {
-        int[] coursePopularity = new int[4];
-        for (int[] points : studentProgress.getStudentPoints().values()) {
-            for (int i = 0; i < 4; i++) {
-                if (points[i] > 0) {
-                    coursePopularity[i]++;
-                }
-            }
+        Map<String, Integer> courseCount = calculateCoursePopularity();
+
+        if (courseCount.isEmpty()) {
+            return "n/a";
         }
-        int minIndex = 0;
-        for (int i = 1; i < 4; i++) {
-            if (coursePopularity[i] < coursePopularity[minIndex]) {
-                minIndex = i;
-            }
-        }
-        return getCourseName(minIndex);
+        int minCount = Collections.min(courseCount.values());
+        return courseCount.entrySet().stream()
+                .filter(entry -> entry.getValue() == minCount)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.joining(", "));
     }
 }
