@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-27T23:15:24" hostname="macbook-pro-uzivatela-cuninka.home" time="0.999">
+<testsuite name="LearningProgressTrackerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-29T18:59:36" hostname="macbook-pro-uzivatela-cuninka.home" time="1.407">
   <properties/>
-  <testcase name="start" classname="LearningProgressTrackerTest" time="0.999">
-    <failure message="java.lang.AssertionError: Wrong answer in test #35&#10;&#10;Expected least popular: n/a, but your output was: Least popular: spring, databases, java, dsa&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&#10;&gt; Tasha Chem address1@mail.com&#10;The student has been added.&#10;&gt; Trixie Winer address2@mail.com&#10;The student has been added.&#10;&gt; Hedwig Wally address3@mail.com&#10;The student has been added.&#10;&gt; Barbara-Anne Chicky address4@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 4 students have been added.&#10;&gt; list&#10;Students:&#10;10000&#10;10001&#10;10002&#10;10003&#10;&gt; add points&#10;Enter an id and points or 'back' to return:&#10;&gt; &gt; 10000 5 4 3 1&#10;Points updated.&#10;&gt; 10001 5 4 3 1&#10;Points updated.&#10;&gt; 10002 5 4 3 1&#10;Points updated.&#10;&gt; 10003 5 4 3 1&#10;Points updated.&#10;&gt; back&#10;&gt; statistics&#10;Type the name of a course to see details or 'back' to quit:&#10;Most popular: spring, databases, java, dsa&#10;Least popular: spring, databases, java, dsa&#10;Highest activity: java&#10;Lowest activity: spring&#10;Easiest course: java&#10;Hardest course: spring" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #35
+  <testcase name="start" classname="LearningProgressTrackerTest" time="1.407">
+    <failure message="java.lang.AssertionError: Wrong answer in test #36&#10;&#10;Your Java student list either contains incorrect data or is incorrectly sorted&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Learning Progress Tracker &gt; &gt; add students&#10;Enter student credentials or 'back' to return:&#10;&gt; Gwenette Kironde address1@mail.com&#10;The student has been added.&#10;&gt; Alexina Belcher address2@mail.com&#10;The student has been added.&#10;&gt; Elysha Quinlan address3@mail.com&#10;The student has been added.&#10;&gt; Barbara-Anne Chicky address4@mail.com&#10;The student has been added.&#10;&gt; back&#10;Total 4 students have been added.&#10;&gt; list&#10;Students:&#10;10000&#10;10001&#10;10002&#10;10003&#10;&gt; add points&#10;Enter an id and points or 'back' to return:&#10;&gt; &gt; 10000 10 10 10 10&#10;Points updated.&#10;&gt; 10001 5 5 5 5&#10;Points updated.&#10;&gt; 10002 5 5 5 5&#10;Points updated.&#10;&gt; 10003 2 2 2 2&#10;Points updated.&#10;&gt; back&#10;&gt; statistics&#10;Type the name of a course to see details or 'back' to quit:&#10;Most popular: Java, DSA, Databases, Spring&#10;Least popular: n/a&#10;Highest activity: Java, DSA, Databases, Spring&#10;Lowest activity: n/a&#10;Easiest course: Java&#10;Hardest course: Java&#10;&gt; Java&#10;JAVA&#10;id | points | completed&#10;10000 | 10 | 1.7%&#10;10001 | 5 | 0.8%&#10;10002 | 5 | 0.8%&#10;10003 | 2 | 0.3%&#10;&gt; DSA&#10;DSA&#10;id | points | completed&#10;10000 | 10 | 2.5%&#10;10001 | 5 | 1.3%&#10;10002 | 5 | 1.3%&#10;10003 | 2 | 0.5%&#10;&gt; Databases&#10;DATABASES&#10;id | points | completed&#10;10000 | 10 | 2.1%&#10;10001 | 5 | 1.0%&#10;10002 | 5 | 1.0%&#10;10003 | 2 | 0.4%&#10;&gt; Spring&#10;SPRING&#10;id | points | completed&#10;10000 | 10 | 1.8%&#10;10001 | 5 | 0.9%&#10;10002 | 5 | 0.9%&#10;10003 | 2 | 0.4%" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #36
 
-Expected least popular: n/a, but your output was: Least popular: spring, databases, java, dsa
+Your Java student list either contains incorrect data or is incorrectly sorted
 
 Please find below the output of your program during this failed test.
 Note that the '&gt;' character indicates the beginning of the input line.
@@ -13,11 +13,11 @@ Note that the '&gt;' character indicates the beginning of the input line.
 
 Learning Progress Tracker &gt; &gt; add students
 Enter student credentials or 'back' to return:
-&gt; Tasha Chem address1@mail.com
+&gt; Gwenette Kironde address1@mail.com
 The student has been added.
-&gt; Trixie Winer address2@mail.com
+&gt; Alexina Belcher address2@mail.com
 The student has been added.
-&gt; Hedwig Wally address3@mail.com
+&gt; Elysha Quinlan address3@mail.com
 The student has been added.
 &gt; Barbara-Anne Chicky address4@mail.com
 The student has been added.
@@ -31,23 +31,51 @@ Students:
 10003
 &gt; add points
 Enter an id and points or 'back' to return:
-&gt; &gt; 10000 5 4 3 1
+&gt; &gt; 10000 10 10 10 10
 Points updated.
-&gt; 10001 5 4 3 1
+&gt; 10001 5 5 5 5
 Points updated.
-&gt; 10002 5 4 3 1
+&gt; 10002 5 5 5 5
 Points updated.
-&gt; 10003 5 4 3 1
+&gt; 10003 2 2 2 2
 Points updated.
 &gt; back
 &gt; statistics
 Type the name of a course to see details or 'back' to quit:
-Most popular: spring, databases, java, dsa
-Least popular: spring, databases, java, dsa
-Highest activity: java
-Lowest activity: spring
-Easiest course: java
-Hardest course: spring
+Most popular: Java, DSA, Databases, Spring
+Least popular: n/a
+Highest activity: Java, DSA, Databases, Spring
+Lowest activity: n/a
+Easiest course: Java
+Hardest course: Java
+&gt; Java
+JAVA
+id | points | completed
+10000 | 10 | 1.7%
+10001 | 5 | 0.8%
+10002 | 5 | 0.8%
+10003 | 2 | 0.3%
+&gt; DSA
+DSA
+id | points | completed
+10000 | 10 | 2.5%
+10001 | 5 | 1.3%
+10002 | 5 | 1.3%
+10003 | 2 | 0.5%
+&gt; Databases
+DATABASES
+id | points | completed
+10000 | 10 | 2.1%
+10001 | 5 | 1.0%
+10002 | 5 | 1.0%
+10003 | 2 | 0.4%
+&gt; Spring
+SPRING
+id | points | completed
+10000 | 10 | 1.8%
+10001 | 5 | 0.9%
+10002 | 5 | 0.9%
+10003 | 2 | 0.4%
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -302,53 +330,53 @@ No students found.
 Start test 24?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Charlena Girardo address1@mail.com
+> Barbara-Anne Chicky address1@mail.com
 The student has been added.
-> Charlena Girardo address1@mail.com
+> Barbara-Anne Chicky address1@mail.com
 This email is already taken.
-> Barbara-Anne Chicky address2@mail.com
+> Marisa Firman address2@mail.com
 The student has been added.
-> Barbara-Anne Chicky address2@mail.com
+> Marisa Firman address2@mail.com
 This email is already taken.
-> Aurie Dorisa address3@mail.com
+> Karee Antoinetta address3@mail.com
 The student has been added.
-> Aurie Dorisa address3@mail.com
+> Karee Antoinetta address3@mail.com
 This email is already taken.
-> Toby Bleier address4@mail.com
+> Nonna Miko address4@mail.com
 The student has been added.
-> Toby Bleier address4@mail.com
+> Nonna Miko address4@mail.com
 This email is already taken.
-> Marisa Firman address5@mail.com
+> Tasha Chem address5@mail.com
 The student has been added.
-> Marisa Firman address5@mail.com
+> Tasha Chem address5@mail.com
 This email is already taken.
-> Karee Antoinetta address6@mail.com
+> Jermaine Naaman address6@mail.com
 The student has been added.
-> Karee Antoinetta address6@mail.com
+> Jermaine Naaman address6@mail.com
 This email is already taken.
-> Carmella Campman address7@mail.com
+> Dalia Gleeson address7@mail.com
 The student has been added.
-> Carmella Campman address7@mail.com
+> Dalia Gleeson address7@mail.com
 This email is already taken.
-> Gwenette Anagnos address8@mail.com
+> Lebbie Alabaster address8@mail.com
 The student has been added.
-> Gwenette Anagnos address8@mail.com
+> Lebbie Alabaster address8@mail.com
 This email is already taken.
-> Roxi Hett address9@mail.com
+> Leola Whelan address9@mail.com
 The student has been added.
-> Roxi Hett address9@mail.com
+> Leola Whelan address9@mail.com
 This email is already taken.
-> Amye Uriisa address10@mail.com
+> Toby Bleier address10@mail.com
 The student has been added.
-> Amye Uriisa address10@mail.com
+> Toby Bleier address10@mail.com
 This email is already taken.
-> Tasha Chem address11@mail.com
+> Elysha Quinlan address11@mail.com
 The student has been added.
-> Tasha Chem address11@mail.com
+> Elysha Quinlan address11@mail.com
 This email is already taken.
-> Van Fawnia address12@mail.com
+> Elwira Florrie address12@mail.com
 The student has been added.
-> Van Fawnia address12@mail.com
+> Elwira Florrie address12@mail.com
 This email is already taken.
 > back
 Total 12 students have been added.
@@ -356,29 +384,29 @@ Total 12 students have been added.
 Start test 25?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Annecorinne Ause address1@mail.com
+> Ricki Trovillion address1@mail.com
 The student has been added.
-> Trixie Winer address2@mail.com
+> Barbara-Anne Chicky address2@mail.com
 The student has been added.
-> Barbara-Anne Chicky address3@mail.com
+> Charlena Girardo address3@mail.com
 The student has been added.
-> Karee Antoinetta address4@mail.com
+> Beatrisa Jegar address4@mail.com
 The student has been added.
-> Roxi Hett address5@mail.com
+> Aurie Dorisa address5@mail.com
 The student has been added.
-> Van Fawnia address6@mail.com
+> Olga Rosanne address6@mail.com
 The student has been added.
-> Amye Uriisa address7@mail.com
+> Anjanette Uis address7@mail.com
 The student has been added.
-> Dolley Panther address8@mail.com
+> Nonna Miko address8@mail.com
 The student has been added.
-> Ricki Trovillion address9@mail.com
+> Roxi Hett address9@mail.com
 The student has been added.
-> Gwenette Kironde address10@mail.com
+> Shoshana Utica address10@mail.com
 The student has been added.
-> Francesca Francis address11@mail.com
+> Carmella Campman address11@mail.com
 The student has been added.
-> Shoshana Utica address12@mail.com
+> Ann Agnella address12@mail.com
 The student has been added.
 > back
 Total 12 students have been added.
@@ -409,17 +437,17 @@ Bye!
 Start test 27?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Natka Herculie address1@mail.com
+> Annecorinne Ause address1@mail.com
 The student has been added.
-> Van Fawnia address2@mail.com
+> Natka Herculie address2@mail.com
 The student has been added.
-> Marisa Firman address3@mail.com
+> Karee Antoinetta address3@mail.com
 The student has been added.
-> Ann Agnella address4@mail.com
+> Trixie Winer address4@mail.com
 The student has been added.
-> Amye Uriisa address5@mail.com
+> Alexina Belcher address5@mail.com
 The student has been added.
-> Tasha Chem address6@mail.com
+> Gwenette Anagnos address6@mail.com
 The student has been added.
 > back
 Total 6 students have been added.
@@ -449,17 +477,17 @@ No student is found for id=imsurethereisnosuchstudentid.
 Start test 28?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Shoshana Utica address1@mail.com
+> Francesca Francis address1@mail.com
 The student has been added.
-> Van Fawnia address2@mail.com
+> Shoshana Utica address2@mail.com
 The student has been added.
-> Dalia Gleeson address3@mail.com
+> Beatrisa Jegar address3@mail.com
 The student has been added.
-> Brandise Hardan address4@mail.com
+> Aurie Dorisa address4@mail.com
 The student has been added.
-> Emelia Annnora address5@mail.com
+> Elwira Florrie address5@mail.com
 The student has been added.
-> Elysha Quinlan address6@mail.com
+> Brandise Hardan address6@mail.com
 The student has been added.
 > back
 Total 6 students have been added.
@@ -473,17 +501,17 @@ Students:
 10005
 > add points
 Enter an id and points or 'back' to return:
-> > 10000 2 9 4 6
+> > 10000 9 1 4 10
 Points updated.
-> 10001 1 2 4 5
+> 10001 1 10 10 7
 Points updated.
-> 10002 5 5 4 2
+> 10002 5 10 1 5
 Points updated.
-> 10003 10 8 9 5
+> 10003 6 7 7 6
 Points updated.
-> 10004 8 4 3 10
+> 10004 9 1 4 10
 Points updated.
-> 10005 9 2 3 5
+> 10005 3 10 8 6
 Points updated.
 ?[1;31m
 Start test 29?[0m
@@ -497,15 +525,15 @@ Bye!
 Start test 30?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Lebbie Alabaster address1@mail.com
+> Shoshana Utica address1@mail.com
 The student has been added.
-> Barbara-Anne Chicky address2@mail.com
+> Nonna Miko address2@mail.com
 The student has been added.
-> Karee Antoinetta address3@mail.com
+> Leola Whelan address3@mail.com
 The student has been added.
-> Brandise Hardan address4@mail.com
+> Francesca Francis address4@mail.com
 The student has been added.
-> Aurie Dorisa address5@mail.com
+> Anjanette Uis address5@mail.com
 The student has been added.
 > back
 Total 5 students have been added.
@@ -636,13 +664,13 @@ Bye!
 Start test 35?[0m
 Learning Progress Tracker > > add students
 Enter student credentials or 'back' to return:
-> Tasha Chem address1@mail.com
+> Karee Antoinetta address1@mail.com
 The student has been added.
-> Trixie Winer address2@mail.com
+> Anjanette Uis address2@mail.com
 The student has been added.
-> Hedwig Wally address3@mail.com
+> Ricki Trovillion address3@mail.com
 The student has been added.
-> Barbara-Anne Chicky address4@mail.com
+> Natka Herculie address4@mail.com
 The student has been added.
 > back
 Total 4 students have been added.
@@ -665,12 +693,79 @@ Points updated.
 > back
 > statistics
 Type the name of a course to see details or 'back' to quit:
-Most popular: spring, databases, java, dsa
-Least popular: spring, databases, java, dsa
-Highest activity: java
-Lowest activity: spring
-Easiest course: java
-Hardest course: spring
+Most popular: Java, DSA, Databases, Spring
+Least popular: n/a
+Highest activity: Java, DSA, Databases, Spring
+Lowest activity: n/a
+Easiest course: Java
+Hardest course: Spring
+?[1;31m
+Start test 36?[0m
+Learning Progress Tracker > > add students
+Enter student credentials or 'back' to return:
+> Gwenette Kironde address1@mail.com
+The student has been added.
+> Alexina Belcher address2@mail.com
+The student has been added.
+> Elysha Quinlan address3@mail.com
+The student has been added.
+> Barbara-Anne Chicky address4@mail.com
+The student has been added.
+> back
+Total 4 students have been added.
+> list
+Students:
+10000
+10001
+10002
+10003
+> add points
+Enter an id and points or 'back' to return:
+> > 10000 10 10 10 10
+Points updated.
+> 10001 5 5 5 5
+Points updated.
+> 10002 5 5 5 5
+Points updated.
+> 10003 2 2 2 2
+Points updated.
+> back
+> statistics
+Type the name of a course to see details or 'back' to quit:
+Most popular: Java, DSA, Databases, Spring
+Least popular: n/a
+Highest activity: Java, DSA, Databases, Spring
+Lowest activity: n/a
+Easiest course: Java
+Hardest course: Java
+> Java
+JAVA
+id | points | completed
+10000 | 10 | 1.7%
+10001 | 5 | 0.8%
+10002 | 5 | 0.8%
+10003 | 2 | 0.3%
+> DSA
+DSA
+id | points | completed
+10000 | 10 | 2.5%
+10001 | 5 | 1.3%
+10002 | 5 | 1.3%
+10003 | 2 | 0.5%
+> Databases
+DATABASES
+id | points | completed
+10000 | 10 | 2.1%
+10001 | 5 | 1.0%
+10002 | 5 | 1.0%
+10003 | 2 | 0.4%
+> Spring
+SPRING
+id | points | completed
+10000 | 10 | 1.8%
+10001 | 5 | 0.9%
+10002 | 5 | 0.9%
+10003 | 2 | 0.4%
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

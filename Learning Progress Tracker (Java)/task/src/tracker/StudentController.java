@@ -39,6 +39,7 @@ class StudentController {
         System.out.println("Hardest course: " + (hardestCourse != null ? hardestCourse : "n/a"));
 
 
+
         while (true) {
             String courseName = scanner.nextLine().strip().toLowerCase();
             if (courseName.equals("back")) {

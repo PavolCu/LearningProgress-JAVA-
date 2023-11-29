@@ -49,13 +49,13 @@ public class CourseStatistics {
     private String getCourseName(int index) {
         switch (index) {
             case 0:
-                return "java";
+                return "Java";
             case 1:
-                return "dsa";
+                return "DSA";
             case 2:
-                return "databases";
+                return "Databases";
             case 3:
-                return "spring";
+                return "Spring";
             default:
                 throw new IllegalArgumentException("Invalid index: " + index);
         }
@@ -65,36 +65,49 @@ public class CourseStatistics {
     public String calculateHardestCourse() {
         // Assuming the hardest course is the one with the lowest average points
         Map<String, Double> courseAveragePoints = calculateAveragePoints();
-        return courseAveragePoints.isEmpty() ? "n/a" : Collections.min(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return courseAveragePoints.isEmpty() || Collections.min(courseAveragePoints.values()) == 0 ? "n/a" : Collections.min(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public String calculateEasiestCourse() {
         // Assuming the easiest course is the one with the highest average points
         Map<String, Double> courseAveragePoints = calculateAveragePoints();
-        return courseAveragePoints.isEmpty() ? "n/a" : Collections.max(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        return courseAveragePoints.isEmpty() || Collections.max(courseAveragePoints.values()) == 0 ? "n/a" : Collections.max(courseAveragePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
     }
 
     public String calculateLowestActivityCourse() {
-        // Assuming the course with the lowest activity is the one with the least points
         Map<String, Integer> coursePoints = calculateCoursePoints();
-        return coursePoints.isEmpty() ? "n/a" : Collections.min(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
-    }
+        if (coursePoints.isEmpty()) {
+            return "n/a";
+        }
+        int minPoints = Collections.min(coursePoints.values());
+        List<String> lowestActivityCourses = coursePoints.entrySet().stream()
+                .filter(entry -> entry.getValue() == minPoints)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
 
+        boolean hasCourseWithMinPoints = lowestActivityCourses.stream()
+                .anyMatch(course -> coursePoints.get(course) == minPoints);
+
+        return hasCourseWithMinPoints ? "n/a" : lowestActivityCourses.get(0);
+    }
     public String calculateHighestActivityCourse() {
-        // Assuming the course with the highest activity is the one with the most points
         Map<String, Integer> coursePoints = calculateCoursePoints();
-        return coursePoints.isEmpty() ? "n/a" : Collections.max(coursePoints.entrySet(), Map.Entry.comparingByValue()).getKey();
+        if (coursePoints.isEmpty()) {
+            return "n/a";
+        }
+        return coursePoints.entrySet().stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .map(Map.Entry::getKey)
+                .collect(Collectors.joining(", "));
     }
-
     public String calculateMostPopularCourse() {
         Map<String, Integer> courseCount = calculateCoursePopularity();
 
         if (courseCount.isEmpty()){
             return "n/a";
         }
-        int maxCount = Collections.max(courseCount.values());
         return courseCount.entrySet().stream()
-                .filter(entry -> entry.getValue() == maxCount)
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .map(Map.Entry::getKey)
                 .collect(Collectors.joining(", "));
     }
@@ -105,9 +118,20 @@ public class CourseStatistics {
             return "n/a";
         }
         int minCount = Collections.min(courseCount.values());
-        return courseCount.entrySet().stream()
+        List<String> leastPopularCourses = courseCount.entrySet().stream()
                 .filter(entry -> entry.getValue() == minCount)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.joining(", "));
+                .collect(Collectors.toList());
+
+        Map<String, Integer> coursePoints = calculateCoursePoints();
+        int minPoints = Collections.min(coursePoints.values());
+        boolean hasCourseWithMinPoints = leastPopularCourses.stream()
+                .anyMatch(course -> coursePoints.get(course) == minPoints);
+
+        if (hasCourseWithMinPoints) {
+            return "n/a";
+        } else {
+            return leastPopularCourses.stream().collect(Collectors.joining(", "));
+        }
     }
 }
