@@ -1,5 +1,6 @@
 package tracker;
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -60,15 +61,15 @@ class StudentController {
 
     private void printCourseStatistics(String courseName) {
         System.out.println(courseName.toUpperCase());
-        System.out.println("id | points | completed");
+        System.out.println("id   points   completed");
         List<Student> students = getStudentsForCourse(courseName);
-        students.sort(Comparator.comparingInt((Student s) ->getTotalPointsForStudent(s, courseName)).reversed()
+        students.sort(Comparator.comparingDouble((Student s) ->getTotalPointsForStudent(s, courseName)).reversed()
                 .thenComparing(Student::getId));
 
         for (Student student : students) {
             int points = getTotalPointsForStudent(student, courseName);
             double completion = getCompletionPercentage(student, courseName);
-            System.out.printf("%d | %d | %.1f%%\n", student.getId(), points, completion);
+            System.out.printf("%d   %d   %.1f%%\n", student.getId(), points, completion);
         }
     }
     public void handleFindCommand(Scanner scanner) {
@@ -91,10 +92,13 @@ class StudentController {
     }
 
     private double getCompletionPercentage(Student student, String courseName) {
-        int totalPoints = getTotalPointsForStudent(student,courseName);
-        return (double) totalPoints / getMaxPointsForCourse(courseName) * 100; // MAX_POINTS_PER_COURSE is the maximum points a student can get for a course
-    }
+        double totalPoints = getTotalPointsForStudent(student,courseName);
+        double completion = totalPoints / getMaxPointsForCourse(courseName) * 100;
 
+        BigDecimal bd = new BigDecimal(Double.toString(completion));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
     private int getCourseIndex(String courseName) {
         switch (courseName) {
             case "java":

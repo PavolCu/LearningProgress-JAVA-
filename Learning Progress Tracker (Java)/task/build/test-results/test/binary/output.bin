@@ -188,53 +188,53 @@ No input.
 Start test 24[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-(> Barbara-Anne Chicky address1@mail.com
+#> Elwira Florrie address1@mail.com
 The student has been added.
-(> Barbara-Anne Chicky address1@mail.com
+#> Elwira Florrie address1@mail.com
 This email is already taken.
-"> Marisa Firman address2@mail.com
+$> Alexina Belcher address2@mail.com
 The student has been added.
-"> Marisa Firman address2@mail.com
+$> Alexina Belcher address2@mail.com
 This email is already taken.
-%> Karee Antoinetta address3@mail.com
+"> Anjanette Uis address3@mail.com
 The student has been added.
-%> Karee Antoinetta address3@mail.com
+"> Anjanette Uis address3@mail.com
 This email is already taken.
-> Nonna Miko address4@mail.com
+!> Hedwig Wally address4@mail.com
 The student has been added.
-> Nonna Miko address4@mail.com
+!> Hedwig Wally address4@mail.com
 This email is already taken.
-> Tasha Chem address5@mail.com
+#> Beatrisa Jegar address5@mail.com
 The student has been added.
-> Tasha Chem address5@mail.com
+#> Beatrisa Jegar address5@mail.com
 This email is already taken.
-$> Jermaine Naaman address6@mail.com
+"> Marisa Firman address6@mail.com
 The student has been added.
-$> Jermaine Naaman address6@mail.com
+"> Marisa Firman address6@mail.com
 This email is already taken.
-"> Dalia Gleeson address7@mail.com
+#> Shoshana Utica address7@mail.com
 The student has been added.
-"> Dalia Gleeson address7@mail.com
+#> Shoshana Utica address7@mail.com
 This email is already taken.
-%> Lebbie Alabaster address8@mail.com
+ > Amye Uriisa address8@mail.com
 The student has been added.
-%> Lebbie Alabaster address8@mail.com
+ > Amye Uriisa address8@mail.com
 This email is already taken.
-!> Leola Whelan address9@mail.com
+(> Barbara-Anne Chicky address9@mail.com
 The student has been added.
-!> Leola Whelan address9@mail.com
+(> Barbara-Anne Chicky address9@mail.com
 This email is already taken.
-!> Toby Bleier address10@mail.com
+"> Trixie Winer address10@mail.com
 The student has been added.
-!> Toby Bleier address10@mail.com
+"> Trixie Winer address10@mail.com
 This email is already taken.
-$> Elysha Quinlan address11@mail.com
+"> Aurie Dorisa address11@mail.com
 The student has been added.
-$> Elysha Quinlan address11@mail.com
+"> Aurie Dorisa address11@mail.com
 This email is already taken.
-$> Elwira Florrie address12@mail.com
+%> Brandise Hardan address12@mail.com
 The student has been added.
-$> Elwira Florrie address12@mail.com
+%> Brandise Hardan address12@mail.com
 This email is already taken.
 > back
 #Total 12 students have been added.
@@ -242,29 +242,29 @@ No input.
 Start test 25[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Ricki Trovillion address1@mail.com
+%> Karee Antoinetta address1@mail.com
 The student has been added.
-(> Barbara-Anne Chicky address2@mail.com
+!> Trixie Winer address2@mail.com
 The student has been added.
-%> Charlena Girardo address3@mail.com
+(> Barbara-Anne Chicky address3@mail.com
 The student has been added.
-#> Beatrisa Jegar address4@mail.com
+ > Toby Bleier address4@mail.com
 The student has been added.
-!> Aurie Dorisa address5@mail.com
+%> Carmella Campman address5@mail.com
 The student has been added.
-!> Olga Rosanne address6@mail.com
+&> Francesca Francis address6@mail.com
 The student has been added.
-"> Anjanette Uis address7@mail.com
+#> Elwira Florrie address7@mail.com
 The student has been added.
-> Nonna Miko address8@mail.com
+%> Charlena Girardo address8@mail.com
 The student has been added.
-> Roxi Hett address9@mail.com
+!> Hedwig Wally address9@mail.com
 The student has been added.
-$> Shoshana Utica address10@mail.com
+%> Alexina Belcher address10@mail.com
 The student has been added.
-&> Carmella Campman address11@mail.com
+&> Ricki Trovillion address11@mail.com
 The student has been added.
-!> Ann Agnella address12@mail.com
+ > Van Fawnia address12@mail.com
 The student has been added.
 > back
 #Total 12 students have been added.
@@ -296,17 +296,17 @@ Students:
 Start test 27[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Annecorinne Ause address1@mail.com
+"> Anjanette Uis address1@mail.com
 The student has been added.
-#> Natka Herculie address2@mail.com
+!> Starlin Griz address2@mail.com
 The student has been added.
-%> Karee Antoinetta address3@mail.com
+> Tasha Chem address3@mail.com
 The student has been added.
-!> Trixie Winer address4@mail.com
+#> Elwira Florrie address4@mail.com
 The student has been added.
-$> Alexina Belcher address5@mail.com
+!> Hedwig Wally address5@mail.com
 The student has been added.
-%> Gwenette Anagnos address6@mail.com
+(> Barbara-Anne Chicky address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -337,17 +337,17 @@ Students:
 Start test 28[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-&> Francesca Francis address1@mail.com
+> Tasha Chem address1@mail.com
 The student has been added.
 #> Shoshana Utica address2@mail.com
 The student has been added.
-#> Beatrisa Jegar address3@mail.com
+> Roxi Hett address3@mail.com
 The student has been added.
-!> Aurie Dorisa address4@mail.com
+$> Alexina Belcher address4@mail.com
 The student has been added.
-#> Elwira Florrie address5@mail.com
+%> Ricki Trovillion address5@mail.com
 The student has been added.
-$> Brandise Hardan address6@mail.com
+%> Charlena Girardo address6@mail.com
 The student has been added.
 > back
 "Total 6 students have been added.
@@ -362,17 +362,17 @@ Students:
 10005
 > add points
 ,Enter an id and points or 'back' to return:
-> > 10000 9 1 4 10
+> > 10000 5 4 2 9
 Points updated.
-> 10001 1 10 10 7
+> 10001 6 3 7 8
 Points updated.
-> 10002 5 10 1 5
+> 10002 5 5 2 6
 Points updated.
-> 10003 6 7 7 6
+> 10003 6 1 8 5
 Points updated.
-> 10004 9 1 4 10
+> 10004 6 9 6 8
 Points updated.
-> 10005 3 10 8 6
+> 10005 6 3 6 8
 Points updated.
 [1;31m
 Start test 29[0m
@@ -386,15 +386,15 @@ Students:
 Start test 30[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-#> Shoshana Utica address1@mail.com
+$> Brandise Hardan address1@mail.com
 The student has been added.
-> Nonna Miko address2@mail.com
+#> Emelia Annnora address2@mail.com
 The student has been added.
-!> Leola Whelan address3@mail.com
+!> Hedwig Wally address3@mail.com
 The student has been added.
-&> Francesca Francis address4@mail.com
+%> Gwenette Anagnos address4@mail.com
 The student has been added.
-"> Anjanette Uis address5@mail.com
+#> Elwira Florrie address5@mail.com
 The student has been added.
 > back
 "Total 5 students have been added.
@@ -477,17 +477,17 @@ Students:
 Hardest course: n/a
 > Java
 JAVA
-id | points | completed
+id   points   completed
 > DSA
 DSA
-id | points | completed
+id   points   completed
 > Databases
 
 DATABASES
-id | points | completed
+id   points   completed
 	> Spring
 SPRING
-id | points | completed
+id   points   completed
 > abc
 Unknown course.
 > quit
@@ -527,11 +527,11 @@ DATABASES
 Start test 35[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Karee Antoinetta address1@mail.com
+!> Hedwig Wally address1@mail.com
 The student has been added.
-"> Anjanette Uis address2@mail.com
+!> Leola Whelan address2@mail.com
 The student has been added.
-%> Ricki Trovillion address3@mail.com
+%> Karee Antoinetta address3@mail.com
 The student has been added.
 #> Natka Herculie address4@mail.com
 The student has been added.
@@ -567,13 +567,13 @@ Students:
 Start test 36[0m
 +Learning Progress Tracker > > add students
 /Enter student credentials or 'back' to return:
-%> Gwenette Kironde address1@mail.com
+%> Karee Antoinetta address1@mail.com
 The student has been added.
-$> Alexina Belcher address2@mail.com
+!> Leola Whelan address2@mail.com
 The student has been added.
-#> Elysha Quinlan address3@mail.com
+$> Jermaine Naaman address3@mail.com
 The student has been added.
-(> Barbara-Anne Chicky address4@mail.com
+> Van Fawnia address4@mail.com
 The student has been added.
 > back
 "Total 4 students have been added.
@@ -605,30 +605,88 @@ Students:
 Hardest course: Java
 > Java
 JAVA
-id | points | completed
-10000 | 10 | 1.7%
-10001 | 5 | 0.8%
-10002 | 5 | 0.8%
-10003 | 2 | 0.3%
+id   points   completed
+10000   10   1.7%
+10001   5   0.8%
+10002   5   0.8%
+10003   2   0.3%
 > DSA
 DSA
-id | points | completed
-10000 | 10 | 2.5%
-10001 | 5 | 1.3%
-10002 | 5 | 1.3%
-10003 | 2 | 0.5%
+id   points   completed
+10000   10   2.5%
+10001   5   1.3%
+10002   5   1.3%
+10003   2   0.5%
 > Databases
 
 DATABASES
-id | points | completed
-10000 | 10 | 2.1%
-10001 | 5 | 1.0%
-10002 | 5 | 1.0%
-10003 | 2 | 0.4%
+id   points   completed
+10000   10   2.1%
+10001   5   1.0%
+10002   5   1.0%
+10003   2   0.4%
 	> Spring
 SPRING
-id | points | completed
-10000 | 10 | 1.8%
-10001 | 5 | 0.9%
-10002 | 5 | 0.9%
-10003 | 2 | 0.4%
+id   points   completed
+10000   10   1.8%
+10001   5   0.9%
+10002   5   0.9%
+10003   2   0.4%
+[1;31m
+Start test 37[0m
++Learning Progress Tracker > > add students
+/Enter student credentials or 'back' to return:
+> John Doe johnd@email.net
+The student has been added.
+> Jane Spark jspark@yahoo.com
+The student has been added.
+> back
+"Total 2 students have been added.
+> list
+
+Students:
+10000
+10001
+> add points
+,Enter an id and points or 'back' to return:
+> > 10000 8 7 7 5
+Points updated.
+> 10000 7 6 9 7
+Points updated.
+> 10000 6 5 5 0
+Points updated.
+> 10001 8 0 8 6
+Points updated.
+> 10001 7 0 0 0
+Points updated.
+> 10001 9 0 0 5
+Points updated.
+> back
+> statistics
+<Type the name of a course to see details or 'back' to quit:
++Most popular: Java, Databases, Spring, DSA
+Least popular: n/a
+/Highest activity: Java, Databases, Spring, DSA
+Lowest activity: n/a
+Easiest course: Java
+Hardest course: DSA
+> Java
+JAVA
+id   points   completed
+10001   24   4.0%
+10000   21   3.5%
+> DSA
+DSA
+id   points   completed
+10000   18   4.5%
+> Databases
+
+DATABASES
+id   points   completed
+10000   21   4.4%
+10001   8   1.7%
+	> Spring
+SPRING
+id   points   completed
+10000   12   2.2%
+10001   11   2.0%
