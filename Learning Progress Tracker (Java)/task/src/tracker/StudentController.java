@@ -12,15 +12,16 @@ class StudentController {
     private final int totalStudents;
 
     public void handleNotifyCommand() {
-        List<String> message = new ArrayList<>();
-        int nofifiedStudents = 0;
+        List<String> messages = new ArrayList<>();
+        int notifiedStudents = 0;
 
-        for (Student student :studentProgress.getStudents()) {
+        for (Map.Entry<Integer, Student> entry : studentProgress.getStudents().entrySet()) {
+            Student student = entry.getValue();
             List<Course> completedCourses = studentProgress.getCompletedCourses(student);
             if (!completedCourses.isEmpty()) {
                 for (Course course : completedCourses) {
-                    String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %! You have accompished our %s course!".)
-                            stuent.getEmail(), student.getFullName(), course.getName());
+                    String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %s! You have accomplished our %s course!",
+                            student.getEmail(), student.getFullName(), course.getName());
                     messages.add(message);
                 }
                 notifiedStudents++;
@@ -32,7 +33,6 @@ class StudentController {
         }
         System.out.println("Total " + notifiedStudents + " students have been notified.");
     }
-
 
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
