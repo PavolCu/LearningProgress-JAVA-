@@ -11,6 +11,21 @@ class StudentController {
     private final StudentProgress studentProgress;
     private final int totalStudents;
 
+    public String getCourseName(int index) {
+        switch (index) {
+            case 0:
+                return "Java";
+            case 1:
+                return "DSA";
+            case 2:
+                return "Databases";
+            case 3:
+                return "Spring";
+            default:
+                throw new IllegalArgumentException("Invalid index: " + index);
+        }
+    }
+
     public void handleNotifyCommand() {
         List<String> messages = new ArrayList<>();
         int notifiedStudents = 0;
@@ -19,12 +34,19 @@ class StudentController {
             Student student = entry.getValue();
             List<Course> completedCourses = studentProgress.getCompletedCourses(student);
             if (!completedCourses.isEmpty()) {
+                boolean isNewlyNotified = false;
                 for (Course course : completedCourses) {
-                    String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %s! You have accomplished our %s course!",
-                            student.getEmail(), student.getFullName(), course.getName());
-                    messages.add(message);
+                    if (!student.getNotifiedCourses().contains(course)) {
+                        String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %s! You have accomplished our %s course!",
+                                student.getEmail(), student.getFullName(), course.getName());
+                        messages.add(message);
+                        student.addNotifiedCourse(course);
+                        isNewlyNotified = true;
+                    }
                 }
-                notifiedStudents++;
+                if (isNewlyNotified) {
+                    notifiedStudents++;
+                }
             }
         }
 
@@ -33,7 +55,6 @@ class StudentController {
         }
         System.out.println("Total " + notifiedStudents + " students have been notified.");
     }
-
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
         this.totalStudents = studentProgress.getStudents().size();// Initialize totalStudents
@@ -134,7 +155,7 @@ class StudentController {
         }
     }
     private int getMaxPointsForCourse(String courseName) {
-        switch (courseName) {
+        switch (courseName.toLowerCase()) {
             case "java":
                 return 600;
             case "dsa":
@@ -275,6 +296,10 @@ class StudentController {
             // Add the new points to the existing points
             for (int i = 0; i < 4; i++) {
                 existingPoints[i] += points[i];
+                //Check if the student has completed the course
+                if (existingPoints[i] >= getMaxPointsForCourse(getCourseName(i))) {
+                    student.addCompletedCourse(new Course(getCourseName(i)));
+                }
             }
 
             // Update the studentPoints map with the new total points
@@ -286,6 +311,7 @@ class StudentController {
             return false;
         }
     }
+
     public void findStudent(int id) {
         Student student = studentProgress.getStudent(id);
         if (student != null) {
