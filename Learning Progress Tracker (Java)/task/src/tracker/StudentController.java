@@ -1,10 +1,7 @@
 package tracker;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -13,6 +10,29 @@ import java.util.stream.Collectors;
 class StudentController {
     private final StudentProgress studentProgress;
     private final int totalStudents;
+
+    public void handleNotifyCommand() {
+        List<String> message = new ArrayList<>();
+        int nofifiedStudents = 0;
+
+        for (Student student :studentProgress.getStudents()) {
+            List<Course> completedCourses = studentProgress.getCompletedCourses(student);
+            if (!completedCourses.isEmpty()) {
+                for (Course course : completedCourses) {
+                    String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %! You have accompished our %s course!".)
+                            stuent.getEmail(), student.getFullName(), course.getName());
+                    messages.add(message);
+                }
+                notifiedStudents++;
+            }
+        }
+
+        for (String message : messages) {
+            System.out.println(message);
+        }
+        System.out.println("Total " + notifiedStudents + " students have been notified.");
+    }
+
 
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;

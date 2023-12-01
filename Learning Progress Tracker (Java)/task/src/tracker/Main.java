@@ -53,6 +53,9 @@ public class Main {
                     studentController.handleStatisticsCommand(scanner
                     );
                     break;
+                case "notify":
+                    studentController.handleNotifyCommand(scanner);
+                    break;
                 default:
                     System.out.println("Unknown command.");
                     break;
