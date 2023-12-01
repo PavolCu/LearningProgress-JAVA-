@@ -1,6 +1,7 @@
 package tracker;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -14,6 +15,9 @@ public class StudentProgress {
 
     public Map<Integer, int[]> getStudentPoints() {
         return studentPoints;
+    }
+    public List<Course>getCompletedCourses(Student student) {
+        return student.getCompletedCourses();
     }
 
     public Student getStudent(int id) {
