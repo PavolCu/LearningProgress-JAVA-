@@ -4,21 +4,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Create a new Scanner object for user input
         Scanner scanner = new Scanner(System.in);
+        // Create a new StudentProgress object
         StudentProgress studentProgress = new StudentProgress();
+        // Create a new StudentController object
         StudentController studentController = new StudentController(studentProgress);
 
+        // Print a prompt to the console
         System.out.print("Learning Progress Tracker > ");
+        // Boolean flag to check if the first input is 'back'
         boolean isFirstInputBack = true;
 
+        // Loop until the user enters 'exit', start of the main program loop
         label:
         while (true) {
+            // Read the user input, remove leading and trailing whitespace, and convert to lowercase
             String input = scanner.nextLine().strip().toLowerCase();
 
+            // If the input is empty, print "No input." and continue to the next iteration of the loop
             if (input.isEmpty()) {
                 System.out.println("No input.");
                 continue;
             }
+            //
             if (input.equalsIgnoreCase("back")) {
                 System.out.println("Enter 'exit' to exit the program.");
                 continue;
@@ -29,6 +38,7 @@ public class Main {
                 continue;
             }
 
+            // Switch statement to handle different commands
             switch (input.toLowerCase()) {
                 case "back":
                     continue;
