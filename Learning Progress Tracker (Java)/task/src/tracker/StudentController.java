@@ -1,25 +1,77 @@
 package tracker;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 
-
+// The StudentController class handles the operations related to students.
 class StudentController {
+    // The student progress data.
     private final StudentProgress studentProgress;
+    // The total number of students.
     private final int totalStudents;
 
+    // Gets the course name based on the index.
+    // @param index The index of the course.
+    // @return The name of the course.
+    public String getCourseName(int index) {
+        switch (index) {
+            case 0:
+                return "Java";
+            case 1:
+                return "DSA";
+            case 2:
+                return "Databases";
+            case 3:
+                return "Spring";
+            default:
+                throw new IllegalArgumentException("Invalid index: " + index);
+        }
+    }
+
+    // Handles the notify command.
+    public void handleNotifyCommand() {
+        List<String> messages = new ArrayList<>();
+        int notifiedStudents = 0;
+
+        for (Map.Entry<Integer, Student> entry : studentProgress.getStudents().entrySet()) {
+            Student student = entry.getValue();
+            List<Course> completedCourses = studentProgress.getCompletedCourses(student);
+            if (!completedCourses.isEmpty()) {
+                boolean isNewlyNotified = false;
+                for (Course course : completedCourses) {
+                    if (!student.getNotifiedCourses().contains(course)) {
+                        String message = String.format("To: %s\nRe: Your Learning Progress\nHello, %s! You have accomplished our %s course!",
+                                student.getEmail(), student.getFullName(), course.getName());
+                        messages.add(message);
+                        student.addNotifiedCourse(course);
+                        isNewlyNotified = true;
+                    }
+                }
+                if (isNewlyNotified) {
+                    notifiedStudents++;
+                }
+            }
+        }
+
+        for (String message : messages) {
+            System.out.println(message);
+        }
+        System.out.println("Total " + notifiedStudents + " students have been notified.");
+    }
+
+    // Constructor for the StudentController class.
+    // @param studentProgress The student progress data.
     public StudentController(StudentProgress studentProgress) {
         this.studentProgress = studentProgress;
         this.totalStudents = studentProgress.getStudents().size();// Initialize totalStudents
     }
 
 
+    // Handles the statistics command.
+    // @param scanner The scanner to read user input.
     public void handleStatisticsCommand(Scanner scanner) {
         CourseStatistics courseStatistics = new CourseStatistics(studentProgress);
         System.out.println("Type the name of a course to see details or 'back' to quit:");
@@ -55,10 +107,15 @@ class StudentController {
         }
     }
 
+    // Checks if the course name is valid.
+    // @param courseName The name of the course.
+    // @return True if the course name is valid, false otherwise.
     private boolean isValidCourseName(String courseName) {
         return courseName.equals("java") || courseName.equals("dsa") || courseName.equals("databases") || courseName.equals("spring");
     }
 
+    // Prints the statistics for a course.
+    // @param courseName The name of the course.
     private void printCourseStatistics(String courseName) {
         System.out.println(courseName.toUpperCase());
         System.out.println("id   points   completed");
@@ -72,6 +129,9 @@ class StudentController {
             System.out.printf("%d   %d   %.1f%%\n", student.getId(), points, completion);
         }
     }
+
+    // Handles the find command.
+    // @param scanner The scanner to read user input.
     public void handleFindCommand(Scanner scanner) {
         while (true) {
             String findInput = scanner.nextLine().strip();
@@ -86,11 +146,20 @@ class StudentController {
             }
         }
     }
+
+    // Gets the total points for a student for a course.
+    // @param student The student.
+    // @param courseName The name of the course.
+    // @return The total points for the student for the course.
     private int getTotalPointsForStudent(Student student, String courseName) {
         int courseIndex = getCourseIndex(courseName);
         return studentProgress.getStudentPoints().get(student.getId())[courseIndex];
     }
 
+    // Gets the completion percentage for a student for a course.
+    // @param student The student.
+    // @param courseName The name of the course.
+    // @return The completion percentage for the student for the course.
     private double getCompletionPercentage(Student student, String courseName) {
         double totalPoints = getTotalPointsForStudent(student,courseName);
         double completion = totalPoints / getMaxPointsForCourse(courseName) * 100;
@@ -99,6 +168,10 @@ class StudentController {
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
+
+    // Gets the index of a course.
+    // @param courseName The name of the course.
+    // @return The index of the course.
     private int getCourseIndex(String courseName) {
         switch (courseName) {
             case "java":
@@ -113,8 +186,12 @@ class StudentController {
                 throw new  IllegalArgumentException("Invalid coursename: " + courseName);
         }
     }
+
+    // Gets the maximum points for a course.
+    // @param courseName The name of the course.
+    // @return The maximum points for the course.
     private int getMaxPointsForCourse(String courseName) {
-        switch (courseName) {
+        switch (courseName.toLowerCase()) {
             case "java":
                 return 600;
             case "dsa":
@@ -128,6 +205,9 @@ class StudentController {
         }
     }
 
+    // Gets the students for a course.
+    // @param courseName The name of the course.
+    // @return A list of students for the course.
     private List<Student> getStudentsForCourse(String courseName) {
         return studentProgress.getStudents().values().stream()
                 .filter(student -> studentProgress.getStudentPoints().containsKey(student.getId()))
@@ -135,6 +215,7 @@ class StudentController {
                 .collect(Collectors.toList());
     }
 
+    // Lists the students and their points.
     public void listStudentsAndPoints() {
         if (studentProgress.getStudents().isEmpty()) {
             System.out.println("No students found.");
@@ -146,17 +227,24 @@ class StudentController {
         }
     }
 
-
-
+    // Checks if a name is valid.
+    // @param name The name to check.
+    // @return True if the name is valid, false otherwise.
     public boolean isValidName(String name) {
         return Pattern.matches("^[A-Za-z]+([ '-][A-Za-z]+)*$", name) && name.length() >= 2;
     }
 
+    // Checks if an email is valid.
+    // @param email The email to check.
+    // @return True if the email is valid, false otherwise.
     public boolean isValidEmail(String email) {
         String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z0-9+_.-]+$";
         return Pattern.matches(emailPattern, email);
     }
 
+    // Handles the add students command.
+    // @param scanner The scanner to read user input.
+    // @return The number of students added.
     public int handleAddStudentsCommand(Scanner scanner) {
         System.out.println("Enter student credentials or 'back' to return:");
         int addedStudents = 0;
@@ -201,7 +289,9 @@ class StudentController {
             }
         }
     }
-    // In StudentController.java
+
+    // Handles the add points command.
+    // @param scanner The scanner to read user input.
     public void handleAddPointsCommand(Scanner scanner) {
         System.out.print("Enter an id and points or 'back' to return:\n> ");
         while (true) {
@@ -239,6 +329,11 @@ class StudentController {
             }
         }
     }
+
+    // Adds points to a student.
+    // @param id The id of the student.
+    // @param points The points to add.
+    // @return True if the points were added, false otherwise.
     public boolean addPoints(int id, int[] points) {
         Student student = studentProgress.getStudent(id);
         if (student == null) {
@@ -255,6 +350,10 @@ class StudentController {
             // Add the new points to the existing points
             for (int i = 0; i < 4; i++) {
                 existingPoints[i] += points[i];
+                //Check if the student has completed the course
+                if (existingPoints[i] >= getMaxPointsForCourse(getCourseName(i))) {
+                    student.addCompletedCourse(new Course(getCourseName(i)));
+                }
             }
 
             // Update the studentPoints map with the new total points
@@ -266,6 +365,9 @@ class StudentController {
             return false;
         }
     }
+
+    // Finds a student by id.
+    // @param id The id of the student.
     public void findStudent(int id) {
         Student student = studentProgress.getStudent(id);
         if (student != null) {
@@ -277,7 +379,10 @@ class StudentController {
         }
     }
 
+    // Gets the total number of students.
+    // @return The total number of students.
     public int getTotalStudents() {
+
         return totalStudents;
     }
 }
